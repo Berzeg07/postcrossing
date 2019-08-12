@@ -17,24 +17,46 @@ $(document).ready(function() {
 
     $('.main-slider').owlCarousel({
         center: true,
-        items:1,
-        loop:true,
-        margin:5,
+        items: 1,
+        loop: true,
+        margin: 5,
         nav: true,
         autoplay: true,
         navText: ['<span class="nav-left"></span>', '<span class="nav-right"></span>'],
         smartSpeed: 1000,
-        responsive:{
-            768:{
-                items:2
+        responsive: {
+            768: {
+                items: 2
             },
-            992:{
-                items:4
+            992: {
+                items: 4
             }
         }
     });
 
-    $('.main-slider_item').hover(function(){
+    $('.icon-slider').owlCarousel({
+        center: false,
+        items: 1,
+        loop: true,
+        margin: 55,
+        nav: true,
+        autoplay: false,
+        navText: ['<span class="nav-left"></span>', '<span class="nav-right"></span>'],
+        smartSpeed: 1000,
+        responsive: {
+            500: {
+                items: 3
+            },
+            768: {
+                items: 4
+            },
+            992: {
+                items: 8
+            }
+        }
+    });
+
+    $('.main-slider_item').hover(function() {
         $(this).find('.main-slider_hover').stop().slideToggle();
     });
 
