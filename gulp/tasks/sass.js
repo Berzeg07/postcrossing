@@ -1,6 +1,6 @@
 module.exports = function() {
     $.gulp.task('sass', function(){
-        return $.gulp.src('src/static/css/main.scss')
+        return $.gulp.src('css/main.scss')
             .pipe($.gp.sourcemaps.init())
             .pipe($.gp.autoprefixer({
                 browsers: ['last 10 versions']

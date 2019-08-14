@@ -10,7 +10,7 @@ module.exports = function() {
     // });
     // Обработка файлов библиотек и перенос в build в исходном виде
     $.gulp.task('scripts:lib', function() {
-        return $.gulp.src('src/static/libs/*/**')
+        return $.gulp.src('libs/*/**')
         .pipe($.gulp.dest('build/libs/'))
         .pipe($.bs.reload({
             stream: true
@@ -18,7 +18,7 @@ module.exports = function() {
     });
     // Перенос файла common.js в папку build
     $.gulp.task('scripts', function() {
-        return $.gulp.src('src/static/js/common.js')
+        return $.gulp.src('js/common.js')
         .pipe($.gulp.dest('build/js/'))
         .pipe($.bs.reload({
             stream: true

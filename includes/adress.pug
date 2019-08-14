@@ -1,0 +1,33 @@
+ul.adress-box
+    li
+        label(for="street-inp") Улица
+        .adress-box_inp.adress-box_arrow
+            input(type="text" placeholder="Улица").inp#street-inp
+    li
+        label(for="house-inp") Дом, Корпус, Квартира/Комната
+        .adress-box_inner
+            .adress-box_inp
+                input(type="text" placeholder="Дом").inp#house-inp
+            .adress-box_inp
+                input(type="text" placeholder="Корпус").inp
+            .adress-box_inp
+                input(type="text" placeholder="Кв/Комната").inp
+    li
+        label(for="city-inp") Город/Населеный пункт
+        .adress-box_inp.adress-box_arrow
+            input(type="text" placeholder="Город/Населеный пункт").inp#city-inp            
+    li
+        label(for="rayon-inp") Район/Область
+        .adress-box_inp.adress-box_arrow
+            input(type="text" placeholder="Район/Область").inp#rayon-inp
+    li
+        label(for="country-inp") Страна
+        .adress-box_inp.adress-box_arrow
+            input(type="text" placeholder="Страна").inp#country-inp
+    li
+        label(for="index-inp") Индекс
+        .adress-box_inp
+            input(type="text" placeholder="XXX XXX").inp#index-inp
+            button(type="submit").btn.purple-btn.adress-box_btn Зарегестрироваться
+                    
+                    
