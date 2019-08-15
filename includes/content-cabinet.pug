@@ -1,0 +1,64 @@
+
+.border-wrap
+    .container
+        .cabinet-top.box-shadow
+            .cabinet-top_item
+                label.cabinet-ava_wrap(for="ava-file")
+                    .cabinet-ava_border
+                    .cabinet-ava
+                        img(src="img/ava-img.png")
+                ul.cabinet-top_btn
+                    li
+                        input(type="file")#ava-file.ava-file
+                        label(for="ava-file") Изменить фото
+                        
+                    li
+                        a(href="#").delete-ava Удалить фото
+                    li        
+                        button.btn.sendpostcard-btn Отправить открытку
+                    li
+                        button.btn.regpostcard-btn Зарегестрировать открытку    
+
+
+            .cabinet-top_item
+                .cabinet-top_title
+                    .cabinet-top_title__item
+                        h2.main-title Личный кабинет
+                        p.cabinet-visit_date Послений визит 
+                            span 03.12.2018
+                            |г
+                    .cabinet-top_title__item
+                        a(href="#").cabinet-top_basket Мои покупки
+
+                .cabinet-top_person
+                    ul.cabinet-top_person_left
+                        li
+                            input(type="text" value="Иванов Семен Петрович").inp
+                        li
+                            input(type="text" placeholder="Логин").inp
+                        li
+                            label(for="datebirth")
+                            input(type="text" placeholder="XX.XX.XXXX").inp#datebirth
+                        li
+                            a(href="#").delete-account Удалить аккаунт        
+                    ul.cabinet-top_person_right
+                        li
+                            textarea.cabinet-top_textarea(placeholder="О себе")
+                        li
+                            ul.cabinet-top_addphoto
+                                li
+                                    .cabinet-img_min
+                                    button.delete-photo
+                                li
+                                    .cabinet-img_min
+                                    button.delete-photo
+                                li
+                                    .cabinet-img_min
+                                    button.delete-photo
+                                li
+                                    input(type="file").min-photo_add#min-photo_add
+                                    label(for="min-photo_add") Прикрепить фото
+                        li
+                            button.btn(type="submit") Сохранить                    
+    .container
+        .cabinet-middle.box-shadow

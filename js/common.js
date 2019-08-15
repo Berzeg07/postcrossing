@@ -17,6 +17,10 @@ $(document).ready(function() {
         });
     });
 
+    $('.header-login_img').hover(function(){
+        $('.header-login_nickname a:first-child').toggleClass('active');
+    });
+
     $('.main-slider').owlCarousel({
         center: true,
         items: 1,
@@ -89,11 +93,11 @@ $(document).ready(function() {
         $(this).find('.main-slider_hover').stop().slideToggle();
     });
 
-    $('.tooltip-btn').mouseenter(function(){
+    $('.mayor-kluv .tooltip-btn').mouseenter(function(){
         $(this).removeClass('pulsing');
     });
 
-    $('.tooltip-btn').mouseleave(function(){
+    $('.mayor-kluv .tooltip-btn').mouseleave(function(){
         $(this).addClass('pulsing');
     });
 
