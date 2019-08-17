@@ -70,7 +70,7 @@
               </li>
               <li><a class="delete-ava" href="#">Удалить фото</a></li>
               <li>       
-                <button class="btn sendpostcard-btn">Отправить открытку</button>
+                <button class="btn sendpostcard-btn btn-opacity">Отправить открытку</button>
               </li>
               <li>
                 <button class="btn regpostcard-btn">Зарегестрировать открытку    </button>
@@ -124,15 +124,417 @@
                   </ul>
                 </li>
                 <li>
-                  <button class="btn" type="submit">Сохранить                    </button>
+                  <button class="btn save-selfinfo btn-opacity" type="submit">Сохранить                    </button>
                 </li>
               </ul>
             </div>
           </div>
         </div>
       </div>
-      <div class="container">
-        <div class="cabinet-middle box-shadow"></div>
+    </div>
+    <div class="container">
+      <div class="cabinet-middle box-shadow">
+        <div class="cabinet-middle_inner">
+          <div class="cabinet-middle_inner__item">
+            <p class="cabinet-middle_title main-title">Местоположение и адрес</p>
+            <ul class="adress-box">
+              <li>
+                <label for="street-inp">Улица</label>
+                <div class="adress-box_inp adress-box_arrow">
+                  <input class="inp" type="text" placeholder="Улица" id="street-inp">
+                </div>
+              </li>
+              <li>
+                <label for="house-inp">Дом, Корпус, Квартира/Комната</label>
+                <div class="adress-box_inp adress-box_inner">
+                  <div class="adress-box_inp">
+                    <input class="inp" type="text" placeholder="Дом" id="house-inp">
+                  </div>
+                  <div class="adress-box_inp">
+                    <input class="inp" type="text" placeholder="Корпус">
+                  </div>
+                  <div class="adress-box_inp">
+                    <input class="inp" type="text" placeholder="Кв/Комната">
+                  </div>
+                </div>
+              </li>
+              <li>
+                <label for="city-inp">Город/Населеный пункт</label>
+                <div class="adress-box_inp adress-box_arrow">
+                  <input class="inp" type="text" placeholder="Город/Населеный пункт" id="city-inp">
+                </div>
+              </li>
+              <li>
+                <label for="rayon-inp">Район/Область</label>
+                <div class="adress-box_inp adress-box_arrow">
+                  <input class="inp" type="text" placeholder="Район/Область" id="rayon-inp">
+                </div>
+              </li>
+              <li>
+                <label for="country-inp">Страна</label>
+                <div class="adress-box_inp adress-box_arrow">
+                  <input class="inp" type="text" placeholder="Страна" id="country-inp">
+                </div>
+              </li>
+              <li>
+                <label for="index-inp">Индекс</label>
+                <div class="adress-box_inp">
+                  <input class="inp" type="text" placeholder="XXX XXX" id="index-inp">
+                  <button class="btn purple-btn adress-box_btn btn-opacity" type="submit">Сохранить</button>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="cabinet-middle_inner__item">
+            <p class="cabinet-middle_title main-title">Смена пароля/e-mail</p>
+            <ul class="cabinet-middle_changepass">
+              <li>
+                <input class="inp" type="text" placeholder="Ввести старые данные">
+              </li>
+              <li>
+                <input class="inp" type="text" placeholder="Ввести новые данные">
+              </li>
+              <li>
+                <input class="inp" type="text" placeholder="Ввести новые данные еще раз">
+              </li>
+              <li>
+                <button class="btn changepass_btn btn-opacity">Обновить данные</button>
+              </li>
+            </ul>
+            <p class="cabinet-middle_title main-title">Добавить соц сети            </p>
+            <ul class="cabinet-middle_social">
+              <li>
+                <div class="social-imgbox">
+                  <div class="cabinet-middle_social__img"><img src="img/vk-big.png"></div>
+                  <div class="cabinet-middle_social__inp">
+                    <input class="inp" type="text">
+                  </div>
+                </div>
+              </li>
+              <li>
+                <p class="choose-social_title">Выберите соц сеть</p>
+                <ul class="choose-social">
+                  <li class="choose-social_inst"><img src="img/inst-icon.png"></li>
+                  <li class="choose-social_vk"><img src="img/vk-icon.png"></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="cabinet-middle_privacy">
+          <p> <a href="#">Условиями обслуживания </a>и <a href="#">Политикой конфиденциальности. </a></p>
+        </div>
+      </div>
+    </div>
+    <div class="postcard-info_wrap">
+      <div class="container">   
+        <div class="postcard-info box-shadow">
+          <div class="postcard-info_top">
+            <p class="main-title">Информация об открытках</p>
+            <ul class="postcard-info_tabs">
+              <li><a class="active" href="#postcard-get">Получено <span class="count-get">335</span></a></li>
+              <li><a href="#postcard-send">Отправлено <span class="count-send">335</span></a></li>
+              <li><a href="#postcard-onway">Открытки в пути</a></li>
+            </ul>
+          </div>
+          <ul class="postcard-info_sort">
+            <li>
+              <p>Сортировать </p>
+            </li>
+            <li><a href="#">все</a></li>
+            <li><a href="#">сначала новые</a></li>
+            <li><a href="#">сначала старые    </a></li>
+          </ul>
+          <div class="postcard-table tab-table" id="postcard-onway">         
+            <table>
+              <tr class="postcard-table_main postcard-table_send">
+                <th></th>
+                <th class="postcard-table_imgbox">
+                  <div class="delete-table"></div>
+                  <div class="postcard-table_item"><a class="postcard-table_img" href="img/s1.jpg" data-fancybox="group-img"><img src="img/s1.jpg"></a>
+                    <div class="send-date">
+                      <p>Дата<br> отправления</p><span>21.06.2019 г        </span>
+                    </div>
+                  </div>
+                </th>
+                <th class="postcard-table_arrow">
+                  <div class="status-arrow_r">
+                    <div class="status-tooltip">
+                      <div class="status-tooltip_sircle"></div>
+                      <div class="status-tooltip_article">
+                        <div class="status-tooltip_inner">Осталось 2 недели 4 дня 8 часов</div>
+                      </div>
+                    </div>
+                  </div>
+                </th>
+                <th class="postcard-table_imgbox">
+                  <div class="send-login"><a href="#">Lena76</a>
+                    <p>21.06.2019 г</p>
+                    <p>ае - 2836581</p>
+                  </div>
+                </th>
+                <th></th>
+              </tr>
+              <tr class="postcard-table_main postcard-table_get">
+                <th></th>
+                <th class="postcard-table_imgbox">
+                  <div class="delete-table"></div>
+                  <div class="send-login"><a href="#">Lena76</a>
+                    <p>21.06.2019 г</p>
+                    <p>ае - 2836581</p>
+                  </div>
+                </th>
+                <th class="postcard-table_arrow">
+                  <div class="status-arrow_l">
+                    <div class="status-tooltip">
+                      <div class="status-tooltip_sircle"></div>
+                      <div class="status-tooltip_article">
+                        <div class="status-tooltip_inner">Осталось 2 недели 4 дня 8 часов</div>
+                      </div>
+                    </div>
+                  </div>
+                </th>
+                <th class="postcard-table_imgbox">
+                  <div class="postcard-table_item"><a class="postcard-table_img" href="img/s1.jpg" data-fancybox="group-img"><img src="img/s2.jpg"></a>
+                    <div class="send-date">
+                      <p>Дата<br> отправления</p><span>21.06.2019 г </span>
+                    </div>
+                  </div>
+                </th>
+                <th> </th>
+              </tr>
+              <tr class="postcard-table_main postcard-table_send">
+                <th></th>
+                <th class="postcard-table_imgbox">
+                  <div class="delete-table"></div>
+                  <div class="postcard-table_item"><a class="postcard-table_img" href="img/s1.jpg" data-fancybox="group-img"><img src="img/s1.jpg"></a>
+                    <div class="send-date">
+                      <p>Дата<br> отправления</p><span>21.06.2019 г        </span>
+                    </div>
+                  </div>
+                </th>
+                <th class="postcard-table_arrow">
+                  <div class="status-arrow_r">
+                    <div class="status-tooltip">
+                      <div class="status-tooltip_sircle"></div>
+                      <div class="status-tooltip_article">
+                        <div class="status-tooltip_inner">Осталось 2 недели 4 дня 8 часов</div>
+                      </div>
+                    </div>
+                  </div>
+                </th>
+                <th class="postcard-table_imgbox">
+                  <div class="send-login"><a href="#">Lena76</a>
+                    <p>21.06.2019 г</p>
+                    <p>ае - 2836581</p>
+                  </div>
+                </th>
+                <th></th>
+              </tr>
+              <tr class="postcard-table_main postcard-table_get">
+                <th></th>
+                <th class="postcard-table_imgbox">
+                  <div class="delete-table"></div>
+                  <div class="send-login"><a href="#">Lena76</a>
+                    <p>21.06.2019 г</p>
+                    <p>ае - 2836581</p>
+                  </div>
+                </th>
+                <th class="postcard-table_arrow">
+                  <div class="status-arrow_l">
+                    <div class="status-tooltip">
+                      <div class="status-tooltip_sircle"></div>
+                      <div class="status-tooltip_article">
+                        <div class="status-tooltip_inner">Осталось 2 недели 4 дня 8 часов</div>
+                      </div>
+                    </div>
+                  </div>
+                </th>
+                <th class="postcard-table_imgbox">
+                  <div class="postcard-table_item"><a class="postcard-table_img" href="img/s1.jpg" data-fancybox="group-img"><img src="img/s2.jpg"></a>
+                    <div class="send-date">
+                      <p>Дата<br> отправления</p><span>21.06.2019 г </span>
+                    </div>
+                  </div>
+                </th>
+                <th></th>
+              </tr>
+              <tr class="postcard-table_main postcard-table_send">
+                <th></th>
+                <th class="postcard-table_imgbox">
+                  <div class="delete-table"></div>
+                  <div class="postcard-table_item"><a class="postcard-table_img" href="img/s1.jpg" data-fancybox="group-img"><img src="img/s1.jpg"></a>
+                    <div class="send-date">
+                      <p>Дата<br> отправления</p><span>21.06.2019 г        </span>
+                    </div>
+                  </div>
+                </th>
+                <th class="postcard-table_arrow">
+                  <div class="status-arrow_r">
+                    <div class="status-tooltip">
+                      <div class="status-tooltip_sircle"></div>
+                      <div class="status-tooltip_article">
+                        <div class="status-tooltip_inner">Осталось 2 недели 4 дня 8 часов</div>
+                      </div>
+                    </div>
+                  </div>
+                </th>
+                <th class="postcard-table_imgbox">
+                  <div class="send-login"><a href="#">Lena76</a>
+                    <p>21.06.2019 г</p>
+                    <p>ае - 2836581</p>
+                  </div>
+                </th>
+                <th>                                       </th>
+              </tr>
+            </table>
+          </div>
+          <div class="postcard-table tab-table" id="postcard-get">         
+            <table>
+              <tr>
+                <th>Номер отправления</th>
+                <th>Логин</th>
+                <th>Страна </th>
+                <th>Дата отправления</th>
+                <th>Дата регистрации </th>
+                <th>Изображение</th>
+              </tr>
+              <tr class="postcard-table_main">
+                <th> 
+                  <div class="send-number">ае - 2836581
+                    <div class="delete-table"></div>
+                  </div>
+                </th>
+                <th> <a href="#">Lena76</a></th>
+                <th>Россия </th>
+                <th>20.06.2019 г</th>
+                <th>21.06.2019 г</th>
+                <th> <a class="postcard-table_img" href="img/s1.jpg" data-fancybox="group-img"><img src="img/s1.jpg"></a></th>
+              </tr>
+              <tr class="postcard-table_main">
+                <th> 
+                  <div class="send-number">ае - 2836581
+                    <div class="delete-table"></div>
+                  </div>
+                </th>
+                <th> <a href="#">Lena76</a></th>
+                <th>Россия </th>
+                <th>20.06.2019 г</th>
+                <th>21.06.2019 г</th>
+                <th> <a class="postcard-table_img" href="img/s1.jpg" data-fancybox="group-img"><img src="img/s1.jpg"></a></th>
+              </tr>
+              <tr class="postcard-table_main">
+                <th> 
+                  <div class="send-number">ае - 2836581
+                    <div class="delete-table"></div>
+                  </div>
+                </th>
+                <th> <a href="#">Lena76</a></th>
+                <th>Россия </th>
+                <th>20.06.2019 г</th>
+                <th>21.06.2019 г</th>
+                <th> <a class="postcard-table_img" href="img/s1.jpg" data-fancybox="group-img"><img src="img/s1.jpg"></a></th>
+              </tr>
+              <tr class="postcard-table_main">
+                <th> 
+                  <div class="send-number">ае - 2836581
+                    <div class="delete-table"></div>
+                  </div>
+                </th>
+                <th> <a href="#">Lena76</a></th>
+                <th>Россия </th>
+                <th>20.06.2019 г</th>
+                <th>21.06.2019 г</th>
+                <th> <a class="postcard-table_img" href="img/s1.jpg" data-fancybox="group-img"><img src="img/s1.jpg"></a></th>
+              </tr>
+              <tr class="postcard-table_main">
+                <th> 
+                  <div class="send-number">ае - 2836581
+                    <div class="delete-table"></div>
+                  </div>
+                </th>
+                <th> <a href="#">Lena76</a></th>
+                <th>Россия </th>
+                <th>20.06.2019 г</th>
+                <th>21.06.2019 г</th>
+                <th> <a class="postcard-table_img" href="img/s1.jpg" data-fancybox="group-img"><img src="img/s1.jpg"></a></th>
+              </tr>
+            </table>
+          </div>
+          <div class="postcard-table tab-table" id="postcard-send">         
+            <table>
+              <tr>
+                <th>Номер отправления</th>
+                <th>Логин</th>
+                <th>Страна </th>
+                <th>Дата отправления</th>
+                <th>Дата регистрации </th>
+                <th>Изображение</th>
+              </tr>
+              <tr class="postcard-table_main">
+                <th> 
+                  <div class="send-number">ае - 2836581
+                    <div class="delete-table"></div>
+                  </div>
+                </th>
+                <th> <a href="#">Lena76</a></th>
+                <th>Россия </th>
+                <th>20.06.2019 г</th>
+                <th>21.06.2019 г</th>
+                <th> <a class="postcard-table_img" href="img/s1.jpg" data-fancybox="group-img"><img src="img/s1.jpg"></a></th>
+              </tr>
+              <tr class="postcard-table_main">
+                <th> 
+                  <div class="send-number">ае - 2836581
+                    <div class="delete-table"></div>
+                  </div>
+                </th>
+                <th> <a href="#">Lena76</a></th>
+                <th>Россия </th>
+                <th>20.06.2019 г</th>
+                <th>21.06.2019 г</th>
+                <th> <a class="postcard-table_img" href="img/s1.jpg" data-fancybox="group-img"><img src="img/s1.jpg"></a></th>
+              </tr>
+              <tr class="postcard-table_main">
+                <th> 
+                  <div class="send-number">ае - 2836581
+                    <div class="delete-table"></div>
+                  </div>
+                </th>
+                <th> <a href="#">Lena76</a></th>
+                <th>Россия </th>
+                <th>20.06.2019 г</th>
+                <th>21.06.2019 г</th>
+                <th> <a class="postcard-table_img" href="img/s1.jpg" data-fancybox="group-img"><img src="img/s1.jpg"></a></th>
+              </tr>
+              <tr class="postcard-table_main">
+                <th> 
+                  <div class="send-number">ае - 2836581
+                    <div class="delete-table"></div>
+                  </div>
+                </th>
+                <th> <a href="#">Lena76</a></th>
+                <th>Россия </th>
+                <th>20.06.2019 г</th>
+                <th>21.06.2019 г</th>
+                <th> <a class="postcard-table_img" href="img/s1.jpg" data-fancybox="group-img"><img src="img/s1.jpg"></a></th>
+              </tr>
+              <tr class="postcard-table_main">
+                <th> 
+                  <div class="send-number">ае - 2836581
+                    <div class="delete-table"></div>
+                  </div>
+                </th>
+                <th> <a href="#">Lena76</a></th>
+                <th>Россия </th>
+                <th>20.06.2019 г</th>
+                <th>21.06.2019 г</th>
+                <th> <a class="postcard-table_img" href="img/s1.jpg" data-fancybox="group-img"><img src="img/s1.jpg"></a></th>
+              </tr>
+            </table>
+          </div>
+          <div class="postcard-pagination"><span class="page-num current">1</span><a class="page-num" href="#">2</a><a class="page-num" href="#">3</a><span class="page-num page-dots">...</span><a class="page-num" href="#">30</a></div>
+        </div>
       </div>
     </div>
     <div class="footer">

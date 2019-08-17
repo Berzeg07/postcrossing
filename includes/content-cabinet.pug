@@ -15,7 +15,7 @@
                     li
                         a(href="#").delete-ava Удалить фото
                     li        
-                        button.btn.sendpostcard-btn Отправить открытку
+                        button.btn.sendpostcard-btn.btn-opacity Отправить открытку
                     li
                         button.btn.regpostcard-btn Зарегестрировать открытку    
 
@@ -59,6 +59,72 @@
                                     input(type="file").min-photo_add#min-photo_add
                                     label(for="min-photo_add") Прикрепить фото
                         li
-                            button.btn(type="submit") Сохранить                    
-    .container
-        .cabinet-middle.box-shadow
+                            button.btn.save-selfinfo.btn-opacity(type="submit") Сохранить                    
+.container
+    .cabinet-middle.box-shadow
+        .cabinet-middle_inner
+            .cabinet-middle_inner__item
+                p.cabinet-middle_title.main-title Местоположение и адрес
+                ul.adress-box
+                    li
+                        label(for="street-inp") Улица
+                        .adress-box_inp.adress-box_arrow
+                            input(type="text" placeholder="Улица").inp#street-inp
+                    li
+                        label(for="house-inp") Дом, Корпус, Квартира/Комната
+                        .adress-box_inp.adress-box_inner
+                            .adress-box_inp
+                                input(type="text" placeholder="Дом").inp#house-inp
+                            .adress-box_inp
+                                input(type="text" placeholder="Корпус").inp
+                            .adress-box_inp
+                                input(type="text" placeholder="Кв/Комната").inp
+                    li
+                        label(for="city-inp") Город/Населеный пункт
+                        .adress-box_inp.adress-box_arrow
+                            input(type="text" placeholder="Город/Населеный пункт").inp#city-inp            
+                    li
+                        label(for="rayon-inp") Район/Область
+                        .adress-box_inp.adress-box_arrow
+                            input(type="text" placeholder="Район/Область").inp#rayon-inp
+                    li
+                        label(for="country-inp") Страна
+                        .adress-box_inp.adress-box_arrow
+                            input(type="text" placeholder="Страна").inp#country-inp
+                    li
+                        label(for="index-inp") Индекс
+                        .adress-box_inp
+                            input(type="text" placeholder="XXX XXX").inp#index-inp
+                            button(type="submit").btn.purple-btn.adress-box_btn.btn-opacity Сохранить
+            .cabinet-middle_inner__item
+                p.cabinet-middle_title.main-title Смена пароля/e-mail
+                ul.cabinet-middle_changepass
+                    li
+                        input(type="text" placeholder="Ввести старые данные").inp
+                    li
+                        input(type="text" placeholder="Ввести новые данные").inp
+                    li
+                        input(type="text" placeholder="Ввести новые данные еще раз").inp
+                    li
+                        button.btn.changepass_btn.btn-opacity Обновить данные
+                p.cabinet-middle_title.main-title Добавить соц сети            
+                ul.cabinet-middle_social
+                    li
+                        .social-imgbox
+                            .cabinet-middle_social__img
+                                img(src="img/vk-big.png")
+                            .cabinet-middle_social__inp
+                                input(type="text").inp
+                    li
+                        p.choose-social_title Выберите соц сеть
+                        ul.choose-social
+                            li.choose-social_inst
+                                img(src="img/inst-icon.png")
+                            li.choose-social_vk
+                                img(src="img/vk-icon.png")
+        .cabinet-middle_privacy
+            p 
+                a(href="#") Условиями обслуживания 
+                |и 
+                a(href="#") Политикой конфиденциальности. 
+include ./postcard-info.pug

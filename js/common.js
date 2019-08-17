@@ -17,7 +17,7 @@ $(document).ready(function() {
         });
     });
 
-    $('.header-login_img').hover(function(){
+    $('.header-login_img').hover(function() {
         $('.header-login_nickname a:first-child').toggleClass('active');
     });
 
@@ -93,17 +93,47 @@ $(document).ready(function() {
         $(this).find('.main-slider_hover').stop().slideToggle();
     });
 
-    $('.mayor-kluv .tooltip-btn').mouseenter(function(){
+    $('.mayor-kluv .tooltip-btn').mouseenter(function() {
         $(this).removeClass('pulsing');
     });
 
-    $('.mayor-kluv .tooltip-btn').mouseleave(function(){
+    $('.mayor-kluv .tooltip-btn').mouseleave(function() {
         $(this).addClass('pulsing');
     });
 
 
+    $('.postcard-info_tabs a').click(function(e) {
+        e.preventDefault();
+        $('a').removeClass('active');
+        $(this).addClass('active');
+        var tab = $(this).attr('href');
+        $('.tab-table').not(tab).css({
+            'display': 'none'
+        });
+        $(tab).fadeIn(400);
+    });
+    $('.postcard-info_tabs a:first').click();
 
+    $('.choose-social_inst').click(function(){
+        var divInner = $('.cabinet-middle_social__img');
+        $(divInner).html('');
+        $(divInner).html('<img src="img/inst-big.png">');
+    });
 
+    $('.choose-social_vk').click(function(){
+        var divInner = $('.cabinet-middle_social__img');
+        $(divInner).html('');
+        $(divInner).html('<img src="img/vk-big.png">');
+    });
+
+    $('.delete-table').click(function(){
+        $(this).parents('.postcard-table_main').remove();
+    });
+
+    $('.sortthemes_btn').click(function(){
+        $('.sortthemes_btn').removeClass('active');
+        $(this).addClass('active');
+    });
 
 
 
