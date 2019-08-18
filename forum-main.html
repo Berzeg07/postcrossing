@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="libs/jquery-ui-select/jquery-ui.min.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&amp;display=swap&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
     <link rel="stylesheet" href="libs/owl.carusel-2.3.4/css/owl.carousel.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
     <link rel="stylesheet" href="libs/fancybox/jquery.fancybox.css">
     <link rel="stylesheet" href="css/main.css">
   </head>
@@ -55,258 +56,269 @@
         </nav>
       </div>
     </header>
-    <div class="container">
-      <div class="forum-top">
-        <div class="forum-top_item box-shadow">
-          <p class="main-title">Форум</p>
-          <div class="forum-top_date">
-            <p>Читать сообщения за период</p>
-            <ul class="forum-top_date__item">
-              <li>
-                <input class="inp" type="date">
-              </li>
-              <li>   
-                <input class="inp" type="date">
-              </li>
-            </ul>
+    <div class="forum border-wrap">
+      <div class="container">
+        <div class="forum-top">
+          <div class="forum-top_item box-shadow">
+            <p class="main-title">Форум</p>
+            <div class="forum-top_date">
+              <p>Читать сообщения за период</p>
+              <ul class="forum-top_date__item">
+                <li>
+                  <input class="inp" type="date">
+                </li>
+                <li>   
+                  <input class="inp" type="date">
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="forum-top_item"><a class="notread-themes_btn sortthemes_btn" href="#">Показать <br>непрочитанные темы   </a><a class="read-themes_btn sortthemes_btn" href="#">Показать <br>прочитанные темы </a></div>
+        </div>
+        <div class="forum-themes box-shadow">
+          <div class="forum-themes_top">
+            <div class="forum-themes_top__item">Статус                 </div>
+            <div class="forum-themes_top__item">Название заголовка                 </div>
+            <div class="forum-themes_top__item"><a class="showalltheme-btn sortthemes_btn" href="#">Показать все темы  </a></div>
+          </div>
+          <div class="forum-themes_inner">                      
+            <div class="forum-article">
+              <div class="forum-article_item forum-article_left">
+                <div class="forum-article_icon"><img src="img/box-icon-2.png"></div>
+                <div class="forum-article_like">
+                  <div class="forum-article_likecount"><span>79       </span></div>
+                  <div class="forum-article_likeicon like-icon_blue">   </div>
+                </div>
+                <div class="forum-article_messcount">
+                  <p>30</p>
+                  <p>сообщений                    </p>
+                </div>
+              </div>
+              <div class="forum-article_item forum-article_right">                    <a class="main-title" href="#">Полное название темы                 </a>
+                <div class="forum-article_date">05.06.2019 г          </div>
+                <div class="forum-article_preview">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.          </div>
+              </div>
+            </div>
+            <div class="forum-article">
+              <div class="forum-article_item forum-article_left">
+                <div class="forum-article_icon"><img src="img/box-icon.png"></div>
+                <div class="forum-article_like">
+                  <div class="forum-article_likecount"><span>79       </span></div>
+                  <div class="forum-article_likeicon like-icon_red">   </div>
+                </div>
+                <div class="forum-article_messcount">
+                  <p>30</p>
+                  <p>сообщений                    </p>
+                </div>
+              </div>
+              <div class="forum-article_item forum-article_right">                    <a class="main-title" href="#">Полное название темы                 </a>
+                <div class="forum-article_date">05.06.2019 г          </div>
+                <div class="forum-article_preview">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</div>
+              </div>
+            </div>
+            <div class="forum-article">
+              <div class="forum-article_item forum-article_left">
+                <div class="forum-article_icon"><img src="img/box-icon-2.png"></div>
+                <div class="forum-article_like">
+                  <div class="forum-article_likecount"><span>79       </span></div>
+                  <div class="forum-article_likeicon like-icon_grey">  </div>
+                </div>
+                <div class="forum-article_messcount">
+                  <p>30</p>
+                  <p>сообщений                    </p>
+                </div>
+              </div>
+              <div class="forum-article_item forum-article_right">                    <a class="main-title" href="#">Полное название темы                 </a>
+                <div class="forum-article_date">05.06.2019 г          </div>
+                <div class="forum-article_preview">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.            </div>
+              </div>
+            </div>
+            <div class="forum-article">
+              <div class="forum-article_item forum-article_left">
+                <div class="forum-article_icon"><img src="img/box-icon-2.png"></div>
+                <div class="forum-article_like">
+                  <div class="forum-article_likecount"><span>79       </span></div>
+                  <div class="forum-article_likeicon like-icon_blue">   </div>
+                </div>
+                <div class="forum-article_messcount">
+                  <p>30</p>
+                  <p>сообщений                    </p>
+                </div>
+              </div>
+              <div class="forum-article_item forum-article_right">                    <a class="main-title" href="#">Полное название темы                 </a>
+                <div class="forum-article_date">05.06.2019 г          </div>
+                <div class="forum-article_preview">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.          </div>
+              </div>
+            </div>
+            <div class="forum-article">
+              <div class="forum-article_item forum-article_left">
+                <div class="forum-article_icon"><img src="img/box-icon.png"></div>
+                <div class="forum-article_like">
+                  <div class="forum-article_likecount"><span>79       </span></div>
+                  <div class="forum-article_likeicon like-icon_red">   </div>
+                </div>
+                <div class="forum-article_messcount">
+                  <p>30</p>
+                  <p>сообщений                    </p>
+                </div>
+              </div>
+              <div class="forum-article_item forum-article_right">                    <a class="main-title" href="#">Полное название темы                 </a>
+                <div class="forum-article_date">05.06.2019 г          </div>
+                <div class="forum-article_preview">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</div>
+              </div>
+            </div>
+            <div class="forum-article">
+              <div class="forum-article_item forum-article_left">
+                <div class="forum-article_icon"><img src="img/box-icon-2.png"></div>
+                <div class="forum-article_like">
+                  <div class="forum-article_likecount"><span>79       </span></div>
+                  <div class="forum-article_likeicon like-icon_grey">  </div>
+                </div>
+                <div class="forum-article_messcount">
+                  <p>30</p>
+                  <p>сообщений                    </p>
+                </div>
+              </div>
+              <div class="forum-article_item forum-article_right">                    <a class="main-title" href="#">Полное название темы                 </a>
+                <div class="forum-article_date">05.06.2019 г          </div>
+                <div class="forum-article_preview">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.            </div>
+              </div>
+            </div>
+            <div class="forum-article">
+              <div class="forum-article_item forum-article_left">
+                <div class="forum-article_icon"><img src="img/box-icon-2.png"></div>
+                <div class="forum-article_like">
+                  <div class="forum-article_likecount"><span>79       </span></div>
+                  <div class="forum-article_likeicon like-icon_blue">   </div>
+                </div>
+                <div class="forum-article_messcount">
+                  <p>30</p>
+                  <p>сообщений                    </p>
+                </div>
+              </div>
+              <div class="forum-article_item forum-article_right">                    <a class="main-title" href="#">Полное название темы                 </a>
+                <div class="forum-article_date">05.06.2019 г          </div>
+                <div class="forum-article_preview">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.          </div>
+              </div>
+            </div>
+            <div class="forum-article">
+              <div class="forum-article_item forum-article_left">
+                <div class="forum-article_icon"><img src="img/box-icon.png"></div>
+                <div class="forum-article_like">
+                  <div class="forum-article_likecount"><span>79       </span></div>
+                  <div class="forum-article_likeicon like-icon_red">   </div>
+                </div>
+                <div class="forum-article_messcount">
+                  <p>30</p>
+                  <p>сообщений                    </p>
+                </div>
+              </div>
+              <div class="forum-article_item forum-article_right">                    <a class="main-title" href="#">Полное название темы                 </a>
+                <div class="forum-article_date">05.06.2019 г          </div>
+                <div class="forum-article_preview">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</div>
+              </div>
+            </div>
+            <div class="forum-article">
+              <div class="forum-article_item forum-article_left">
+                <div class="forum-article_icon"><img src="img/box-icon-2.png"></div>
+                <div class="forum-article_like">
+                  <div class="forum-article_likecount"><span>79       </span></div>
+                  <div class="forum-article_likeicon like-icon_grey">  </div>
+                </div>
+                <div class="forum-article_messcount">
+                  <p>30</p>
+                  <p>сообщений                    </p>
+                </div>
+              </div>
+              <div class="forum-article_item forum-article_right">                    <a class="main-title" href="#">Полное название темы                 </a>
+                <div class="forum-article_date">05.06.2019 г          </div>
+                <div class="forum-article_preview">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.            </div>
+              </div>
+            </div>
+            <div class="forum-article">
+              <div class="forum-article_item forum-article_left">
+                <div class="forum-article_icon"><img src="img/box-icon-2.png"></div>
+                <div class="forum-article_like">
+                  <div class="forum-article_likecount"><span>79       </span></div>
+                  <div class="forum-article_likeicon like-icon_blue">   </div>
+                </div>
+                <div class="forum-article_messcount">
+                  <p>30</p>
+                  <p>сообщений                    </p>
+                </div>
+              </div>
+              <div class="forum-article_item forum-article_right">                    <a class="main-title" href="#">Полное название темы                 </a>
+                <div class="forum-article_date">05.06.2019 г          </div>
+                <div class="forum-article_preview">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.          </div>
+              </div>
+            </div>
+            <div class="forum-article">
+              <div class="forum-article_item forum-article_left">
+                <div class="forum-article_icon"><img src="img/box-icon.png"></div>
+                <div class="forum-article_like">
+                  <div class="forum-article_likecount"><span>79       </span></div>
+                  <div class="forum-article_likeicon like-icon_red">   </div>
+                </div>
+                <div class="forum-article_messcount">
+                  <p>30</p>
+                  <p>сообщений                    </p>
+                </div>
+              </div>
+              <div class="forum-article_item forum-article_right">                    <a class="main-title" href="#">Полное название темы                 </a>
+                <div class="forum-article_date">05.06.2019 г          </div>
+                <div class="forum-article_preview">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</div>
+              </div>
+            </div>
+            <div class="forum-article">
+              <div class="forum-article_item forum-article_left">
+                <div class="forum-article_icon"><img src="img/box-icon-2.png"></div>
+                <div class="forum-article_like">
+                  <div class="forum-article_likecount"><span>79       </span></div>
+                  <div class="forum-article_likeicon like-icon_grey">  </div>
+                </div>
+                <div class="forum-article_messcount">
+                  <p>30</p>
+                  <p>сообщений                    </p>
+                </div>
+              </div>
+              <div class="forum-article_item forum-article_right">                    <a class="main-title" href="#">Полное название темы                 </a>
+                <div class="forum-article_date">05.06.2019 г          </div>
+                <div class="forum-article_preview">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.            </div>
+              </div>
+            </div>
+            <div class="forum-article">
+              <div class="forum-article_item forum-article_left">
+                <div class="forum-article_icon"><img src="img/box-icon-2.png"></div>
+                <div class="forum-article_like">
+                  <div class="forum-article_likecount"><span>79       </span></div>
+                  <div class="forum-article_likeicon like-icon_grey">  </div>
+                </div>
+                <div class="forum-article_messcount">
+                  <p>30</p>
+                  <p>сообщений                    </p>
+                </div>
+              </div>
+              <div class="forum-article_item forum-article_right">                    <a class="main-title" href="#">Полное название темы                 </a>
+                <div class="forum-article_date">05.06.2019 г          </div>
+                <div class="forum-article_preview">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.                         </div>
+              </div>
+            </div>
+          </div>
+          <div class="forum-themes_nav">
+            <div class="forum-themes_nav__left"></div>
+            <div class="forum-themes_nav__right">
+              <div class="forum-pagination"><a class="forum-pagination_left" href="#"> </a><a class="curent" href="#">1</a><a href="#">2</a><a href="#">3</a><a href="#">4</a><a href="#">5</a><a href="#">6 </a><a href="#">7</a><a class="forum-pagination_right" href="#"></a><a class="forum-pagination_next" href="#">Вперед                                                                                                                    </a></div>
+            </div>
           </div>
         </div>
-        <div class="forum-top_item"><a class="notread-themes_btn sortthemes_btn" href="#">Показать <br>непрочитанные темы   </a><a class="read-themes_btn sortthemes_btn" href="#">Показать <br>прочитанные темы </a></div>
       </div>
-      <div class="forum-themes box-shadow">
-        <div class="forum-themes_top">
-          <div class="forum-themes_top__item">Статус                 </div>
-          <div class="forum-themes_top__item">Название заголовка                 </div>
-          <div class="forum-themes_top__item"><a class="showalltheme-btn sortthemes_btn" href="#">Показать все темы  </a></div>
-        </div>
-        <div class="forum-themes_inner">                      
-          <div class="forum-article">
-            <div class="forum-article_item forum-article_left">
-              <div class="forum-article_icon"><img src="img/box-icon-2.png"></div>
-              <div class="forum-article_like">
-                <div class="forum-article_likecount"><span>79       </span></div>
-                <div class="forum-article_likeicon like-icon_blue">   </div>
-              </div>
-              <div class="forum-article_messcount">
-                <p>30</p>
-                <p>сообщений                    </p>
-              </div>
-            </div>
-            <div class="forum-article_item forum-article_right">                    <a class="main-title" href="#">Полное название темы                 </a>
-              <div class="forum-article_date">05.06.2019 г          </div>
-              <div class="forum-article_preview">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.          </div>
-            </div>
-          </div>
-          <div class="forum-article">
-            <div class="forum-article_item forum-article_left">
-              <div class="forum-article_icon"><img src="img/box-icon.png"></div>
-              <div class="forum-article_like">
-                <div class="forum-article_likecount"><span>79       </span></div>
-                <div class="forum-article_likeicon like-icon_red">   </div>
-              </div>
-              <div class="forum-article_messcount">
-                <p>30</p>
-                <p>сообщений                    </p>
-              </div>
-            </div>
-            <div class="forum-article_item forum-article_right">                    <a class="main-title" href="#">Полное название темы                 </a>
-              <div class="forum-article_date">05.06.2019 г          </div>
-              <div class="forum-article_preview">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</div>
-            </div>
-          </div>
-          <div class="forum-article">
-            <div class="forum-article_item forum-article_left">
-              <div class="forum-article_icon"><img src="img/box-icon-2.png"></div>
-              <div class="forum-article_like">
-                <div class="forum-article_likecount"><span>79       </span></div>
-                <div class="forum-article_likeicon like-icon_grey">  </div>
-              </div>
-              <div class="forum-article_messcount">
-                <p>30</p>
-                <p>сообщений                    </p>
-              </div>
-            </div>
-            <div class="forum-article_item forum-article_right">                    <a class="main-title" href="#">Полное название темы                 </a>
-              <div class="forum-article_date">05.06.2019 г          </div>
-              <div class="forum-article_preview">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.            </div>
-            </div>
-          </div>
-          <div class="forum-article">
-            <div class="forum-article_item forum-article_left">
-              <div class="forum-article_icon"><img src="img/box-icon-2.png"></div>
-              <div class="forum-article_like">
-                <div class="forum-article_likecount"><span>79       </span></div>
-                <div class="forum-article_likeicon like-icon_blue">   </div>
-              </div>
-              <div class="forum-article_messcount">
-                <p>30</p>
-                <p>сообщений                    </p>
-              </div>
-            </div>
-            <div class="forum-article_item forum-article_right">                    <a class="main-title" href="#">Полное название темы                 </a>
-              <div class="forum-article_date">05.06.2019 г          </div>
-              <div class="forum-article_preview">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.          </div>
-            </div>
-          </div>
-          <div class="forum-article">
-            <div class="forum-article_item forum-article_left">
-              <div class="forum-article_icon"><img src="img/box-icon.png"></div>
-              <div class="forum-article_like">
-                <div class="forum-article_likecount"><span>79       </span></div>
-                <div class="forum-article_likeicon like-icon_red">   </div>
-              </div>
-              <div class="forum-article_messcount">
-                <p>30</p>
-                <p>сообщений                    </p>
-              </div>
-            </div>
-            <div class="forum-article_item forum-article_right">                    <a class="main-title" href="#">Полное название темы                 </a>
-              <div class="forum-article_date">05.06.2019 г          </div>
-              <div class="forum-article_preview">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</div>
-            </div>
-          </div>
-          <div class="forum-article">
-            <div class="forum-article_item forum-article_left">
-              <div class="forum-article_icon"><img src="img/box-icon-2.png"></div>
-              <div class="forum-article_like">
-                <div class="forum-article_likecount"><span>79       </span></div>
-                <div class="forum-article_likeicon like-icon_grey">  </div>
-              </div>
-              <div class="forum-article_messcount">
-                <p>30</p>
-                <p>сообщений                    </p>
-              </div>
-            </div>
-            <div class="forum-article_item forum-article_right">                    <a class="main-title" href="#">Полное название темы                 </a>
-              <div class="forum-article_date">05.06.2019 г          </div>
-              <div class="forum-article_preview">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.            </div>
-            </div>
-          </div>
-          <div class="forum-article">
-            <div class="forum-article_item forum-article_left">
-              <div class="forum-article_icon"><img src="img/box-icon-2.png"></div>
-              <div class="forum-article_like">
-                <div class="forum-article_likecount"><span>79       </span></div>
-                <div class="forum-article_likeicon like-icon_blue">   </div>
-              </div>
-              <div class="forum-article_messcount">
-                <p>30</p>
-                <p>сообщений                    </p>
-              </div>
-            </div>
-            <div class="forum-article_item forum-article_right">                    <a class="main-title" href="#">Полное название темы                 </a>
-              <div class="forum-article_date">05.06.2019 г          </div>
-              <div class="forum-article_preview">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.          </div>
-            </div>
-          </div>
-          <div class="forum-article">
-            <div class="forum-article_item forum-article_left">
-              <div class="forum-article_icon"><img src="img/box-icon.png"></div>
-              <div class="forum-article_like">
-                <div class="forum-article_likecount"><span>79       </span></div>
-                <div class="forum-article_likeicon like-icon_red">   </div>
-              </div>
-              <div class="forum-article_messcount">
-                <p>30</p>
-                <p>сообщений                    </p>
-              </div>
-            </div>
-            <div class="forum-article_item forum-article_right">                    <a class="main-title" href="#">Полное название темы                 </a>
-              <div class="forum-article_date">05.06.2019 г          </div>
-              <div class="forum-article_preview">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</div>
-            </div>
-          </div>
-          <div class="forum-article">
-            <div class="forum-article_item forum-article_left">
-              <div class="forum-article_icon"><img src="img/box-icon-2.png"></div>
-              <div class="forum-article_like">
-                <div class="forum-article_likecount"><span>79       </span></div>
-                <div class="forum-article_likeicon like-icon_grey">  </div>
-              </div>
-              <div class="forum-article_messcount">
-                <p>30</p>
-                <p>сообщений                    </p>
-              </div>
-            </div>
-            <div class="forum-article_item forum-article_right">                    <a class="main-title" href="#">Полное название темы                 </a>
-              <div class="forum-article_date">05.06.2019 г          </div>
-              <div class="forum-article_preview">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.            </div>
-            </div>
-          </div>
-          <div class="forum-article">
-            <div class="forum-article_item forum-article_left">
-              <div class="forum-article_icon"><img src="img/box-icon-2.png"></div>
-              <div class="forum-article_like">
-                <div class="forum-article_likecount"><span>79       </span></div>
-                <div class="forum-article_likeicon like-icon_blue">   </div>
-              </div>
-              <div class="forum-article_messcount">
-                <p>30</p>
-                <p>сообщений                    </p>
-              </div>
-            </div>
-            <div class="forum-article_item forum-article_right">                    <a class="main-title" href="#">Полное название темы                 </a>
-              <div class="forum-article_date">05.06.2019 г          </div>
-              <div class="forum-article_preview">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.          </div>
-            </div>
-          </div>
-          <div class="forum-article">
-            <div class="forum-article_item forum-article_left">
-              <div class="forum-article_icon"><img src="img/box-icon.png"></div>
-              <div class="forum-article_like">
-                <div class="forum-article_likecount"><span>79       </span></div>
-                <div class="forum-article_likeicon like-icon_red">   </div>
-              </div>
-              <div class="forum-article_messcount">
-                <p>30</p>
-                <p>сообщений                    </p>
-              </div>
-            </div>
-            <div class="forum-article_item forum-article_right">                    <a class="main-title" href="#">Полное название темы                 </a>
-              <div class="forum-article_date">05.06.2019 г          </div>
-              <div class="forum-article_preview">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</div>
-            </div>
-          </div>
-          <div class="forum-article">
-            <div class="forum-article_item forum-article_left">
-              <div class="forum-article_icon"><img src="img/box-icon-2.png"></div>
-              <div class="forum-article_like">
-                <div class="forum-article_likecount"><span>79       </span></div>
-                <div class="forum-article_likeicon like-icon_grey">  </div>
-              </div>
-              <div class="forum-article_messcount">
-                <p>30</p>
-                <p>сообщений                    </p>
-              </div>
-            </div>
-            <div class="forum-article_item forum-article_right">                    <a class="main-title" href="#">Полное название темы                 </a>
-              <div class="forum-article_date">05.06.2019 г          </div>
-              <div class="forum-article_preview">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.            </div>
-            </div>
-          </div>
-          <div class="forum-article">
-            <div class="forum-article_item forum-article_left">
-              <div class="forum-article_icon"><img src="img/box-icon-2.png"></div>
-              <div class="forum-article_like">
-                <div class="forum-article_likecount"><span>79       </span></div>
-                <div class="forum-article_likeicon like-icon_grey">  </div>
-              </div>
-              <div class="forum-article_messcount">
-                <p>30</p>
-                <p>сообщений                    </p>
-              </div>
-            </div>
-            <div class="forum-article_item forum-article_right">                    <a class="main-title" href="#">Полное название темы                 </a>
-              <div class="forum-article_date">05.06.2019 г          </div>
-              <div class="forum-article_preview">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.                         </div>
-            </div>
-          </div>
-        </div>
-        <div class="forum-themes_nav">
-          <div class="forum-themes_nav__left"></div>
-          <div class="forum-themes_nav__right">
-            <div class="forum-pagination"><a class="forum-pagination_left" href="#"> </a><a class="curent" href="#">1</a><a href="#">2</a><a href="#">3</a><a href="#">4</a><a href="#">5</a><a href="#">6 </a><a href="#">7</a><a class="forum-pagination_right" href="#"></a><a class="forum-pagination_next" href="#">Вперед                                                                                                                    </a></div>
-          </div>
+    </div>
+    <div class="container">
+      <div class="postcrossing">
+        <h2 class="main-title">Посткроссинг</h2>
+        <div class="postcrossing-article main-text">
+          <p>Проект, созданный для возможности получения открыток со всего мира; возник подвлиянием буккроссинга. В основе принципа обмена открытками лежит единая база всех участников проекта, а также механизм выдачи адресов, направленный на то, чтобы разница между отправленными и полученными открытками у каждого участника была минимальной. При этом в посткроссинге имеет место система непрямого обмена, то есть отправляя открытки одним пользователям, участник получает их от других.</p>
+          <p>На апрель 2017 года в проекте было зарегистрировано более 676 000 человек из 208 стран[3], 2 июня 2015 года была получена 30-миллионная открытка[4], а 13 февраля 2017 года — 40-миллионная[5] </p>
         </div>
       </div>
     </div>
@@ -340,6 +352,7 @@
     <script src="libs/wow/wow.js"></script>
     <script src="libs/jquery-ui-select/jquery-ui.min.js"></script>
     <script src="libs/autosize/autosize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
     <script src="libs/fancybox/jquery.fancybox.js"></script>
     <script src="libs/owl.carusel-2.3.4/owl.carousel.min.js"></script>
     <script src="js/common.js"></script>

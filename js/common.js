@@ -114,30 +114,47 @@ $(document).ready(function() {
     });
     $('.postcard-info_tabs a:first').click();
 
-    $('.choose-social_inst').click(function(){
+    $('.choose-social_inst').click(function() {
         var divInner = $('.cabinet-middle_social__img');
         $(divInner).html('');
         $(divInner).html('<img src="img/inst-big.png">');
     });
 
-    $('.choose-social_vk').click(function(){
+    $('.choose-social_vk').click(function() {
         var divInner = $('.cabinet-middle_social__img');
         $(divInner).html('');
         $(divInner).html('<img src="img/vk-big.png">');
     });
 
-    $('.delete-table').click(function(){
+    $('.delete-table').click(function() {
         $(this).parents('.postcard-table_main').remove();
     });
 
-    $('.sortthemes_btn').click(function(){
+    $('.sortthemes_btn').click(function() {
         $('.sortthemes_btn').removeClass('active');
         $(this).addClass('active');
     });
 
+    var itemprice = $('.product-main_price span').text(),
+        priceInner = $('.product-main_price span');
 
+    $(".switch-count  .switch-button").on("click", function() {
+        var $button = $(this);
+        var oldValue = $button.parent().find("input").val();
+        if ($button.text() == "+") {
+            var newVal = parseFloat(oldValue) + 1;
+        } else {
+            if (oldValue > 1) {
+                var newVal = parseFloat(oldValue) - 1;
+            } else {
+                newVal = 1;
+            }
+        }
+        $button.parent().find("input").val(newVal);
 
-
-
+        var quantity = $('#quantity').val(),
+            total = itemprice * quantity;
+        $(priceInner).html(total);
+    });
 
 });
