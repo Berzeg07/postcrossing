@@ -157,4 +157,55 @@ $(document).ready(function() {
         $(priceInner).html(total);
     });
 
+    if ($("div").is("#map-profile")) {
+        ymaps.ready(init);
+
+        function init() {
+            var center = [55.59113656911934, 37.88662649999996];
+            var myMap = new ymaps.Map('map-profile', {
+                center: center,
+                controls: [],
+                zoom: 16
+            }, {
+                searchControlProvider: 'yandex#search'
+
+            });
+
+            // myMap.behaviors.disable('scrollZoom');
+
+            var myPlacemark = new ymaps.Placemark(center, {
+                // Свойства.
+                // Содержимое иконки, балуна и хинта.
+                balloonContent: 'улица Ивана Франко, 4к4',
+                hintContent: 'улица Ивана Франко, 4к4'
+            }, {
+                // Опции.
+                iconLayout: 'default#image',
+                iconImageHref: 'img/map-ic.png',
+                iconImageSize: [42, 42]
+                // preset: 'twirl#violetIcon'
+            });
+
+            myMap.geoObjects.add(myPlacemark);
+        }
+    }
+
+    $('.profile-social_link').hover(function() {
+        $('.profile-social span').toggleClass('active');
+    });
+
+    $('.profile-name').hover(function() {
+        $('.profile-name_hover').toggleClass('hide');
+        $('.profile-name_inner').toggleClass('active');
+    });
+
+    $('.profile-article_show').click(function(){
+        if($('.profile-article_inner').hasClass('active')){
+            $('.profile-article_show').html('Развернуть');
+        }else{
+            $('.profile-article_show').html('Свернуть');
+        }
+        $('.profile-article_inner').toggleClass('active');
+    });
+
 });

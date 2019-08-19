@@ -1,0 +1,94 @@
+.profile.border-wrap
+    .container
+        .profile-top.cabinet-top.box-shadow
+            .cabinet-top_item
+                .profile-ava.cabinet-ava_wrap
+                    .cabinet-ava_border
+                    .cabinet-ava
+                        img(src="img/ava-img.png")
+                ul.profile-ava_info
+                    li
+                        p Отправлено 233
+                        p Получено 235
+                    li        
+                        button.btn.sendpostcard-btn Отправить открытку
+                    li
+                        p Дата регистрации
+                        p 02.05.2019    
+
+
+            .cabinet-top_item
+                .cabinet-top_title
+                    .cabinet-top_title__item
+                        a(href="#").return-forum Вернуться в форум
+                    .cabinet-top_title__item
+                         .profile-social
+                             span Соц. сети
+                             ul
+                                li
+                                    a(href="#").profile-social_link
+                                        img(src="img/vk-ico.png")
+                                li 
+                                    a(href="#").profile-social_link
+                                        img(src="img/inst-ico.png")
+                                        
+                .profile-info
+                    .profile-nick Kari79
+                    .profile-vizit Последний визит 03.06.2019 г 
+                    .profile-name 
+                        p.profile-name_hover Показать имя и возраст
+                        p.profile-name_inner Кириенко Станислав Дмитриевич
+                    .profile-article
+                        .profile-article_inner
+                            p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.  
+                        span.profile-article_show Развернуть
+                    ul.profile-img
+                        li
+                            a(href="img/profile-img.jpg" data-fancybox="group-img")
+                                img(src="img/profile-img.jpg")
+                        li
+                            a(href="img/profile-img.jpg" data-fancybox="group-img")
+                                img(src="img/profile-img.jpg")
+                        li
+                            a(href="img/profile-img.jpg" data-fancybox="group-img")
+                                img(src="img/profile-img.jpg")
+                                       
+.container
+    .cabinet-middle.profile-adress.box-shadow
+        p.cabinet-middle_title.main-title Местоположение и адрес Kari79
+        .cabinet-middle_inner.profile-adress_inner
+            .cabinet-middle_inner__item
+                ul.adress-box
+                    li
+                        label(for="street-inp") Улица
+                        .adress-box_inp.adress-box_arrow
+                            input(type="text" placeholder="Улица").inp#street-inp
+                    li
+                        label(for="house-inp") Дом, Корпус, Квартира/Комната
+                        .adress-box_inp.adress-box_inner
+                            .adress-box_inp
+                                input(type="text" placeholder="Дом").inp#house-inp
+                            .adress-box_inp
+                                input(type="text" placeholder="Корпус").inp
+                            .adress-box_inp
+                                input(type="text" placeholder="Кв/Комната").inp
+                    li
+                        label(for="city-inp") Город/Населеный пункт
+                        .adress-box_inp.adress-box_arrow
+                            input(type="text" placeholder="Город/Населеный пункт").inp#city-inp            
+                    li
+                        label(for="rayon-inp") Район/Область
+                        .adress-box_inp.adress-box_arrow
+                            input(type="text" placeholder="Район/Область").inp#rayon-inp
+                    li
+                        label(for="country-inp") Страна
+                        .adress-box_inp.adress-box_arrow
+                            input(type="text" placeholder="Страна").inp#country-inp
+                    li
+                        label(for="index-inp") Индекс
+                        .adress-box_inp
+                            input(type="text" placeholder="XXX XXX").inp#index-inp
+                        
+            .cabinet-middle_inner__item
+                .map-profile#map-profile
+        include ./postcard-info2.pug
