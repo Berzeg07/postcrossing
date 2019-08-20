@@ -1,0 +1,41 @@
+.border-wrap
+    .container
+        .postcard-reg.cabinet-top.box-shadow
+            .cabinet-top_item
+                .profile-ava.cabinet-ava_wrap
+                    .cabinet-ava_border
+                    .cabinet-ava
+                        img(src="img/reg-letter-2.png")
+                ul.profile-ava_info
+                    li
+                        input(type="file").addpostcard-img#addpostcard-img
+                        label(for="addpostcard-img").addpostcard-img_btn Прикрепить фото <br>открытки
+                    li        
+                        button.delete-postcardimg Удалить
+
+
+            .cabinet-top_item
+                .return-forum Личный кабинет
+                .postcard-reg_inner
+                    .postcard-reg_inner__item
+                                                
+                        .profile-info
+                            .profile-nick Регистрация открытки
+                            .profile-vizit Регистрация открыток, полученных через<br> портал Лига посткроссеров
+                        
+                         
+                        .postcard-reg_num
+                            p Номер отправления
+                            .postcard-reg_num__inp
+                                label
+                                    input(type="text" value="ae").inp
+                                label
+                                    input(type="text" value="2836581").inp
+                                                            
+                    .postcard-reg_inner__item
+                        textarea(placeholder="Комментарий отправителю").postcard-reg_comment
+                        .postcard-reg_btn
+                            button.btn.btn-blue Зарегистрировать
+
+
+include ./postcard-info.pug

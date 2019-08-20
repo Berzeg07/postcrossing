@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
-    <title>Личный кабинет</title>
+    <title>Регистрация открытки</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/css/swiper.min.css">
     <link rel="stylesheet" href="libs/simplebox/simplebox.css">
     <link rel="stylesheet" href="libs/wow/animate.css">
@@ -58,172 +58,50 @@
     </header>
     <div class="border-wrap">
       <div class="container">
-        <div class="cabinet-top box-shadow">
+        <div class="postcard-reg cabinet-top box-shadow">
           <div class="cabinet-top_item">
-            <label class="cabinet-ava_wrap" for="ava-file">
+            <div class="profile-ava cabinet-ava_wrap">
               <div class="cabinet-ava_border"></div>
-              <div class="cabinet-ava"><img src="img/ava-img.png"></div>
-            </label>
-            <ul class="cabinet-top_btn">
+              <div class="cabinet-ava"><img src="img/reg-letter-2.png"></div>
+            </div>
+            <ul class="profile-ava_info">
               <li>
-                <input class="ava-file" type="file" id="ava-file">
-                <label for="ava-file">Изменить фото</label>
+                <input class="addpostcard-img" type="file" id="addpostcard-img">
+                <label class="addpostcard-img_btn" for="addpostcard-img">Прикрепить фото <br>открытки</label>
               </li>
-              <li><a class="delete-ava" href="#">Удалить фото</a></li>
               <li>       
-                <button class="btn btn-red sendpostcard-btn">Отправить открытку</button>
-              </li>
-              <li>
-                <button class="btn regpostcard-btn">Зарегистрировать открытку    </button>
+                <button class="delete-postcardimg">Удалить</button>
               </li>
             </ul>
           </div>
           <div class="cabinet-top_item">
-            <div class="cabinet-top_title">
-              <div class="cabinet-top_title__item">
-                <h2 class="main-title">Личный кабинет</h2>
-                <p class="cabinet-visit_date">Послений визит <span>03.12.2018</span>г</p>
+            <div class="return-forum">Личный кабинет</div>
+            <div class="postcard-reg_inner">
+              <div class="postcard-reg_inner__item">
+                <div class="profile-info">
+                  <div class="profile-nick">Регистрация открытки</div>
+                  <div class="profile-vizit">Регистрация открыток, полученных через<br> портал Лига посткроссеров</div>
+                </div>
+                <div class="postcard-reg_num">
+                  <p>Номер отправления</p>
+                  <div class="postcard-reg_num__inp">
+                    <label>
+                      <input class="inp" type="text" value="ae">
+                    </label>
+                    <label>
+                      <input class="inp" type="text" value="2836581">
+                    </label>
+                  </div>
+                </div>
               </div>
-              <div class="cabinet-top_title__item"><a class="cabinet-top_basket" href="#">Мои покупки</a></div>
-            </div>
-            <div class="cabinet-top_person">
-              <ul class="cabinet-top_person_left">
-                <li>
-                  <input class="inp" type="text" value="Иванов Семен Петрович">
-                </li>
-                <li>
-                  <input class="inp" type="text" placeholder="Логин">
-                </li>
-                <li>
-                  <label for="datebirth"></label>
-                  <input class="inp" type="text" placeholder="XX.XX.XXXX" id="datebirth">
-                </li>
-                <li><a class="delete-account" href="#">Удалить аккаунт        </a></li>
-              </ul>
-              <ul class="cabinet-top_person_right">
-                <li>
-                  <textarea class="cabinet-top_textarea" placeholder="О себе"></textarea>
-                </li>
-                <li>
-                  <ul class="cabinet-top_addphoto">
-                    <li>
-                      <div class="cabinet-img_min"></div>
-                      <button class="delete-photo"></button>
-                    </li>
-                    <li>
-                      <div class="cabinet-img_min"></div>
-                      <button class="delete-photo"></button>
-                    </li>
-                    <li>
-                      <div class="cabinet-img_min"></div>
-                      <button class="delete-photo"></button>
-                    </li>
-                    <li>
-                      <input class="min-photo_add" type="file" id="min-photo_add">
-                      <label for="min-photo_add">Прикрепить фото</label>
-                    </li>
-                  </ul>
-                </li>
-                <li>
-                  <button class="btn btn-red save-selfinfo" type="submit">Сохранить                    </button>
-                </li>
-              </ul>
+              <div class="postcard-reg_inner__item">
+                <textarea class="postcard-reg_comment" placeholder="Комментарий отправителю"></textarea>
+                <div class="postcard-reg_btn">
+                  <button class="btn btn-blue">Зарегистрировать</button>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-    <div class="container">
-      <div class="cabinet-middle box-shadow">
-        <div class="cabinet-middle_inner">
-          <div class="cabinet-middle_inner__item">
-            <p class="cabinet-middle_title main-title">Местоположение и адрес</p>
-            <ul class="adress-box">
-              <li>
-                <label for="street-inp">Улица</label>
-                <div class="adress-box_inp adress-box_arrow">
-                  <input class="inp" type="text" placeholder="Улица" id="street-inp">
-                </div>
-              </li>
-              <li>
-                <label for="house-inp">Дом, Корпус, Квартира/Комната</label>
-                <div class="adress-box_inp adress-box_inner">
-                  <div class="adress-box_inp">
-                    <input class="inp" type="text" placeholder="Дом" id="house-inp">
-                  </div>
-                  <div class="adress-box_inp">
-                    <input class="inp" type="text" placeholder="Корпус">
-                  </div>
-                  <div class="adress-box_inp">
-                    <input class="inp" type="text" placeholder="Кв/Комната">
-                  </div>
-                </div>
-              </li>
-              <li>
-                <label for="city-inp">Город/Населеный пункт</label>
-                <div class="adress-box_inp adress-box_arrow">
-                  <input class="inp" type="text" placeholder="Город/Населеный пункт" id="city-inp">
-                </div>
-              </li>
-              <li>
-                <label for="rayon-inp">Район/Область</label>
-                <div class="adress-box_inp adress-box_arrow">
-                  <input class="inp" type="text" placeholder="Район/Область" id="rayon-inp">
-                </div>
-              </li>
-              <li>
-                <label for="country-inp">Страна</label>
-                <div class="adress-box_inp adress-box_arrow">
-                  <input class="inp" type="text" placeholder="Страна" id="country-inp">
-                </div>
-              </li>
-              <li>
-                <label for="index-inp">Индекс</label>
-                <div class="adress-box_inp">
-                  <input class="inp" type="text" placeholder="XXX XXX" id="index-inp">
-                  <button class="btn purple-btn adress-box_btn btn-opacity" type="submit">Сохранить</button>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div class="cabinet-middle_inner__item">
-            <p class="cabinet-middle_title main-title">Смена пароля/e-mail</p>
-            <ul class="cabinet-middle_changepass">
-              <li>
-                <input class="inp" type="text" placeholder="Ввести старые данные">
-              </li>
-              <li>
-                <input class="inp" type="text" placeholder="Ввести новые данные">
-              </li>
-              <li>
-                <input class="inp" type="text" placeholder="Ввести новые данные еще раз">
-              </li>
-              <li>
-                <button class="btn changepass_btn btn-opacity">Обновить данные</button>
-              </li>
-            </ul>
-            <p class="cabinet-middle_title main-title">Добавить соц сети            </p>
-            <ul class="cabinet-middle_social">
-              <li>
-                <div class="social-imgbox">
-                  <div class="cabinet-middle_social__img"><img src="img/vk-big.png"></div>
-                  <div class="cabinet-middle_social__inp">
-                    <input class="inp" type="text">
-                  </div>
-                </div>
-              </li>
-              <li>
-                <p class="choose-social_title">Выберите соц сеть</p>
-                <ul class="choose-social">
-                  <li class="choose-social_inst"><img src="img/inst-icon.png"></li>
-                  <li class="choose-social_vk"><img src="img/vk-icon.png"></li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="cabinet-middle_privacy">
-          <p> <a href="#">Условиями обслуживания </a>и <a href="#">Политикой конфиденциальности. </a></p>
         </div>
       </div>
     </div>
