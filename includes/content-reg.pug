@@ -2,7 +2,7 @@
     form
         .border-wrap
             .container
-                .regestration-top.box-shadow
+                .regestration-top.box-shadow.wow.slideInRight(data-wow-duration="1s")
                     .regestration-item_title
                         a(href="#").regestration-enter Вход
                         h2.regestration-title Федеральная лига посткроссеров 
@@ -29,34 +29,35 @@
                             .pass-title Придумайте пароль
                             input(type="password" placeholder="Минимум 6 символов").inp
                             input(type="password" placeholder="Введите пароль еще раз").inp         
-        .container
-            .regestration-bottom.box-shadow.wow.slideInLeft(data-wow-duration="2s")
-                .regestration-bottom_title Местоположение и адрес
-                .regestration-bottom_inner
-                    .regestration-bottom_item
-                        include ./adress.pug
+        .border-wrap
+            .container
+                .regestration-bottom.box-shadow.wow.slideInRight(data-wow-duration="2s")
+                    .regestration-bottom_title Местоположение и адрес
+                    .regestration-bottom_inner
+                        .regestration-bottom_item
+                            include ./adress.pug
 
-                    .regestration-bottom_item
-                        .mayor-kluv
-                            .mayor-kluv_sircle
-                            .mayor-kluv_img
-                                img(src="img/kluv2.png")
-                            .tooltip-box.tooltip-kluv
-                                .tooltip-btn.pulsing i
-                                .tooltip-article
-                                    .tooltip-article_inner
-                                        |Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.
-                        .mayor-kluv_slider.owl-carousel
-                            .item
-                                p Привет! Рад приветствовать тебя на нашей платформе. Меня зовут Майор Клюв. Я помогаю ориентироваться на сайте и доставлять почту.Ты найдешь мои подсказки. Увидимся!
-                            .item
-                                p Привет! Рад приветствовать тебя на нашей платформе. Меня зовут Майор Клюв. Я помогаю ориентироваться на сайте и доставлять почту.Ты найдешь мои подсказки. Увидимся! 
-                            .item
-                                p Привет! Рад приветствовать тебя на нашей платформе. Меня зовут Майор Клюв. Я помогаю ориентироваться на сайте и доставлять почту.Ты найдешь мои подсказки. Увидимся!
+                        .regestration-bottom_item
+                            .mayor-kluv
+                                .mayor-kluv_sircle
+                                .mayor-kluv_img
+                                    img(src="img/kluv2.png")
+                                .tooltip-box.tooltip-kluv
+                                    .tooltip-btn.pulsing i
+                                    .tooltip-article
+                                        .tooltip-article_inner
+                                            |Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.
+                            .mayor-kluv_slider.owl-carousel
+                                .item
+                                    p Привет! Рад приветствовать тебя на нашей платформе. Меня зовут Майор Клюв. Я помогаю ориентироваться на сайте и доставлять почту.Ты найдешь мои подсказки. Увидимся!
+                                .item
+                                    p Привет! Рад приветствовать тебя на нашей платформе. Меня зовут Майор Клюв. Я помогаю ориентироваться на сайте и доставлять почту.Ты найдешь мои подсказки. Увидимся! 
+                                .item
+                                    p Привет! Рад приветствовать тебя на нашей платформе. Меня зовут Майор Клюв. Я помогаю ориентироваться на сайте и доставлять почту.Ты найдешь мои подсказки. Увидимся!
 
-                .privacy-check
-                    input(type="checkbox" checked)#privacy-check.privacy-check_inp
-                    label(for="privacy-check") Согласие с 
-                        a(href="#") Условиями обслуживания и Политикой конфиденциальности.            
+                    .privacy-check
+                        input(type="checkbox" checked)#privacy-check.privacy-check_inp
+                        label(for="privacy-check") Согласие с 
+                            a(href="#") Условиями обслуживания и Политикой конфиденциальности.            
 
 include ./postcrossing.pug
