@@ -3445,6 +3445,14 @@ body {
   }
 }
 
+.profile-social {
+  width: 160px;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: flex-end;
+}
+
 .profile-social_link {
   width: 32px;
   height: 32px;
@@ -3742,4 +3750,143 @@ body {
 
 .postcard-reg_btn {
   text-align: right;
+}
+
+.contacts {
+  padding: 10px;
+}
+
+.contacts .profile-social {
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .contacts .profile-social {
+    margin: 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .contacts-item:first-child {
+    width: 20%;
+  }
+}
+
+@media (min-width: 992px) {
+  .contacts-item:last-child {
+    width: 80%;
+  }
+}
+
+@media (min-width: 992px) {
+  .contacts {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+  }
+}
+
+@media (min-width: 1270px) {
+  .contacts {
+    padding: 79px 145px 48px 83px;
+  }
+}
+
+.contacts-img {
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .contacts-img {
+    text-align: left;
+  }
+}
+
+.contacts-title {
+  font-family: 'Cambria';
+  font-size: 36px;
+  color: #FF6B80;
+  margin-bottom: 38px;
+  text-align: center;
+  margin-top: 15px;
+}
+
+@media (min-width: 600px) {
+  .contacts-title {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 992px) {
+  .contacts-title {
+    margin-top: 0;
+  }
+}
+
+.contacts-mess {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 25px;
+}
+
+@media (min-width: 992px) {
+  .contacts-mess {
+    margin-bottom: 65px;
+  }
+}
+
+.contacts-mess a {
+  color: #079CB1;
+  display: inline-block;
+}
+
+@media (min-width: 992px) {
+  .contacts-info {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 992px) {
+  .contacts-info_list {
+    width: 50%;
+  }
+}
+
+.contacts-info_list li {
+  margin-bottom: 24px;
+}
+
+.contacts-info_list li p {
+  font-size: 11px;
+  margin-bottom: 8px;
+}
+
+@media (min-width: 992px) {
+  .contacts-info_list:last-child {
+    padding-top: 21px;
+    margin-left: 22px;
+  }
+}
+
+.contacts-info_field {
+  width: 100%;
+  font-size: 14px;
+  background: #F8F8F7;
+  padding: 16px 18px;
+}
+
+.contacts-phone {
+  font-size: 30px;
+}
+
+.contacts-email {
+  font-size: 16px;
 }
