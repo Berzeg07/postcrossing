@@ -138,7 +138,7 @@ $(document).ready(function() {
     var itemprice = $('.product-main_price span').text(),
         priceInner = $('.product-main_price span');
 
-    $(".switch-count  .switch-button").on("click", function() {
+    $(".product-counter  .switch-button").on("click", function() {
         var $button = $(this);
         var oldValue = $button.parent().find("input").val();
         if ($button.text() == "+") {
@@ -155,6 +155,31 @@ $(document).ready(function() {
         var quantity = $('#quantity').val(),
             total = itemprice * quantity;
         $(priceInner).html(total);
+    });
+
+
+
+    $(".product-cat_counter  .switch-button").on("click", function() {
+        var $button = $(this),
+            productCatPrice = $button.parents('.product-cat_count').find('.current-price').val(),
+            productCatPriceInner = $button.parents('.product-cat_count').find('.product-cat_price_main span'),
+            oldValue = $button.parent().find("input").val();
+
+        if ($button.text() == "+") {
+            var newVal = parseFloat(oldValue) + 1;
+        } else {
+            if (oldValue > 1) {
+                var newVal = parseFloat(oldValue) - 1;
+            } else {
+                newVal = 1;
+            }
+        }
+        $button.parent().find("input").val(newVal);
+
+        var quantity = $button.parent().find('.quantity').val(),
+            total = productCatPrice * quantity;
+
+        $(productCatPriceInner).html(total);
     });
 
     if ($("div").is("#map-profile")) {
@@ -199,10 +224,10 @@ $(document).ready(function() {
         $('.profile-name_inner').toggleClass('active');
     });
 
-    $('.profile-article_show').click(function(){
-        if($('.profile-article_inner').hasClass('active')){
+    $('.profile-article_show').click(function() {
+        if ($('.profile-article_inner').hasClass('active')) {
             $('.profile-article_show').html('Развернуть');
-        }else{
+        } else {
             $('.profile-article_show').html('Свернуть');
         }
         $('.profile-article_inner').toggleClass('active');

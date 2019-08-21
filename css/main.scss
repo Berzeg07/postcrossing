@@ -568,6 +568,7 @@ a {
 
 body {
     font-family: "Verdana";
+    font-size: 14px;
     overflow-x: hidden;
 }
 
@@ -3083,6 +3084,12 @@ body {
     justify-content: space-between;
     align-items: center;
 
+    &:hover {
+        .count-field {
+            background: #FD6B7E;
+        }
+    }
+
     .switch-button {
         display: inline-block;
         width: 19px;
@@ -3656,14 +3663,15 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    @media(min-width: 992px){
+    @media(min-width: 992px) {
         justify-content: flex-start;
+        padding: 18px;
     }
 
     li {
         text-align: center;
         margin-bottom: 25px;
-        @media(min-width: 992px){
+        @media(min-width: 992px) {
             margin-bottom: 50px;
         }
     }
@@ -3672,17 +3680,27 @@ body {
         display: inline-block;
         width: 270px;
         height: 266px;
-        padding: 0 10px;
+        // padding: 0 10px;
         display: -webkit-flex;
         display: -ms-flex;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
         transition: 0.5s;
         margin-bottom: 25px;
 
+        .product-addbasket_btn {
+            width: 100%;
+            margin-top: 3px;
+            display: none;
+        }
+
         &:hover {
             box-shadow: -7px 7px 27px rgba(0, 7, 3, 0.09);
+            .product-addbasket_btn{
+                display: block;
+            }
         }
     }
 
@@ -3697,5 +3715,47 @@ body {
     &_article {
         font-size: 14px;
         color: #BAB7BB;
+    }
+}
+
+.product-cat_img{
+    justify-content: flex-end;
+}
+
+.product-cat_count {
+    .product-count_item {
+        &:last-child {
+            text-align: left;
+            margin-left: 20px;
+        }
+    }
+}
+
+.product-cat_name {
+    margin-bottom: 8px;
+}
+
+.product-cat_date {
+    color: #BAB7BB;
+    margin-bottom: 12px;
+}
+
+.product-cat_price_main {
+    color: #5E8EA3;
+    font-size: 24px;
+    margin-bottom: 7px;
+}
+
+.product-cat_price_old {
+    color: #BAB7BB;
+    display: none;
+}
+
+.product-cat_price__action {
+    .product-cat_price_main {
+        color: #FD6B7E;
+    }
+    .product-cat_price_old {
+        display: block;
     }
 }
