@@ -233,4 +233,7 @@ $(document).ready(function() {
         $('.profile-article_inner').toggleClass('active');
     });
 
+    // custom select ===========================================================
+    $('.news-sort_select').selectmenu();
+
 });
