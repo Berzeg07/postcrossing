@@ -201,6 +201,7 @@ $(document).ready(function() {
 
     $('.delete-basket_product').click(function(){
         $(this).parents('li').remove();
+        totalBasketPrice();
     });
 
     if ($("div").is("#map-profile")) {
