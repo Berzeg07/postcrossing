@@ -1,0 +1,99 @@
+.border-wrap
+    .container
+        .sendpostcard-top.box-shadow.wow.slideInRight(data-wow-duration="1s")
+            .news-top_inner
+                .news-top_item.sendpostcard-top_img
+                    img(src="img/mess-icon.png")
+                .news-top_item
+                    .breadcrumbs
+                        a(href="#") Личный кабинет
+                    p.basket-top_title Отправить открытку
+                    p.sendpostcard-top_article Присвоение номера отправления через<br> портал Лига Посткроссеров
+                    ul.sendpostcard-top_list
+                        li
+                            .sendpostcard-user
+                                .sendpostcard-user_item
+                                    p Логин
+                                    input(type="text" value="Kari743" disabled).inp   
+                                .sendpostcard-user_item
+                                    p Номер
+                                    .sendpostcard-user_inner
+                                        label
+                                            input(type="text" value="ae" disabled).inp   
+                                        label
+                                            input(type="text" value="2836581" disabled).inp  
+
+.border-wrap   
+    .container
+        .sendpostcard.box-shadow.wow.slideInRight(data-wow-duration="2s")
+            .sendpostcard-data_title 
+                p Данные к отправлению открытки 
+                    a(href="#") Kari743
+            .sendpostcard-form.box-shadow
+                .sendpostcard-form_item
+                    p.sendpostcard-form_title Предпочтения пользователя 
+                        a(href="#") Kari743
+                    textarea(placeholder="Текст")
+                    p.sendpostcard-form_title.grey
+                        |Пожалуйста, внимательно сверяйте информацию в данном <br> блоке с данными на вашем конверте
+                    .sendpostcard-form_index
+                        label
+                            input(type="text")
+                        label
+                            input(type="text")    
+                        label
+                            input(type="text")
+                        label
+                            input(type="text")
+                        label
+                            input(type="text")
+                        label
+                            input(type="text")                                                                               
+                .sendpostcard-form_item
+                    .sendpostcard-form_inner
+                        p.sendpostcard-form_title Кому
+                        label.sendpostcard-form_label.adress-box_inp
+                            input(type="text").inp
+                        p.sendpostcard-form_title Куда
+                        ul.adress-box.sendpostcard-form_list
+                            li
+                    
+                                .adress-box_inp.adress-box_arrow
+                                    input(type="text" placeholder="Улица").inp#street-inp
+                            li
+                                
+                                .adress-box_inp.adress-box_inner
+                                    .adress-box_inp
+                                        input(type="text" placeholder="Дом").inp#house-inp
+                                    .adress-box_inp
+                                        input(type="text" placeholder="Корпус").inp
+                                    .adress-box_inp
+                                        input(type="text" placeholder="Кв/Комната").inp
+                            li
+                                
+                                .adress-box_inp.adress-box_arrow
+                                    input(type="text" placeholder="Город/Населеный пункт").inp#city-inp            
+                            li
+                        
+                                .adress-box_inp.adress-box_arrow
+                                    input(type="text" placeholder="Район/Область").inp#rayon-inp
+                            li
+                    
+                                .adress-box_inp.adress-box_arrow
+                                    input(type="text" placeholder="Страна").inp#country-inp
+                            li
+                                .adress-box_inp
+                                    input(type="text" placeholder="Индекс").inp
+            .sendbox
+                .sendbox_item
+                    p Вы отправляете открытку с адреса, который указан<br> в вашем личном кабинете?
+                .sendbox_item
+                    button(type="button").sendbox_btn.btn-blue Нет
+                    button(type="button").sendbox_btn.btn-red Да
+                    
+                
+                
+                    
+            
+
+include ./postcard-info.pug    
