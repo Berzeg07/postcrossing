@@ -93,7 +93,6 @@ video {
     vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-
 article,
 aside,
 details,
@@ -581,6 +580,10 @@ body {
     margin: 0 auto;
     width: 100%;
     padding: 0 10px;
+}
+
+.p0 {
+    padding: 0;
 }
 
 .header {
@@ -4337,7 +4340,7 @@ body {
 .sendpostcard {
     padding: 15px;
     @media(min-width: 992px) {
-        padding: 53px 10px 10px;
+        padding: 53px 0 0;
     }
 }
 
@@ -4422,7 +4425,10 @@ body {
             height: 70px;
 
             &:not(:last-child) {
-                margin-right: 20px;
+                margin-right: 4px;
+                @media(min-width: 768px) {
+                    margin-right: 20px;
+                }
             }
 
             input {
@@ -4472,6 +4478,7 @@ body {
     max-width: 1070px;
     width: 100%;
     margin: 25px auto;
+    padding-bottom: 25px;
     text-align: center;
     @media(min-width: 768px) {
         text-align: left;
@@ -4480,7 +4487,8 @@ body {
         display: flex;
     }
     @media(min-width: 992px) {
-        margin: 75px auto 40px;
+        margin: 75px auto 0;
+        padding-bottom: 60px;
     }
 
     &_item {
@@ -4500,5 +4508,149 @@ body {
         color: white;
         text-transform: uppercase;
         cursor: pointer;
+    }
+}
+
+.readytosend {
+    &-inner {
+        max-width: 1070px;
+        width: 100%;
+        margin: 0 auto;
+        padding-bottom: 40px;
+        @media(min-width: 992px) {
+            padding-bottom: 127px;
+        }
+    }
+    @media(min-width: 992px) {
+        background: url("../img/bg-send.jpg") no-repeat bottom center;
+    }
+
+    &-title {
+        font-family: 'Cambria';
+        font-size: 18px;
+        color: #7DA4B4;
+        margin-bottom: 25px;
+        @media(min-width: 992px) {
+            font-size: 24px;
+            margin-bottom: 58px;
+        }
+    }
+
+    &-time {
+        font-family: 'Cambria';
+        font-size: 24px;
+        color: #7DA4B4;
+        text-align: center;
+        margin-bottom: 25px;
+        @media(min-width: 992px) {
+            font-size: 34px;
+        }
+        @media(min-width: 1270px) {
+            font-size: 70px;
+        }
+    }
+
+    &-article {
+        text-align: center;
+        margin-bottom: 32px;
+
+        a {
+            color: #7DA4B4;
+        }
+    }
+
+    &-form {
+        max-width: 530px;
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        padding: 25px 0 18px;
+
+        &_title {
+            margin-bottom: 37px;
+        }
+        @media(min-width: 992px) {
+            padding: 45px 0 38px;
+        }
+
+        &_btn {
+            padding: 20px 0;
+            color: white;
+            border: none;
+            font-size: 12px;
+            text-transform: uppercase;
+            text-align: center;
+            width: 100px;
+            cursor: pointer;
+            @media(min-width: 768px) {
+                width: 220px;
+            }
+        }
+    }
+}
+
+.adress-box_room {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    max-width: 440px;
+    width: 100%;
+    padding-right: 25px;
+
+    &__item {
+        &:first-child {
+            width: 33%;
+            margin-right: 9px;
+        }
+
+        &:last-child {
+            width: 67%;
+        }
+    }
+}
+
+.editadress {
+    padding: 35px 0 55px;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1070px;
+width: 100%;
+margin: 0 auto;
+    @media(min-width: 768px) {
+        flex-direction: row;
+        align-items: baseline;
+    }
+    @media(min-width: 992px) {
+        padding: 72px 0 114px;
+    }
+
+    &-title {
+        margin-bottom: 25px;
+    }
+
+    &-item {
+        &:first-child {
+            @media(min-width: 768px) {
+                width: 30%;
+            }
+        }
+        &:last-child {
+            @media(min-width: 768px) {
+                width: 70%;
+            }
+        }
+    }
+}
+
+.editadress-btn_wrap {
+    max-width: 440px;
+    width: 100%;
+    text-align: center;
+    margin-top: 25px;
+    @media(min-width: 992px) {
+        margin-top: 40px;
     }
 }

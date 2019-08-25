@@ -24,7 +24,7 @@
                                             input(type="text" value="2836581" disabled).inp  
 
 .border-wrap   
-    .container
+    .container.p0
         .sendpostcard.box-shadow.wow.slideInRight(data-wow-duration="2s")
             .sendpostcard-data_title 
                 p Данные к отправлению открытки 
@@ -91,7 +91,58 @@
                     button(type="button").sendbox_btn.btn-blue Нет
                     button(type="button").sendbox_btn.btn-red Да
                     
+            .readytosend
+                .readytosend-inner
+                    p.readytosend-title Ваша открытка будет в пути:
+                    p.readytosend-time 4 недели 3 дня 5 часов
+                    p.readytosend-article Отслеживайте открытку в личном кабинете в разделе 
+                        a(href="#") "Информация об открытках"
+                    .readytosend-form.box-shadow
+                        p.readytosend-form_title Готовы отправить открытку?
+                        .readytosend-form_inner
+                            button.readytosend-form_btn.btn-red Отправить
+                            button.readytosend-form_btn.btn-blue Не сейчас
+                                
+                            
+            .editadress
+                .editadress-item
+                    p.editadress-title Введите свой адрес
+                .editadress-item
+                    ul.adress-box.sendpostcard-form_list
+                        li
                 
+                            .adress-box_inp.adress-box_arrow
+                                input(type="text" placeholder="Улица").inp
+                        li
+                            
+                            .adress-box_inp.adress-box_inner
+                                .adress-box_inp
+                                    input(type="text" placeholder="Дом").inp
+                                .adress-box_inp
+                                    input(type="text" placeholder="Корпус").inp
+                                .adress-box_inp
+                                    input(type="text" placeholder="Квартира").inp
+                        li
+                            .adress-box_room
+                                .adress-box_room__item
+                                    input(type="text" placeholder="Комната").inp
+                                .adress-box_room__item
+                                    input(type="text" placeholder="Населеный пункт").inp                  
+                        li
+                    
+                            .adress-box_inp
+                                input(type="text" placeholder="Район/Область").inp
+                        li
+                
+                            .adress-box_inp
+                                input(type="text" placeholder="Регион").inp
+                        li
+                            .adress-box_inp.adress-box_arrow
+                                input(type="text" placeholder="Страна").inp
+                    .editadress-btn_wrap
+                        button.editadress-btn.btn.btn-red Продолжить
+                
+                    
                 
                     
             
