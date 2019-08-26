@@ -1452,9 +1452,11 @@ body {
     background: #F8F8F7;
     border: none;
     padding: 0 5px;
-    font-size: 14px;
+    font-size: 12px;
     @media(min-width: 768px) {
         padding: 0 20px;
+        font-size: 14px;
+
     }
 
     &:focus {
@@ -2542,6 +2544,10 @@ body {
     background: url("../img/delete.png") no-repeat center;
     cursor: pointer;
     display: none;
+    transition: 0.5s;
+    &:hover{
+        transform: rotate(90deg);
+    }
 }
 
 .postcard-pagination {
@@ -4338,7 +4344,7 @@ body {
 }
 
 .sendpostcard {
-    padding: 15px;
+    padding: 0px;
     @media(min-width: 992px) {
         padding: 53px 0 0;
     }
@@ -4351,6 +4357,8 @@ body {
     max-width: 1255px;
     width: 100%;
     margin: 0 auto 25px;
+    padding: 10px;
+
 
     p {
         position: relative;
@@ -4480,7 +4488,7 @@ body {
     margin: 25px auto;
     padding-bottom: 25px;
     text-align: center;
-    @media(min-width: 768px) {
+    @media(min-width: 992px) {
         text-align: left;
         display: -webkit-flex;
         display: -ms-flex;
@@ -4495,8 +4503,9 @@ body {
         margin-bottom: 15px;
 
         &:first-child {
-            @media(min-width: 768px) {
+            @media(min-width: 992px) {
                 margin-right: 81px;
+                padding-left: 15px;
             }
         }
     }
@@ -4512,6 +4521,12 @@ body {
 }
 
 .readytosend {
+    display: none;
+    margin-top: 45px;
+    @media(min-width: 992px) {
+        margin-top: 90px;
+    }
+
     &-inner {
         max-width: 1070px;
         width: 100%;
@@ -4523,6 +4538,7 @@ body {
     }
     @media(min-width: 992px) {
         background: url("../img/bg-send.jpg") no-repeat bottom center;
+        background-size: contain;
     }
 
     &-title {
@@ -4564,13 +4580,15 @@ body {
         width: 100%;
         margin: 0 auto;
         text-align: center;
-        padding: 25px 0 18px;
+        // padding: 25px 0 18px;
+        position: relative;
+        animation: moving 2s infinite linear;
 
         &_title {
             margin-bottom: 37px;
         }
         @media(min-width: 992px) {
-            padding: 45px 0 38px;
+            // padding: 45px 0 38px;
         }
 
         &_btn {
@@ -4586,6 +4604,41 @@ body {
                 width: 220px;
             }
         }
+    }
+}
+
+.readytosend-form_item{
+    padding: 25px 0px;
+    @media(min-width: 992px) {
+        padding: 45px 0 38px;
+    }
+}
+
+.readytosend-form_result {
+    position: relative;
+    padding: 25px 0px;
+    display: none;
+    @media(min-width: 992px) {
+        padding: 45px 0 38px;
+    }
+    .close-form_result{
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        width: 17px;
+        height: 17px;
+        background: url('../img/delete.png') no-repeat center;
+        border: none;
+        cursor: pointer;
+        transition: 0.5s;
+        &:hover{
+            transform: rotate(90deg);
+        }
+    }
+    p {
+        font-family: 'Cambria';
+        color: #7DA4B4;
+        font-size: 28px;
     }
 }
 
@@ -4610,18 +4663,26 @@ body {
 }
 
 .editadress {
-    padding: 35px 0 55px;
-    display: -webkit-flex;
-    display: -ms-flex;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     max-width: 1070px;
-width: 100%;
-margin: 0 auto;
-    @media(min-width: 768px) {
-        flex-direction: row;
-        align-items: baseline;
+    width: 100%;
+    margin: 0 auto;
+    padding: 35px 10px 55px;
+    display: none;
+
+    .editadress-inner {
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @media(min-width: 768px) {
+            flex-direction: row;
+            align-items: baseline;
+        }
+    }
+
+    .adress-box_inp {
+        width: 100%;
     }
     @media(min-width: 992px) {
         padding: 72px 0 114px;
@@ -4637,6 +4698,7 @@ margin: 0 auto;
                 width: 30%;
             }
         }
+
         &:last-child {
             @media(min-width: 768px) {
                 width: 70%;
@@ -4653,4 +4715,12 @@ margin: 0 auto;
     @media(min-width: 992px) {
         margin-top: 40px;
     }
+}
+
+.hide-block {
+    display: none;
+}
+
+.show-block {
+    display: block;
 }

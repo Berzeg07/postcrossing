@@ -255,6 +255,38 @@ $(document).ready(function() {
         $('.profile-article_inner').toggleClass('active');
     });
 
+    $('#sendBtnNo').click(function(){
+        $(this).parents('.sendbox').addClass('hide-block');
+        $('.editadress').addClass('show-block');
+    });
+
+    $('#sendBtnYes').click(function(){
+        $(this).parents('.sendbox').addClass('hide-block');
+        $('.readytosend').addClass('show-block');
+    });
+
+    $('#aprooveAdress').click(function(){
+        $(this).parents('.editadress').removeClass('show-block');
+        $('.readytosend').addClass('show-block');
+    });
+
+    $('#sendPostcardBtn').click(function(){
+        $(this).parents('.readytosend-form_item').addClass('hide-block');
+        $('.readytosend-form_result').addClass('show-block');
+    });
+
+    $('.close-form_result').click(function(){
+        $(this).parents('.readytosend-form_result').removeClass('show-block');
+        $('.readytosend-form_item').removeClass('hide-block');
+        $(this).parents('.readytosend').removeClass('show-block');
+        $('.sendbox').removeClass('hide-block');
+    });
+
+    $('#canselPostcardBtn').click(function(){
+        $(this).parents('.readytosend').removeClass('show-block');
+        $('.sendbox').removeClass('hide-block');
+    });
+
     // custom select ===========================================================
     $('.news-sort_select').selectmenu();
 

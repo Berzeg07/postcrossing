@@ -1575,12 +1575,13 @@ body {
   background: #F8F8F7;
   border: none;
   padding: 0 5px;
-  font-size: 14px;
+  font-size: 12px;
 }
 
 @media (min-width: 768px) {
   .inp {
     padding: 0 20px;
+    font-size: 14px;
   }
 }
 
@@ -2734,6 +2735,11 @@ body {
   background: url("../img/delete.png") no-repeat center;
   cursor: pointer;
   display: none;
+  transition: 0.5s;
+}
+
+.delete-table:hover {
+  transform: rotate(90deg);
 }
 
 .postcard-pagination {
@@ -4642,7 +4648,7 @@ body {
 }
 
 .sendpostcard {
-  padding: 15px;
+  padding: 0px;
 }
 
 @media (min-width: 992px) {
@@ -4658,6 +4664,7 @@ body {
   max-width: 1255px;
   width: 100%;
   margin: 0 auto 25px;
+  padding: 10px;
 }
 
 .sendpostcard-data_title p {
@@ -4795,7 +4802,7 @@ body {
   text-align: center;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .sendbox {
     text-align: left;
     display: -webkit-flex;
@@ -4815,9 +4822,10 @@ body {
   margin-bottom: 15px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .sendbox_item:first-child {
     margin-right: 81px;
+    padding-left: 15px;
   }
 }
 
@@ -4828,6 +4836,17 @@ body {
   color: white;
   text-transform: uppercase;
   cursor: pointer;
+}
+
+.readytosend {
+  display: none;
+  margin-top: 45px;
+}
+
+@media (min-width: 992px) {
+  .readytosend {
+    margin-top: 90px;
+  }
 }
 
 .readytosend-inner {
@@ -4846,6 +4865,7 @@ body {
 @media (min-width: 992px) {
   .readytosend {
     background: url("../img/bg-send.jpg") no-repeat bottom center;
+    background-size: contain;
   }
 }
 
@@ -4897,17 +4917,12 @@ body {
   width: 100%;
   margin: 0 auto;
   text-align: center;
-  padding: 25px 0 18px;
+  position: relative;
+  animation: moving 2s infinite linear;
 }
 
 .readytosend-form_title {
   margin-bottom: 37px;
-}
-
-@media (min-width: 992px) {
-  .readytosend-form {
-    padding: 45px 0 38px;
-  }
 }
 
 .readytosend-form_btn {
@@ -4925,6 +4940,50 @@ body {
   .readytosend-form_btn {
     width: 220px;
   }
+}
+
+.readytosend-form_item {
+  padding: 25px 0px;
+}
+
+@media (min-width: 992px) {
+  .readytosend-form_item {
+    padding: 45px 0 38px;
+  }
+}
+
+.readytosend-form_result {
+  position: relative;
+  padding: 25px 0px;
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .readytosend-form_result {
+    padding: 45px 0 38px;
+  }
+}
+
+.readytosend-form_result .close-form_result {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 17px;
+  height: 17px;
+  background: url("../img/delete.png") no-repeat center;
+  border: none;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.readytosend-form_result .close-form_result:hover {
+  transform: rotate(90deg);
+}
+
+.readytosend-form_result p {
+  font-family: 'Cambria';
+  color: #7DA4B4;
+  font-size: 28px;
 }
 
 .adress-box_room {
@@ -4946,22 +5005,30 @@ body {
 }
 
 .editadress {
-  padding: 35px 0 55px;
+  max-width: 1070px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 35px 10px 55px;
+  display: none;
+}
+
+.editadress .editadress-inner {
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 1070px;
-  width: 100%;
-  margin: 0 auto;
 }
 
 @media (min-width: 768px) {
-  .editadress {
+  .editadress .editadress-inner {
     flex-direction: row;
     align-items: baseline;
   }
+}
+
+.editadress .adress-box_inp {
+  width: 100%;
 }
 
 @media (min-width: 992px) {
@@ -4997,4 +5064,12 @@ body {
   .editadress-btn_wrap {
     margin-top: 40px;
   }
+}
+
+.hide-block {
+  display: none;
+}
+
+.show-block {
+  display: block;
 }

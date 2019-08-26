@@ -92,7 +92,7 @@
       </div>
     </div>
     <div class="border-wrap">  
-      <div class="container p0">
+      <div class="container">
         <div class="sendpostcard box-shadow wow slideInRight" data-wow-duration="2s">
           <div class="sendpostcard-data_title"> 
             <p>Данные к отправлению открытки <a href="#">Kari743</a></p>
@@ -100,26 +100,26 @@
           <div class="sendpostcard-form box-shadow">
             <div class="sendpostcard-form_item">
               <p class="sendpostcard-form_title">Предпочтения пользователя <a href="#">Kari743</a></p>
-              <textarea placeholder="Текст"></textarea>
+              <textarea disabled>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</textarea>
               <p class="sendpostcard-form_title grey">Пожалуйста, внимательно сверяйте информацию в данном <br> блоке с данными на вашем конверте</p>
               <div class="sendpostcard-form_index">
                 <label>
-                  <input type="text">
+                  <input type="text" value="1" disabled>
                 </label>
                 <label>
-                  <input type="text">
+                  <input type="text" value="2" disabled>
                 </label>
                 <label>
-                  <input type="text">
+                  <input type="text" value="3" disabled>
                 </label>
                 <label>
-                  <input type="text">
+                  <input type="text" value="4" disabled>
                 </label>
                 <label>
-                  <input type="text">
+                  <input type="text" value="5" disabled>
                 </label>
                 <label>
-                  <input type="text">
+                  <input type="text" value="6" disabled>
                 </label>
               </div>
             </div>
@@ -127,46 +127,46 @@
               <div class="sendpostcard-form_inner">
                 <p class="sendpostcard-form_title">Кому</p>
                 <label class="sendpostcard-form_label adress-box_inp">
-                  <input class="inp" type="text">
+                  <input class="inp" type="text" value="Ковалев Александр Викторович" disabled>
                 </label>
                 <p class="sendpostcard-form_title">Куда</p>
                 <ul class="adress-box sendpostcard-form_list">
                   <li>
                     <div class="adress-box_inp adress-box_arrow">
-                      <input class="inp" type="text" placeholder="Улица" id="street-inp">
+                      <input class="inp" type="text" value="Улица" disabled>
                     </div>
                   </li>
                   <li>
                     <div class="adress-box_inp adress-box_inner">
                       <div class="adress-box_inp">
-                        <input class="inp" type="text" placeholder="Дом" id="house-inp">
+                        <input class="inp" type="text" value="Дом" disabled>
                       </div>
                       <div class="adress-box_inp">
-                        <input class="inp" type="text" placeholder="Корпус">
+                        <input class="inp" type="text" value="Корпус" disabled>
                       </div>
                       <div class="adress-box_inp">
-                        <input class="inp" type="text" placeholder="Кв/Комната">
+                        <input class="inp" type="text" value="Кв/Комната" disabled>
                       </div>
                     </div>
                   </li>
                   <li>
                     <div class="adress-box_inp adress-box_arrow">
-                      <input class="inp" type="text" placeholder="Город/Населеный пункт" id="city-inp">
+                      <input class="inp" type="text" value="Город/Населеный пункт" disabled>
                     </div>
                   </li>
                   <li>
                     <div class="adress-box_inp adress-box_arrow">
-                      <input class="inp" type="text" placeholder="Район/Область" id="rayon-inp">
+                      <input class="inp" type="text" value="Район/Область" disabled>
                     </div>
                   </li>
                   <li>
                     <div class="adress-box_inp adress-box_arrow">
-                      <input class="inp" type="text" placeholder="Страна" id="country-inp">
+                      <input class="inp" type="text" value="Страна" disabled>
                     </div>
                   </li>
                   <li>
                     <div class="adress-box_inp">
-                      <input class="inp" type="text" placeholder="Индекс">
+                      <input class="inp" type="text" value="Индекс" disabled>
                     </div>
                   </li>
                 </ul>
@@ -178,8 +178,8 @@
               <p>Вы отправляете открытку с адреса, который указан<br> в вашем личном кабинете?</p>
             </div>
             <div class="sendbox_item">
-              <button class="sendbox_btn btn-blue" type="button">Нет</button>
-              <button class="sendbox_btn btn-red" type="button">Да</button>
+              <button class="sendbox_btn btn-blue" type="button" id="sendBtnNo">Нет</button>
+              <button class="sendbox_btn btn-red" type="button" id="sendBtnYes">Да</button>
             </div>
           </div>
           <div class="readytosend">
@@ -188,66 +188,74 @@
               <p class="readytosend-time">4 недели 3 дня 5 часов</p>
               <p class="readytosend-article">Отслеживайте открытку в личном кабинете в разделе <a href="#">"Информация об открытках"</a></p>
               <div class="readytosend-form box-shadow">
-                <p class="readytosend-form_title">Готовы отправить открытку?</p>
-                <div class="readytosend-form_inner">
-                  <button class="readytosend-form_btn btn-red">Отправить</button>
-                  <button class="readytosend-form_btn btn-blue">Не сейчас</button>
+                <div class="readytosend-form_result">
+                  <button class="close-form_result"></button>
+                  <p>Ваша открытка отправлена</p>
+                </div>
+                <div class="readytosend-form_item">
+                  <p class="readytosend-form_title">Готовы отправить открытку?</p>
+                  <div class="readytosend-form_inner">
+                    <button class="readytosend-form_btn btn-red" id="sendPostcardBtn">Отправить</button>
+                    <button class="readytosend-form_btn btn-blue" id="canselPostcardBtn">Не сейчас</button>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
           <div class="editadress">
-            <div class="editadress-item">
-              <p class="editadress-title">Введите свой адрес</p>
-            </div>
-            <div class="editadress-item">
-              <ul class="adress-box sendpostcard-form_list">
-                <li>
-                  <div class="adress-box_inp adress-box_arrow">
-                    <input class="inp" type="text" placeholder="Улица">
-                  </div>
-                </li>
-                <li>
-                  <div class="adress-box_inp adress-box_inner">
+            <div class="editadress-inner">
+              <div class="editadress-item">
+                <p class="editadress-title">Введите свой адрес</p>
+              </div>
+              <div class="editadress-item">
+                <ul class="adress-box sendpostcard-form_list">
+                  <li>
+                    <div class="adress-box_inp adress-box_arrow">
+                      <input class="inp" type="text" placeholder="Улица">
+                    </div>
+                  </li>
+                  <li>
+                    <div class="adress-box_inp adress-box_inner">
+                      <div class="adress-box_inp">
+                        <input class="inp" type="text" placeholder="Дом">
+                      </div>
+                      <div class="adress-box_inp">
+                        <input class="inp" type="text" placeholder="Корпус">
+                      </div>
+                      <div class="adress-box_inp">
+                        <input class="inp" type="text" placeholder="Квартира">
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="adress-box_room">
+                      <div class="adress-box_room__item">
+                        <input class="inp" type="text" placeholder="Комната">
+                      </div>
+                      <div class="adress-box_room__item">
+                        <input class="inp" type="text" placeholder="Населеный пункт">
+                      </div>
+                    </div>
+                  </li>
+                  <li>
                     <div class="adress-box_inp">
-                      <input class="inp" type="text" placeholder="Дом">
+                      <input class="inp" type="text" placeholder="Район/Область">
                     </div>
+                  </li>
+                  <li>
                     <div class="adress-box_inp">
-                      <input class="inp" type="text" placeholder="Корпус">
+                      <input class="inp" type="text" placeholder="Регион">
                     </div>
-                    <div class="adress-box_inp">
-                      <input class="inp" type="text" placeholder="Квартира">
+                  </li>
+                  <li>
+                    <div class="adress-box_inp adress-box_arrow">
+                      <input class="inp" type="text" placeholder="Страна">
                     </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="adress-box_room">
-                    <div class="adress-box_room__item">
-                      <input class="inp" type="text" placeholder="Комната">
-                    </div>
-                    <div class="adress-box_room__item">
-                      <input class="inp" type="text" placeholder="Населеный пункт">
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="adress-box_inp">
-                    <input class="inp" type="text" placeholder="Район/Область">
-                  </div>
-                </li>
-                <li>
-                  <div class="adress-box_inp">
-                    <input class="inp" type="text" placeholder="Регион">
-                  </div>
-                </li>
-                <li>
-                  <div class="adress-box_inp adress-box_arrow">
-                    <input class="inp" type="text" placeholder="Страна">
-                  </div>
-                </li>
-              </ul>
-              <div class="editadress-btn_wrap">
-                <button class="editadress-btn btn btn-red">Продолжить</button>
+                  </li>
+                </ul>
+                <div class="editadress-btn_wrap">
+                  <button class="editadress-btn btn btn-red" id="aprooveAdress">Продолжить</button>
+                </div>
               </div>
             </div>
           </div>
