@@ -306,9 +306,13 @@ $(document).ready(function() {
             $('.foruminner-bottom_comments').slideUp();
             $('.add-comment').removeClass('active');
             $('.formcomment-inner').removeAttr('style');
+            $('.foruminner-bottom_comment').removeClass("active");
         }
+
         $this.toggleClass("active");
         $(this).parents('.foruminner-bottom_inner').next().slideToggle();
+        $(this).parents('.foruminner-bottom_comment').toggleClass("active");
+
     });
 
     $('.add-answear').click(function() {
@@ -317,14 +321,13 @@ $(document).ready(function() {
         if (!$this.hasClass("active")) {
             $('.formcomment-inner').slideUp();
             $(".add-answear").removeClass("active");
+            $(".comment-answears").removeClass("active");
         }
 
         $this.toggleClass("active");
+        $(this).parents('.comment-answears').toggleClass("active");
         $(this).parents('.foruminner-bottom_comments__item').find('.formcomment-inner').slideToggle();
     });
 
-    function showComments() {
-
-    }
 
 });

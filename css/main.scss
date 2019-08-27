@@ -93,6 +93,7 @@ video {
     vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
+
 article,
 aside,
 details,
@@ -116,7 +117,7 @@ q {
     quotes: none;
 }
 
-button{
+button {
     outline: none;
 }
 
@@ -4787,7 +4788,7 @@ body {
 
 .foruminner {
     padding-bottom: 25px;
-    @media(min-width: 992px){
+    @media(min-width: 992px) {
         padding-bottom: 70px;
     }
 
@@ -4977,7 +4978,7 @@ body {
         }
     }
 
-    &_item{
+    &_item {
         margin-bottom: 25px;
     }
 
@@ -5152,6 +5153,16 @@ body {
     }
 }
 
+.foruminner-bottom_comment.active {
+    background: #E5F1F4;
+    border-bottom: 4px solid #38A5B8;
+}
+
+.comment-answears.active {
+    border: 1px solid #38A5B8;
+    background: #F8F8F7;
+}
+
 .foruminner-formcomment {
     border: 1px solid #38A5B8;
     margin-top: 25px;
@@ -5196,10 +5207,10 @@ body {
     }
 }
 
-.formcomment-main{
+.formcomment-main {
     display: block;
 }
 
-.pagination-forum{
+.pagination-forum {
     margin-top: 45px;
 }
