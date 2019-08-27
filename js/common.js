@@ -199,7 +199,7 @@ $(document).ready(function() {
         }
     });
 
-    $('.delete-basket_product').click(function(){
+    $('.delete-basket_product').click(function() {
         $(this).parents('li').remove();
         totalBasketPrice();
     });
@@ -255,39 +255,76 @@ $(document).ready(function() {
         $('.profile-article_inner').toggleClass('active');
     });
 
-    $('#sendBtnNo').click(function(){
+    $('#sendBtnNo').click(function() {
         $(this).parents('.sendbox').addClass('hide-block');
         $('.editadress').addClass('show-block');
     });
 
-    $('#sendBtnYes').click(function(){
+    $('#sendBtnYes').click(function() {
         $(this).parents('.sendbox').addClass('hide-block');
         $('.readytosend').addClass('show-block');
     });
 
-    $('#aprooveAdress').click(function(){
+    $('#aprooveAdress').click(function() {
         $(this).parents('.editadress').removeClass('show-block');
         $('.readytosend').addClass('show-block');
     });
 
-    $('#sendPostcardBtn').click(function(){
+    $('#sendPostcardBtn').click(function() {
         $(this).parents('.readytosend-form_item').addClass('hide-block');
         $('.readytosend-form_result').addClass('show-block');
     });
 
-    $('.close-form_result').click(function(){
+    $('.close-form_result').click(function() {
         $(this).parents('.readytosend-form_result').removeClass('show-block');
         $('.readytosend-form_item').removeClass('hide-block');
         $(this).parents('.readytosend').removeClass('show-block');
         $('.sendbox').removeClass('hide-block');
     });
 
-    $('#canselPostcardBtn').click(function(){
+    $('#canselPostcardBtn').click(function() {
         $(this).parents('.readytosend').removeClass('show-block');
         $('.sendbox').removeClass('hide-block');
     });
 
+    $(".postcard-scroll").click(function(e) {
+        e.preventDefault();
+        var currentBlock = $(this).attr("href");
+        currentBlockoffset = $(currentBlock).offset().top;
+        $("html, body").animate({
+            scrollTop: currentBlockoffset
+        }, 500);
+    });
+
     // custom select ===========================================================
     $('.news-sort_select').selectmenu();
+
+    $('.add-comment').click(function() {
+        var $this = $(this)
+
+        if (!$this.hasClass("active")) {
+            $('.foruminner-bottom_comments').slideUp();
+            $('.add-comment').removeClass('active');
+            $('.formcomment-inner').removeAttr('style');
+        }
+        $this.toggleClass("active");
+        $(this).parents('.foruminner-bottom_inner').next().slideToggle();
+    });
+
+    $('.add-answear').click(function() {
+        var $this = $(this)
+
+        if (!$this.hasClass("active")) {
+            $('.formcomment-inner').slideUp();
+            $(".add-answear").removeClass("active");
+        }
+
+        $this.toggleClass("active");
+        $(this).parents('.foruminner-bottom_comments__item').find('.formcomment-inner').slideToggle();
+    });
+
+    function showComments() {
+
+    }
 
 });
