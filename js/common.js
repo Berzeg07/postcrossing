@@ -343,22 +343,6 @@ $(document).ready(function() {
     // custom select ===========================================================
     $('.news-sort_select').selectmenu();
 
-    // $('.add-comment').click(function() {
-    //     var $this = $(this)
-    //
-    //     if (!$this.hasClass("active")) {
-    //         $('.foruminner-bottom_comments').slideUp();
-    //         $('.add-comment').removeClass('active');
-    //         $('.formcomment-inner').removeAttr('style');
-    //         $('.foruminner-bottom_comment').removeClass("active");
-    //     }
-    //
-    //     $this.toggleClass("active");
-    //     $(this).parents('.foruminner-bottom_inner').next().slideToggle();
-    //     $(this).parents('.foruminner-bottom_comment').toggleClass("active");
-    //
-    // });
-
     autosize(document.querySelectorAll('textarea'));
 
     $('.foruminner-formcomment_textarea').focus(function() {
@@ -368,96 +352,37 @@ $(document).ready(function() {
         $(this).parents('.foruminner-formcomment').removeClass('active');
     });
 
-    function showMainComment() {
-        var $this = $(this)
-        var comment = $(this).parents('.foruminner-bottom_item').find('.formcomment-main');
-        var commentAttr = $(comment).attr('style');
 
-        if (!$this.hasClass("active")) {
-            $('.add-comment').removeClass('active');
-            $('.formcomment-main').slideUp();
-            $('.foruminner-commentcount').removeClass("active");
-        }
-        $(this).parents('.foruminner-bottom_item').find('.formcomment-main').slideDown();
-        $(this).parents('.foruminner-bottom_item').find('.foruminner-commentcount').addClass("active");
-        $this.addClass("active");
-    }
 
     $('.quote-btn').click(function() {
         var $this = $(this)
-        var comment = $(this).parents('.foruminner-bottom_item').find('.formcomment-main');
-        var commentAttr = $(comment).attr('style');
-
-        if (!$this.hasClass("active")) {
-            $('.add-comment').removeClass('active');
-            $('.formcomment-main').slideUp();
-            $('.foruminner-commentcount').removeClass("active");
-            $('.quote-box').html('');
-        }
-
-        $(this).parents('.foruminner-bottom_item').find('.formcomment-main').slideDown();
-        $(this).parents('.foruminner-bottom_item').find('.foruminner-commentcount').addClass("active");
-
-        var quoteText = $(this).parents('.foruminner-bottom_comment').find('.foruminner-bottom_text').html();
-        $(this).parents('.foruminner-bottom_item').find('.quote-box').html(quoteText);
-
-        $this.addClass("active");
+        $('.quote-box').html('');
+        $('.nick-author').html('');
+        var quoteText = $(this).parents('.foruminner-bottom_comment').find('.foruminner-bottom_text__inner').html();
+        $('.quote-box').html(quoteText);
+        var currentBlockoffset = $('#form-comment').offset().top;
+    	$("html, body").animate({
+    		scrollTop: currentBlockoffset
+    	}, 500);
     });
 
     $('.add-comment').click(function() {
         var $this = $(this)
-        var comment = $(this).parents('.foruminner-bottom_item').find('.formcomment-main');
-        var commentAttr = $(comment).attr('style');
-
-        if (!$this.hasClass("active")) {
-            $('.add-comment').removeClass('active');
-            $('.formcomment-main').slideUp();
-            $('.foruminner-commentcount').removeClass("active");
-
-        }
         $('.quote-box').html('');
-        $(this).parents('.foruminner-bottom_item').find('.formcomment-main').slideDown();
-        $(this).parents('.foruminner-bottom_item').find('.foruminner-commentcount').addClass("active");
-        $this.addClass("active");
+        $('.nick-author').html('');
+        var quoteText = $(this).parents('.foruminner-bottom_inner').find('.foruminner-nick').html();
+        $('.nick-author').html(quoteText);
+        var currentBlockoffset = $('#form-comment').offset().top;
+        $("html, body").animate({
+            scrollTop: currentBlockoffset
+        }, 500);
     });
 
-    $('.foruminner-commentcount').click(function() {
-        var $this = $(this)
 
-        if (!$this.hasClass("active")) {
-            $('.foruminner-bottom_comments').slideUp();
-            $('.add-comment').removeClass('active');
-            $('.formcomment-inner').removeAttr('style');
-            $('.foruminner-bottom_comment').removeClass("active");
-            $('.formcomment-main').slideUp();
-            $('.add-comment').removeClass('active');
-            $('.foruminner-commentcount').removeClass('active');
-        }
 
-        $this.addClass("active");
-        $(this).parents('.foruminner-bottom_inner').next().slideDown();
-        $(this).parents('.foruminner-bottom_comment').addClass("active");
-        $(this).parents('.foruminner-bottom_item').find('.add-comment').addClass("active");
-        $(this).parents('.foruminner-bottom_item').find('.formcomment-main').slideDown();
 
-    });
 
-    $('.add-answear').click(function() {
-        var $this = $(this)
-        var text = $this.html();
 
-        if (!$this.hasClass("active")) {
-            $('.formcomment-inner').slideUp();
-            $(".add-answear").removeClass("active");
-            $(".comment-answears").removeClass("active");
-        }
-        if (text == "Комментировать") {
-            $('.quote-box').html('');
-        }
-        $this.addClass("active");
-        $(this).parents('.comment-answears').addClass("active");
-        $(this).parents('.foruminner-bottom_comments__item').find('.formcomment-inner').slideDown();
-    });
 
     $(function() {
         $('.minimized').click(function(event) {
@@ -495,13 +420,13 @@ $(document).ready(function() {
         });
     });
 
-    $('.order-table_delete').click(function(){
+    $('.order-table_delete').click(function() {
         $(this).parents('tr').remove();
     });
 
-    $('.forum-article_likeicon').click(function(){
+    $('.forum-article_likeicon').click(function() {
         $(this).parent().find('.tooltip-article').addClass('active');
-        $(this).mouseleave(function(){
+        $(this).mouseleave(function() {
             $(this).parent().find('.tooltip-article').removeClass('active');
         });
     });

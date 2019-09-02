@@ -93,6 +93,7 @@ video {
     vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
+
 article,
 aside,
 details,
@@ -244,7 +245,6 @@ a {
     height: auto;
 }
 /* кнопка закрытия */
-
 .modal-close {
     position: absolute;
     width: 17px;
@@ -1686,9 +1686,7 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-        // @media(min-width: 500px) {
         height: 182px;
-        // }
     }
 
     &_img {
@@ -4358,7 +4356,7 @@ body {
 
 .service-title {
     color: #5E8EA3;
-    @media(min-width: 768px){
+    @media(min-width: 768px) {
         padding-left: 72px;
     }
 }
@@ -5478,8 +5476,38 @@ body {
     }
 }
 
-.foruminner-article_like {
+.foruminner-top_bottom {
     margin-top: 34px;
+}
+
+.answear_author {
+    color: #089CB1;
+    font-size: 16px;
+}
+
+.my-answear_color{
+    color: #FD6B7E;
+}
+
+.auth-user_img{
+    border: 2px solid #FD6B7E;
+}
+
+.quote-text {
+    padding: 15px 10px;
+    font-size: 12px;
+    border: 1px solid #E5E5E4;
+    margin-bottom: 15px;
+
+    a {
+        color: #089CB1;
+    }
+
+    &_author {
+        color: #089CB1;
+        font-size: 13px;
+        padding-bottom: 10px;
+    }
 }
 
 .foruminner-date {
@@ -5784,12 +5812,9 @@ body {
 }
 
 .foruminner-formcomment {
-    max-width: 896px;
-    margin-left: auto;
     border: 1px solid transparent;
     margin-top: 25px;
     margin-bottom: 25px;
-    display: none;
 
     &_title {
         background: #E5F1F4;
@@ -5805,7 +5830,7 @@ body {
         font-family: "Verdana";
         font-size: 14px;
         width: 100%;
-        padding: 7px;
+        padding: 7px 10px 10px 24px;
         resize: none;
         height: 65px;
         margin-bottom: 25px;
@@ -5830,10 +5855,6 @@ body {
 
 .foruminner-formcomment.active {
     border: 1px solid #38A5B8;
-}
-
-.formcomment-main {
-    display: none;
 }
 
 .pagination-forum {
@@ -6243,4 +6264,13 @@ body {
 .service-list_info {
     text-align: left;
     margin-bottom: 25px;
+}
+
+.user-comment_padding {
+    padding-bottom: 25px;
+    padding-right: 20px;
+}
+
+.user-comment_bg {
+    background: #EDF5F9;
 }
