@@ -27,6 +27,7 @@ $(document).ready(function() {
         loop: true,
         margin: 5,
         nav: true,
+        mouseDrag: true,
         autoplay: true,
         navText: ['<span class="nav-left"></span>', '<span class="nav-right"></span>'],
         smartSpeed: 1000,
@@ -35,16 +36,20 @@ $(document).ready(function() {
                 items: 2
             },
             992: {
+                items: 3
+            },
+            1600: {
                 items: 4
             }
         }
     });
 
+
     $('.icon-slider').owlCarousel({
         center: false,
         items: 1,
         loop: true,
-        margin: 55,
+        margin: 0,
         nav: true,
         autoplay: false,
         navText: ['<span class="nav-left"></span>', '<span class="nav-right"></span>'],
@@ -131,6 +136,7 @@ $(document).ready(function() {
     });
 
     $('.sortthemes_btn').click(function() {
+        var text = $(this).text();
         $('.sortthemes_btn').removeClass('active');
         $(this).addClass('active');
     });
@@ -255,19 +261,39 @@ $(document).ready(function() {
         $('.profile-article_inner').toggleClass('active');
     });
 
+    $('.order-toggle').click(function() {
+        if ($('.order-shipping_toggle').hasClass('active')) {
+            $(this).html('Информация о стоимости');
+        } else {
+            $(this).html('Свернуть информацию о стоимости');
+        }
+        $('.order-shipping_toggle').toggleClass('active');
+        $('.order-shipping_toggle').slideToggle();
+
+    });
+
     $('#sendBtnNo').click(function() {
         $(this).parents('.sendbox').addClass('hide-block');
-        $('.editadress').addClass('show-block');
+        $('.editadress').slideDown();
+
+        // $('.editadress').addClass('show-block');
+
     });
 
     $('#sendBtnYes').click(function() {
         $(this).parents('.sendbox').addClass('hide-block');
-        $('.readytosend').addClass('show-block');
+        $('.readytosend').slideDown();
+
+        // $('.readytosend').addClass('show-block');
     });
 
     $('#aprooveAdress').click(function() {
-        $(this).parents('.editadress').removeClass('show-block');
-        $('.readytosend').addClass('show-block');
+        // $(this).parents('.editadress').removeClass('show-block');
+        $(this).parents('.editadress').slideUp();
+        $('.readytosend').slideDown();
+
+
+        // $('.readytosend').addClass('show-block');
     });
 
     $('#sendPostcardBtn').click(function() {
@@ -277,13 +303,18 @@ $(document).ready(function() {
 
     $('.close-form_result').click(function() {
         $(this).parents('.readytosend-form_result').removeClass('show-block');
+
         $('.readytosend-form_item').removeClass('hide-block');
-        $(this).parents('.readytosend').removeClass('show-block');
+        // $(this).parents('.readytosend').removeClass('show-block');
+        $(this).parents('.readytosend').slideUp();
+
         $('.sendbox').removeClass('hide-block');
     });
 
     $('#canselPostcardBtn').click(function() {
-        $(this).parents('.readytosend').removeClass('show-block');
+        // $(this).parents('.readytosend').removeClass('show-block');
+        $(this).parents('.readytosend').slideUp();
+
         $('.sendbox').removeClass('hide-block');
     });
 
@@ -296,10 +327,101 @@ $(document).ready(function() {
         }, 500);
     });
 
+    $(".basket-more").click(function(e) {
+        e.preventDefault();
+        var currentBlock = $(this).attr("href");
+        currentBlockoffset = $(currentBlock).offset().top;
+        $("html, body").animate({
+            scrollTop: currentBlockoffset
+        }, 500);
+    });
+
+    $('.toggle-article').click(function() {
+        $('.foruminner-article').slideToggle();
+    });
+
     // custom select ===========================================================
     $('.news-sort_select').selectmenu();
 
+    // $('.add-comment').click(function() {
+    //     var $this = $(this)
+    //
+    //     if (!$this.hasClass("active")) {
+    //         $('.foruminner-bottom_comments').slideUp();
+    //         $('.add-comment').removeClass('active');
+    //         $('.formcomment-inner').removeAttr('style');
+    //         $('.foruminner-bottom_comment').removeClass("active");
+    //     }
+    //
+    //     $this.toggleClass("active");
+    //     $(this).parents('.foruminner-bottom_inner').next().slideToggle();
+    //     $(this).parents('.foruminner-bottom_comment').toggleClass("active");
+    //
+    // });
+
+    autosize(document.querySelectorAll('textarea'));
+
+    $('.foruminner-formcomment_textarea').focus(function() {
+        $(this).parents('.foruminner-formcomment').addClass('active');
+    });
+    $('.foruminner-formcomment_textarea').blur(function() {
+        $(this).parents('.foruminner-formcomment').removeClass('active');
+    });
+
+    function showMainComment() {
+        var $this = $(this)
+        var comment = $(this).parents('.foruminner-bottom_item').find('.formcomment-main');
+        var commentAttr = $(comment).attr('style');
+
+        if (!$this.hasClass("active")) {
+            $('.add-comment').removeClass('active');
+            $('.formcomment-main').slideUp();
+            $('.foruminner-commentcount').removeClass("active");
+        }
+        $(this).parents('.foruminner-bottom_item').find('.formcomment-main').slideDown();
+        $(this).parents('.foruminner-bottom_item').find('.foruminner-commentcount').addClass("active");
+        $this.addClass("active");
+    }
+
+    $('.quote-btn').click(function() {
+        var $this = $(this)
+        var comment = $(this).parents('.foruminner-bottom_item').find('.formcomment-main');
+        var commentAttr = $(comment).attr('style');
+
+        if (!$this.hasClass("active")) {
+            $('.add-comment').removeClass('active');
+            $('.formcomment-main').slideUp();
+            $('.foruminner-commentcount').removeClass("active");
+            $('.quote-box').html('');
+        }
+
+        $(this).parents('.foruminner-bottom_item').find('.formcomment-main').slideDown();
+        $(this).parents('.foruminner-bottom_item').find('.foruminner-commentcount').addClass("active");
+
+        var quoteText = $(this).parents('.foruminner-bottom_comment').find('.foruminner-bottom_text').html();
+        $(this).parents('.foruminner-bottom_item').find('.quote-box').html(quoteText);
+
+        $this.addClass("active");
+    });
+
     $('.add-comment').click(function() {
+        var $this = $(this)
+        var comment = $(this).parents('.foruminner-bottom_item').find('.formcomment-main');
+        var commentAttr = $(comment).attr('style');
+
+        if (!$this.hasClass("active")) {
+            $('.add-comment').removeClass('active');
+            $('.formcomment-main').slideUp();
+            $('.foruminner-commentcount').removeClass("active");
+
+        }
+        $('.quote-box').html('');
+        $(this).parents('.foruminner-bottom_item').find('.formcomment-main').slideDown();
+        $(this).parents('.foruminner-bottom_item').find('.foruminner-commentcount').addClass("active");
+        $this.addClass("active");
+    });
+
+    $('.foruminner-commentcount').click(function() {
         var $this = $(this)
 
         if (!$this.hasClass("active")) {
@@ -307,27 +429,96 @@ $(document).ready(function() {
             $('.add-comment').removeClass('active');
             $('.formcomment-inner').removeAttr('style');
             $('.foruminner-bottom_comment').removeClass("active");
+            $('.formcomment-main').slideUp();
+            $('.add-comment').removeClass('active');
+            $('.foruminner-commentcount').removeClass('active');
         }
 
-        $this.toggleClass("active");
-        $(this).parents('.foruminner-bottom_inner').next().slideToggle();
-        $(this).parents('.foruminner-bottom_comment').toggleClass("active");
+        $this.addClass("active");
+        $(this).parents('.foruminner-bottom_inner').next().slideDown();
+        $(this).parents('.foruminner-bottom_comment').addClass("active");
+        $(this).parents('.foruminner-bottom_item').find('.add-comment').addClass("active");
+        $(this).parents('.foruminner-bottom_item').find('.formcomment-main').slideDown();
 
     });
 
     $('.add-answear').click(function() {
         var $this = $(this)
+        var text = $this.html();
 
         if (!$this.hasClass("active")) {
             $('.formcomment-inner').slideUp();
             $(".add-answear").removeClass("active");
             $(".comment-answears").removeClass("active");
         }
-
-        $this.toggleClass("active");
-        $(this).parents('.comment-answears').toggleClass("active");
-        $(this).parents('.foruminner-bottom_comments__item').find('.formcomment-inner').slideToggle();
+        if (text == "Комментировать") {
+            $('.quote-box').html('');
+        }
+        $this.addClass("active");
+        $(this).parents('.comment-answears').addClass("active");
+        $(this).parents('.foruminner-bottom_comments__item').find('.formcomment-inner').slideDown();
     });
 
+    $(function() {
+        $('.minimized').click(function(event) {
+            var i_path = $(this).attr('src');
+            var i_link = $(this).attr('linkpostcard');
+            var i_alt = $(this).attr('alt');
+
+
+            $('body').append(`
+            <div id="overlay"></div>
+                <div id="magnify">
+                    <div class="magnify-inner">
+                        <img src="${i_path}">
+                    </div>
+                    <ul class="magnify-article">
+                        <li>
+                            <a href="${i_link}" class="i-link">Ссылка на открытку</a>
+                        </li>
+                        <li>
+                            <p class="i-alt">${i_alt}</p>
+                        </li>
+                    </ul>
+                    <div id="close-popup">
+                </div>
+            </div>`);
+            $('.overlay, #magnify').fadeIn('fast');
+        });
+
+        $('body').on('click', '#close-popup, .overlay', function(event) {
+            event.preventDefault();
+
+            $('.overlay, #magnify').fadeOut('fast', function() {
+                $('#close-popup, #magnify').remove();
+            });
+        });
+    });
+
+    $('.order-table_delete').click(function(){
+        $(this).parents('tr').remove();
+    });
+
+    $('.forum-article_likeicon').click(function(){
+        $(this).parent().find('.tooltip-article').addClass('active');
+        $(this).mouseleave(function(){
+            $(this).parent().find('.tooltip-article').removeClass('active');
+        });
+    });
+
+    // $(".dws-progress-bar").circularProgress({
+    //     color: "#CAE2ED",
+    //     line_width: 17,
+    //     height: "350px",
+    //     width: "350px",
+    //     percent: 0,
+    //     // counter_clockwise: true,
+    //     starting_position: 25
+    // }).circularProgress('animate', 100, 2000);
 
 });
+
+// $(window).on('load', function() {
+//     var $preloader = $('#preloader');
+//     $preloader.delay(2850).fadeOut('slow');
+// });

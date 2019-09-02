@@ -1,4 +1,7 @@
 .forum.border-wrap
+    .cloud-wrap
+        .cloud-animate
+            img(src="img/cont-cloud.png")
     .container
         .forum-top.wow.slideInRight(data-wow-duration="1s")
             .forum-top_item.box-shadow
@@ -11,8 +14,8 @@
                         li    
                             input(type="date").inp    
             .forum-top_item
-                a(href="#").notread-themes_btn.sortthemes_btn Показать <br>непрочитанные темы   
-                a(href="#").read-themes_btn.sortthemes_btn Показать <br>прочитанные темы 
+                a(href="#").notread-themes_btn.sortthemes_btn Показать (177) <br>непрочитанные темы   
+                a(href="#").read-themes_btn.sortthemes_btn Показать (154) <br>прочитанные темы 
 
         .forum-themes.box-shadow.wow.slideInRight(data-wow-duration="2s")
             .forum-themes_top
@@ -22,7 +25,7 @@
                     |Название заголовка                 
                 .forum-themes_top__item
                     a(href="#").showalltheme-btn.sortthemes_btn.btn-blue Показать все темы  
-            .forum-themes_inner                       
+            .forum-themes_inner              
                 .forum-article
                     .forum-article_item.forum-article_left
                         .forum-article_icon
@@ -30,7 +33,12 @@
                         .forum-article_like
                             .forum-article_likecount
                                 span 79       
-                            .forum-article_likeicon.like-icon_blue    
+                            .forum-article_likeicon.like-icon_blue
+                            .tooltip-box.tooltip-forum
+                                .tooltip-article
+                                    .tooltip-article_inner
+                                        |Для того что бы оставить комментарий или поставить отметку необходимо 
+                                        span зарегистрироваться   
                         .forum-article_messcount
                             p 30
                             p сообщений                    
@@ -38,6 +46,7 @@
                         a(href="#").main-title Полное название темы                 
                         .forum-article_date 05.06.2019 г          
                         .forum-article_preview Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.          
+
                 .forum-article
                     .forum-article_item.forum-article_left
                         .forum-article_icon
@@ -45,7 +54,12 @@
                         .forum-article_like
                             .forum-article_likecount
                                 span 79       
-                            .forum-article_likeicon.like-icon_red    
+                            .forum-article_likeicon.like-icon_red
+                            .tooltip-box.tooltip-forum
+                                .tooltip-article
+                                    .tooltip-article_inner
+                                        |Для того что бы оставить комментарий или поставить отметку необходимо 
+                                        span зарегистрироваться     
                         .forum-article_messcount
                             p 30
                             p сообщений                    
@@ -53,171 +67,10 @@
                         a(href="#").main-title Полное название темы                 
                         .forum-article_date 05.06.2019 г          
                         .forum-article_preview Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
-                .forum-article
-                    .forum-article_item.forum-article_left
-                        .forum-article_icon
-                            img(src="img/box-icon-2.png")
-                        .forum-article_like
-                            .forum-article_likecount
-                                span 79       
-                            .forum-article_likeicon.like-icon_grey   
-                        .forum-article_messcount
-                            p 30
-                            p сообщений                    
-                    .forum-article_item.forum-article_right                     
-                        a(href="#").main-title Полное название темы                 
-                        .forum-article_date 05.06.2019 г          
-                        .forum-article_preview Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.            
-                .forum-article
-                    .forum-article_item.forum-article_left
-                        .forum-article_icon
-                            img(src="img/box-icon-2.png")
-                        .forum-article_like
-                            .forum-article_likecount
-                                span 79       
-                            .forum-article_likeicon.like-icon_blue    
-                        .forum-article_messcount
-                            p 30
-                            p сообщений                    
-                    .forum-article_item.forum-article_right                     
-                        a(href="#").main-title Полное название темы                 
-                        .forum-article_date 05.06.2019 г          
-                        .forum-article_preview Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.          
-                .forum-article
-                    .forum-article_item.forum-article_left
-                        .forum-article_icon
-                            img(src="img/box-icon.png")
-                        .forum-article_like
-                            .forum-article_likecount
-                                span 79       
-                            .forum-article_likeicon.like-icon_red    
-                        .forum-article_messcount
-                            p 30
-                            p сообщений                    
-                    .forum-article_item.forum-article_right                     
-                        a(href="#").main-title Полное название темы                 
-                        .forum-article_date 05.06.2019 г          
-                        .forum-article_preview Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
-                .forum-article
-                    .forum-article_item.forum-article_left
-                        .forum-article_icon
-                            img(src="img/box-icon-2.png")
-                        .forum-article_like
-                            .forum-article_likecount
-                                span 79       
-                            .forum-article_likeicon.like-icon_grey   
-                        .forum-article_messcount
-                            p 30
-                            p сообщений                    
-                    .forum-article_item.forum-article_right                     
-                        a(href="#").main-title Полное название темы                 
-                        .forum-article_date 05.06.2019 г          
-                        .forum-article_preview Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.            
-                .forum-article
-                    .forum-article_item.forum-article_left
-                        .forum-article_icon
-                            img(src="img/box-icon-2.png")
-                        .forum-article_like
-                            .forum-article_likecount
-                                span 79       
-                            .forum-article_likeicon.like-icon_blue    
-                        .forum-article_messcount
-                            p 30
-                            p сообщений                    
-                    .forum-article_item.forum-article_right                     
-                        a(href="#").main-title Полное название темы                 
-                        .forum-article_date 05.06.2019 г          
-                        .forum-article_preview Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.          
-                .forum-article
-                    .forum-article_item.forum-article_left
-                        .forum-article_icon
-                            img(src="img/box-icon.png")
-                        .forum-article_like
-                            .forum-article_likecount
-                                span 79       
-                            .forum-article_likeicon.like-icon_red    
-                        .forum-article_messcount
-                            p 30
-                            p сообщений                    
-                    .forum-article_item.forum-article_right                     
-                        a(href="#").main-title Полное название темы                 
-                        .forum-article_date 05.06.2019 г          
-                        .forum-article_preview Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
-                .forum-article
-                    .forum-article_item.forum-article_left
-                        .forum-article_icon
-                            img(src="img/box-icon-2.png")
-                        .forum-article_like
-                            .forum-article_likecount
-                                span 79       
-                            .forum-article_likeicon.like-icon_grey   
-                        .forum-article_messcount
-                            p 30
-                            p сообщений                    
-                    .forum-article_item.forum-article_right                     
-                        a(href="#").main-title Полное название темы                 
-                        .forum-article_date 05.06.2019 г          
-                        .forum-article_preview Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.            
-                .forum-article
-                    .forum-article_item.forum-article_left
-                        .forum-article_icon
-                            img(src="img/box-icon-2.png")
-                        .forum-article_like
-                            .forum-article_likecount
-                                span 79       
-                            .forum-article_likeicon.like-icon_blue    
-                        .forum-article_messcount
-                            p 30
-                            p сообщений                    
-                    .forum-article_item.forum-article_right                     
-                        a(href="#").main-title Полное название темы                 
-                        .forum-article_date 05.06.2019 г          
-                        .forum-article_preview Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.          
-                .forum-article
-                    .forum-article_item.forum-article_left
-                        .forum-article_icon
-                            img(src="img/box-icon.png")
-                        .forum-article_like
-                            .forum-article_likecount
-                                span 79       
-                            .forum-article_likeicon.like-icon_red    
-                        .forum-article_messcount
-                            p 30
-                            p сообщений                    
-                    .forum-article_item.forum-article_right                     
-                        a(href="#").main-title Полное название темы                 
-                        .forum-article_date 05.06.2019 г          
-                        .forum-article_preview Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
-                .forum-article
-                    .forum-article_item.forum-article_left
-                        .forum-article_icon
-                            img(src="img/box-icon-2.png")
-                        .forum-article_like
-                            .forum-article_likecount
-                                span 79       
-                            .forum-article_likeicon.like-icon_grey   
-                        .forum-article_messcount
-                            p 30
-                            p сообщений                    
-                    .forum-article_item.forum-article_right                     
-                        a(href="#").main-title Полное название темы                 
-                        .forum-article_date 05.06.2019 г          
-                        .forum-article_preview Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.            
-                .forum-article
-                    .forum-article_item.forum-article_left
-                        .forum-article_icon
-                            img(src="img/box-icon-2.png")
-                        .forum-article_like
-                            .forum-article_likecount
-                                span 79       
-                            .forum-article_likeicon.like-icon_grey   
-                        .forum-article_messcount
-                            p 30
-                            p сообщений                    
-                    .forum-article_item.forum-article_right                     
-                        a(href="#").main-title Полное название темы                 
-                        .forum-article_date 05.06.2019 г          
-                        .forum-article_preview Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.                         
+
+
+
+
             .forum-themes_nav
                 .forum-themes_nav__left
                 .forum-themes_nav__right
@@ -233,5 +86,5 @@
                         a(href="#").pagination-right
                         a(href="#").pagination-next
                             |Вперед                                                                                                                    
-                        
+
 include ./postcrossing.pug

@@ -10,13 +10,15 @@
     <link rel="stylesheet" href="libs/jquery-ui-select/jquery-ui.min.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&amp;display=swap&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
     <link rel="stylesheet" href="libs/owl.carusel-2.3.4/css/owl.carousel.min.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet">
     <link rel="stylesheet" href="libs/fancybox/jquery.fancybox.css">
+    <link rel="stylesheet" href="libs/modal/css/component.css">
+    <link rel="stylesheet" href="libs/fotorama/fotorama.css">
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
     <header class="header">
-      <div class="container">
+      <div class="header-cloud cloud-animate"><img src="img/header-cloud.png"></div>
+      <div class="container position-r">
         <div class="header-top">
           <div class="header-logo">
             <div class="header-logo_item"><a class="header-logo_img" href="#"><img src="img/logo.png"></a></div>
@@ -37,8 +39,9 @@
               <div class="header-cont_item"><a href="tel:89222222222">89222222222</a><a href="mailto:pochta@pochta.ru">pochta@pochta.ru</a></div>
               <div class="header-cont_item"><a class="header-basket" href="#"><span class="header-basket_count">16</span></a></div>
             </div>
-            <div class="header-login"><a class="header-login_img" href="#"><img src="img/avatar.png"></a>
-              <div class="header-login_nickname"><a href="#">Kari174887765...</a><a href="#">Выйти</a></div><a class="header-inter" href="#">Личный кабинет                </a>
+            <div class="header-login">                   <a class="header-login_img" href="#"><img src="img/avatar.png"></a>
+              <div class="header-login_nickname"><a href="#">Kari174887765...</a><a href="#">Выйти</a></div>
+              <button class="header-inter md-trigger" data-modal="modal-login"> <span>Личный кабинет                </span></button>
             </div>
           </div>
         </div>
@@ -99,9 +102,10 @@
             <p class="katalog-list_article">Краткое описание    </p>
           </li>
         </ul>
+        <div class="pagination pagination-center"><a class="pagination-left" href="#"> </a><a class="curent" href="#">1</a><a href="#">2</a><a href="#">3</a><a href="#">4</a><a href="#">5</a><a href="#">6 </a><a href="#">7</a><a class="pagination-right" href="#"></a><a class="pagination-next" href="#">Вперед   </a></div>
       </div>
     </div>
-    <div class="footer">
+    <div class="footer position-r">
       <div class="container">
         <div class="footer-top">
           <div class="footer-pers"><img src="img/pers.png"></div>
@@ -122,19 +126,97 @@
         </div>
       </div>
     </div>
-    <p>модалки</p>
+    <div class="md-modal md-effect-16" id="modal-deleteAcc">
+      <div class="modal deleteacc-modal md-content box-shadow">
+        <div class="modal-inner">
+          <button class="modal-close md-close"></button>
+          <div class="modal-item">
+            <p class="modal-title modal-title_red">Удалить аккаунт?</p>
+            <div class="modal-article"> 
+              <p>Вся информация и сохраненные товары<br> будут удалены</p>
+            </div>
+            <input class="inp" type="text" placeholder="Введите E-mail">
+            <div class="modal-btnbox">
+              <button class="modal-btn btn-red">Удалить аккаунт</button>
+              <button class="modal-btn btn-blue md-close">Отмена                  </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="md-modal md-effect-16" id="modal-restorePass"> 
+      <div class="modal restorepass-modal md-content box-shadow">
+        <div class="modal-inner">
+          <button class="modal-close md-close"></button>
+          <div class="modal-item">
+            <p class="modal-title modal-title_blue">Восстановление пароля</p>
+            <div class="modal-links">
+              <button class="md-trigger login-button" data-modal="modal-login">Вход /</button><a class="modal-links_icon" href="#">Регистрация</a>
+            </div>
+            <input class="inp" type="text" placeholder="Введите E-mail">
+            <div class="modal-btnbox">
+              <button class="modal-btn btn-blue">Отправить пароль</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="md-modal md-effect-16" id="modal-thanks">                             
+      <div class="modal thanks-modal md-content box-shadow">
+        <div class="modal-inner">
+          <button class="modal-close md-close"></button>
+          <div class="modal-item">
+            <p class="modal-title modal-title_blue">Благодарим<br> за регистрацию!</p>
+            <div class="modal-article"> 
+              <p>На ваш адрес электронной почты будет отправлено письмо с подтверждением регистрации на сайте</p>
+              <p>Вы можете осуществить <span>вход в личный кабинет </span>после подтверждения электронной почты</p>
+            </div>
+            <div class="modal-btnbox">
+              <button class="modal-btn btn-blue">Перейти в каталог</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="md-modal md-effect-16" id="modal-login">  
+      <div class="modal login-modal md-content box-shadow">
+        <div class="modal-inner">
+          <button class="modal-close md-close"></button>
+          <div class="modal-item">
+            <p class="modal-title modal-title_blue">Вход</p>
+            <div class="modal-links"><a class="modal-links_icon" href="#">Зарегистрироваться</a></div>
+            <div class="modal-inp">
+              <input class="inp" type="text" placeholder="Login">
+              <input class="inp" type="text" placeholder="Пароль">
+            </div>
+            <div class="modal-btnbox">
+              <button class="modal-btn btn-blue">Войти в личный кабинет</button>
+            </div>
+            <div class="modal-wrongpass">
+              <button class="md-trigger restorePass-btn" data-modal="modal-restorePass">Забыли пароль?    </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="overlay"></div>
     <script src="libs/jquery/jquery-3.4.1.min.js"></script>
     <script src="libs/parallax/parallax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/js/swiper.min.js"></script>
     <script src="libs/simplebox/simplebox.js"></script>
     <script src="libs/simplebox/simplebox_util.js"></script>
+    <script src="libs/selectresize/selectresize.js"></script>
     <script src="libs/wow/wow.js"></script>
     <script src="libs/jquery-ui-select/jquery-ui.min.js"></script>
+    <script src="libs/preloader/preloader.js"></script>
     <script src="libs/autosize/autosize.min.js"></script>
+    <script src="libs/fotorama/fotorama.js"></script>
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript">   </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
     <script src="libs/fancybox/jquery.fancybox.js"></script>
     <script src="libs/owl.carusel-2.3.4/owl.carousel.min.js"></script>
+    <script src="libs/modal/js/classie.js"></script>
+    <script src="libs/modal/js/modalEffects.js"></script>
+    <script src="libs/modal/js/cssParser.js"></script>
     <script src="js/common.js"></script>
   </body>
 </html>

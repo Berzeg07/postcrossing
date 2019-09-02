@@ -1,63 +1,66 @@
-.regestration
-    form
-        .border-wrap
-            .container
-                .regestration-top.box-shadow.wow.slideInRight(data-wow-duration="1s")
-                    .regestration-item_title
-                        a(href="#").regestration-enter Вход
-                        h2.regestration-title Федеральная лига посткроссеров 
-                            span приветствует вас!
-                    .regestration-top_inner
-                        .regestration-top_item
-                            .inp-box
-                                label(for="reg-name").inp-label Имя пользователя
-                                .inp-box_inner
-                                    input(type="text").inp#reg-name
-                            .inp-box
-                                label(for="reg-email").inp-label Email
-                                .inp-box_inner
-                                    input(type="email").inp#reg-email
-                            .inp-box
-                                label(for="reg-login").inp-label Придумайте login
-                                .inp-box_inner
-                                    input(type="text").inp#reg-login
-                                    input(type="checkbox")#mess.mess-check
-                                    label(for="mess").privacy-label Оповещать меня по e-mail о том, кто и когда </br>отправил мне открытку
-                                                  
+.cloud-wrap
+    .cloud-animate
+        img(src="img/cont-cloud.png")
+    .regestration
+        form
+            .border-wrap
+                .container
+                    .regestration-top.box-shadow.wow.slideInRight(data-wow-duration="1s")
+                        .regestration-item_title
+                            a(href="#").regestration-enter Вход
+                            h2.regestration-title Федеральная лига посткроссеров 
+                                span приветствует вас!
+                        .regestration-top_inner
+                            .regestration-top_item
+                                .inp-box
+                                    label(for="reg-name").inp-label Имя пользователя
+                                    .inp-box_inner
+                                        input(type="text").inp#reg-name
+                                .inp-box
+                                    label(for="reg-email").inp-label Email
+                                    .inp-box_inner
+                                        input(type="email").inp#reg-email
+                                .inp-box
+                                    label(for="reg-login").inp-label Придумайте login
+                                    .inp-box_inner
+                                        input(type="text").inp#reg-login
+                                        input(type="checkbox")#mess.mess-check
+                                        label(for="mess").privacy-label Оповещать меня по e-mail о том, кто и когда </br>отправил мне открытку
+                                                      
 
-                        .regestration-top_item         
-                            .pass-title Придумайте пароль
-                            input(type="password" placeholder="Минимум 6 символов").inp
-                            input(type="password" placeholder="Введите пароль еще раз").inp         
-        .border-wrap
-            .container
-                .regestration-bottom.box-shadow.wow.slideInRight(data-wow-duration="2s")
-                    .regestration-bottom_title Местоположение и адрес
-                    .regestration-bottom_inner
-                        .regestration-bottom_item
-                            include ./adress.pug
+                            .regestration-top_item         
+                                .pass-title Придумайте пароль
+                                input(type="password" placeholder="Минимум 6 символов").inp
+                                input(type="password" placeholder="Введите пароль еще раз").inp         
+            .border-wrap
+                .container
+                    .regestration-bottom.box-shadow.wow.slideInRight(data-wow-duration="2s")
+                        .regestration-bottom_title Местоположение и адрес
+                        .regestration-bottom_inner
+                            .regestration-bottom_item
+                                include ./adress.pug
 
-                        .regestration-bottom_item
-                            .mayor-kluv
-                                .mayor-kluv_sircle
-                                .mayor-kluv_img
-                                    img(src="img/kluv2.png")
-                                .tooltip-box.tooltip-kluv
-                                    .tooltip-btn.pulsing i
-                                    .tooltip-article
-                                        .tooltip-article_inner
-                                            |Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.
-                            .mayor-kluv_slider.owl-carousel
-                                .item
-                                    p Привет! Рад приветствовать тебя на нашей платформе. Меня зовут Майор Клюв. Я помогаю ориентироваться на сайте и доставлять почту.Ты найдешь мои подсказки. Увидимся!
-                                .item
-                                    p Привет! Рад приветствовать тебя на нашей платформе. Меня зовут Майор Клюв. Я помогаю ориентироваться на сайте и доставлять почту.Ты найдешь мои подсказки. Увидимся! 
-                                .item
-                                    p Привет! Рад приветствовать тебя на нашей платформе. Меня зовут Майор Клюв. Я помогаю ориентироваться на сайте и доставлять почту.Ты найдешь мои подсказки. Увидимся!
+                            .regestration-bottom_item
+                                .mayor-kluv
+                                    .mayor-kluv_sircle
+                                    .mayor-kluv_img
+                                        img(src="img/kluv2.png")
+                                    .tooltip-box.tooltip-kluv
+                                        .tooltip-btn.pulsing i
+                                        .tooltip-article
+                                            .tooltip-article_inner
+                                                |Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.
+                                .mayor-kluv_slider.owl-carousel
+                                    .item
+                                        p Привет! Рад приветствовать тебя на нашей платформе. Меня зовут Майор Клюв. Я помогаю ориентироваться на сайте и доставлять почту.Ты найдешь мои подсказки. Увидимся!
+                                    .item
+                                        p Привет! Рад приветствовать тебя на нашей платформе. Меня зовут Майор Клюв. Я помогаю ориентироваться на сайте и доставлять почту.Ты найдешь мои подсказки. Увидимся! 
+                                    .item
+                                        p Привет! Рад приветствовать тебя на нашей платформе. Меня зовут Майор Клюв. Я помогаю ориентироваться на сайте и доставлять почту.Ты найдешь мои подсказки. Увидимся!
 
-                    .privacy-check
-                        input(type="checkbox" checked)#privacy-check.privacy-check_inp
-                        label(for="privacy-check") Согласие с 
-                            a(href="#") Условиями обслуживания и Политикой конфиденциальности.            
+                        .privacy-check
+                            input(type="checkbox" checked)#privacy-check.privacy-check_inp
+                            label(for="privacy-check") Согласие с 
+                                a(href="#") Условиями обслуживания и Политикой конфиденциальности.            
 
-include ./postcrossing.pug
+    include ./postcrossing.pug

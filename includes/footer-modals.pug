@@ -1,1 +1,64 @@
-p модалки
+
+
+//- button.md-trigger(data-modal="modal-deleteAcc") test
+
+
+.md-modal.md-effect-16#modal-deleteAcc
+    .modal.deleteacc-modal.md-content.box-shadow
+        .modal-inner
+            button.modal-close.md-close
+            .modal-item
+                p.modal-title.modal-title_red Удалить аккаунт?
+                .modal-article 
+                    p Вся информация и сохраненные товары<br> будут удалены
+                input(type="text" placeholder="Введите E-mail").inp
+                .modal-btnbox
+                    button.modal-btn.btn-red Удалить аккаунт
+                    button.modal-btn.btn-blue.md-close Отмена                  
+                    
+.md-modal.md-effect-16#modal-restorePass  
+    .modal.restorepass-modal.md-content.box-shadow
+        .modal-inner
+            button.modal-close.md-close
+            .modal-item
+                p.modal-title.modal-title_blue Восстановление пароля
+                .modal-links
+                    button.md-trigger(data-modal="modal-login").login-button Вход /
+                    a(href="#").modal-links_icon Регистрация
+                input(type="text" placeholder="Введите E-mail").inp
+                .modal-btnbox
+                    button.modal-btn.btn-blue Отправить пароль
+
+.md-modal.md-effect-16#modal-thanks                              
+    .modal.thanks-modal.md-content.box-shadow
+        .modal-inner
+            button.modal-close.md-close
+            .modal-item
+                p.modal-title.modal-title_blue Благодарим<br> за регистрацию!
+                .modal-article 
+                    p На ваш адрес электронной почты будет отправлено письмо с подтверждением регистрации на сайте
+                    p Вы можете осуществить 
+                        span вход в личный кабинет 
+                        |после подтверждения электронной почты
+                .modal-btnbox
+                    button.modal-btn.btn-blue Перейти в каталог
+
+.md-modal.md-effect-16#modal-login   
+    .modal.login-modal.md-content.box-shadow
+        .modal-inner
+            button.modal-close.md-close
+            .modal-item
+                p.modal-title.modal-title_blue Вход
+                .modal-links
+                    a(href="#").modal-links_icon Зарегистрироваться
+                .modal-inp
+                    input(type="text" placeholder="Login").inp
+                    input(type="text" placeholder="Пароль").inp    
+                        
+                .modal-btnbox
+                    button.modal-btn.btn-blue Войти в личный кабинет
+                    
+                .modal-wrongpass
+                    button.md-trigger(data-modal="modal-restorePass").restorePass-btn Забыли пароль?    
+
+.overlay

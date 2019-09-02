@@ -1,8 +1,11 @@
 .profile.border-wrap
+    .cloud-wrap
+        .cloud-animate
+            img(src="img/cont-cloud.png")
     .container
         .profile-top.cabinet-top.box-shadow.wow.slideInRight(data-wow-duration="1s")
             .cabinet-top_item
-                .profile-ava.cabinet-ava_wrap
+                a(href="img/ava-img.png" data-fancybox="ava").profile-ava.cabinet-ava_wrap
                     .cabinet-ava_border
                     .cabinet-ava
                         img(src="img/ava-img.png")
@@ -39,8 +42,9 @@
                         p.profile-name_hover Показать имя и возраст
                         p.profile-name_inner Кириенко Станислав Дмитриевич
                     .profile-article
-                        .profile-article_inner
-                            p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.  
+                        .profile-article_box
+                            .profile-article_inner
+                                p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.  
                         span.profile-article_show Развернуть
                     ul.profile-img
                         li
@@ -61,7 +65,7 @@
                 ul.adress-box
                     li
                         label(for="street-inp") Улица
-                        .adress-box_inp.adress-box_arrow
+                        .adress-box_inp
                             input(type="text" placeholder="Улица").inp#street-inp
                     li
                         label(for="house-inp") Дом, Корпус, Квартира/Комната
@@ -74,15 +78,15 @@
                                 input(type="text" placeholder="Кв/Комната").inp
                     li
                         label(for="city-inp") Город/Населеный пункт
-                        .adress-box_inp.adress-box_arrow
+                        .adress-box_inp
                             input(type="text" placeholder="Город/Населеный пункт").inp#city-inp            
                     li
                         label(for="rayon-inp") Район/Область
-                        .adress-box_inp.adress-box_arrow
+                        .adress-box_inp
                             input(type="text" placeholder="Район/Область").inp#rayon-inp
                     li
                         label(for="country-inp") Страна
-                        .adress-box_inp.adress-box_arrow
+                        .adress-box_inp
                             input(type="text" placeholder="Страна").inp#country-inp
                     li
                         label(for="index-inp") Индекс

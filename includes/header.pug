@@ -1,5 +1,10 @@
+//- #preloader
+//-     .dws-progress-bar
+        
 header.header
-    .container
+    .header-cloud.cloud-animate
+        img(src="img/header-cloud.png")
+    .container.position-r
         .header-top
             .header-logo
                 .header-logo_item
@@ -22,13 +27,14 @@ header.header
                     .header-cont_item
                         a(href="#").header-basket
                             span.header-basket_count 16
-                .header-login
+                .header-login                    
                     a(href="#").header-login_img
                         img(src="img/avatar.png")      
                     .header-login_nickname
                         a(href="#") Kari174887765...
                         a(href="#") Выйти
-                    a(href="#").header-inter Личный кабинет                
+                    button.header-inter.md-trigger(data-modal="modal-login") 
+                        span Личный кабинет                
 
         nav.main-nav
             .burger

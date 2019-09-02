@@ -1,219 +1,222 @@
-.border-wrap
+.cloud-wrap
+    .cloud-animate
+        img(src="img/cont-cloud.png")
+    .border-wrap
+        .container
+            .basket-top.news-top.box-shadow.wow.slideInRight(data-wow-duration="1s")
+                .news-top_inner
+                    .news-top_item
+                        img(src="img/cart-inner.png")
+                    .news-top_item
+                        p.basket-top_title Корзина
+                        ul.basket-info_list
+                            li
+                                |У вас 24 товара
+                            li    
+                                a(href="#") Узнать об акциях
+                            li
+                                a(href="#basket-more").basket-more подробнее    
+                            
     .container
-        .basket-top.news-top.box-shadow.wow.slideInRight(data-wow-duration="1s")
-            .news-top_inner
-                .news-top_item
-                    img(src="img/cart-inner.png")
-                .news-top_item
-                    p.basket-top_title Корзина
-                    ul.basket-info_list
-                        li
-                            |У вас 24 товара
-                        li    
-                            a(href="#") Узнать об акциях
-                        li
-                            a(href="#") подробнее    
-                        
-.container
-    .basket.box-shadow.wow.slideInRight(data-wow-duration="2s")
-        .news-sort
-            p Сортировать:
-            .select-block
-                select.news-sort_select
-                    option Цена по убыванию
-                    option Цена по возрастанию
-                    option Тест
-        ul.basket-list.katalog-list
-            li
-                .katalog-list_img.product-cat_img
-                    img(src="img/cat-img.png")
-                    button.close_btn.delete-basket_product
-                .product-count.product-cat_count
-                    .product-count_item
-                        .switch-count.product-cat_counter
-                            span.switch-button -
-                            input(type="text" value="1" disabled="disabled").count-field.quantity  
-                            span.switch-button +
-                        
-                    .product-count_item
-                        p.product-cat_name Название товара
-                        p.product-cat_date 20.06.19 17:27
-                        .product-cat_price.product-cat_price__action 
-                            .product-cat_price_main
-                                input(type="hidden" value="3439").current-price
-                                span.basket-price 3439
-                                |р
-                            .product-cat_price_old 
-                                strike 4000 р
-            li
-                .katalog-list_img.product-cat_img
-                    img(src="img/cat-img.png")
-                    button.close_btn.delete-basket_product
-                .product-count.product-cat_count
-                    .product-count_item
-                        .switch-count.product-cat_counter
-                            span.switch-button -
-                            input(type="text" value="1" disabled="disabled").count-field.quantity  
-                            span.switch-button +
-                        
-                    .product-count_item
-                        p.product-cat_name Название товара
-                        p.product-cat_date 20.06.19 17:27
-                        .product-cat_price.product-cat_price__action 
-                            .product-cat_price_main
-                                input(type="hidden" value="3439").current-price
-                                span.basket-price 3439
-                                |р
-                            .product-cat_price_old 
-                                strike 4000 р 
-                                        
-            li
-                .katalog-list_img.product-cat_img
-                    img(src="img/cat-img.png")
-                    button.close_btn.delete-basket_product
-                .product-count.product-cat_count
-                    .product-count_item
-                        .switch-count.product-cat_counter
-                            span.switch-button -
-                            input(type="text" value="1" disabled="disabled").count-field.quantity  
-                            span.switch-button +
-                        
-                    .product-count_item
-                        p.product-cat_name Название товара
-                        p.product-cat_date 20.06.19 17:27
-                        .product-cat_price.product-cat_price__action 
-                            .product-cat_price_main
-                                input(type="hidden" value="3439").current-price
-                                span.basket-price 3439
-                                |р
-                            .product-cat_price_old 
-                                strike 4000 р
-            li
-                .katalog-list_img.product-cat_img
-                    img(src="img/cat-img.png")
-                    button.close_btn.delete-basket_product
-                .product-count.product-cat_count
-                    .product-count_item
-                        .switch-count.product-cat_counter
-                            span.switch-button -
-                            input(type="text" value="1" disabled="disabled").count-field.quantity  
-                            span.switch-button +
-                        
-                    .product-count_item
-                        p.product-cat_name Название товара
-                        p.product-cat_date 20.06.19 17:27
-                        .product-cat_price.product-cat_price__action 
-                            .product-cat_price_main
-                                input(type="hidden" value="3439").current-price
-                                span.basket-price 3439
-                                |р
-                            .product-cat_price_old 
-                                strike 4000 р 
-                                
-            li
-                .katalog-list_img.product-cat_img
-                    img(src="img/cat-img.png")
-                    button.close_btn.delete-basket_product
-                .product-count.product-cat_count
-                    .product-count_item
-                        .switch-count.product-cat_counter
-                            span.switch-button -
-                            input(type="text" value="1" disabled="disabled").count-field.quantity  
-                            span.switch-button +
-                        
-                    .product-count_item
-                        p.product-cat_name Название товара
-                        p.product-cat_date 20.06.19 17:27
-                        .product-cat_price.product-cat_price__action 
-                            .product-cat_price_main
-                                input(type="hidden" value="3439").current-price
-                                span.basket-price 3439
-                                |р
-                            .product-cat_price_old 
-                                strike 4000 р
-            li
-                .katalog-list_img.product-cat_img
-                    img(src="img/cat-img.png")
-                    button.close_btn.delete-basket_product
-                .product-count.product-cat_count
-                    .product-count_item
-                        .switch-count.product-cat_counter
-                            span.switch-button -
-                            input(type="text" value="1" disabled="disabled").count-field.quantity  
-                            span.switch-button +
-                        
-                    .product-count_item
-                        p.product-cat_name Название товара
-                        p.product-cat_date 20.06.19 17:27
-                        .product-cat_price.product-cat_price__action 
-                            .product-cat_price_main
-                                input(type="hidden" value="3439").current-price
-                                span.basket-price 3439
-                                |р
-                            .product-cat_price_old 
-                                strike 4000 р 
-                                        
-            li
-                .katalog-list_img.product-cat_img
-                    img(src="img/cat-img.png")
-                    button.close_btn.delete-basket_product
-                .product-count.product-cat_count
-                    .product-count_item
-                        .switch-count.product-cat_counter
-                            span.switch-button -
-                            input(type="text" value="1" disabled="disabled").count-field.quantity  
-                            span.switch-button +
-                        
-                    .product-count_item
-                        p.product-cat_name Название товара
-                        p.product-cat_date 20.06.19 17:27
-                        .product-cat_price.product-cat_price__action 
-                            .product-cat_price_main
-                                input(type="hidden" value="3439").current-price
-                                span.basket-price 3439
-                                |р
-                            .product-cat_price_old 
-                                strike 4000 р
-            li
-                .katalog-list_img.product-cat_img
-                    img(src="img/cat-img.png")
-                    button.close_btn.delete-basket_product
-                .product-count.product-cat_count
-                    .product-count_item
-                        .switch-count.product-cat_counter
-                            span.switch-button -
-                            input(type="text" value="1" disabled="disabled").count-field.quantity  
-                            span.switch-button +
-                        
-                    .product-count_item
-                        p.product-cat_name Название товара
-                        p.product-cat_date 20.06.19 17:27
-                        .product-cat_price.product-cat_price__action 
-                            .product-cat_price_main
-                                input(type="hidden" value="3439").current-price
-                                span.basket-price 3439
-                                |р
-                            .product-cat_price_old 
-                                strike 4000 р                       
-        .pagination.pagination-main
-            a(href="#").pagination-left 
-            a(href="#").curent 1
-            a(href="#") 2
-            a(href="#") 3
-            a(href="#") 4
-            a(href="#") 5
-            a(href="#") 6 
-            a(href="#") 7
-            a(href="#").pagination-right
-            a(href="#").pagination-next
-                |Вперед 
-        .basket-total_box
-            .basket-total_box__item
-                p.basket-total Итого: 
-                    span.basket-total_inner 37094 
-                    b р
-            .basket-total_box__item
-                button.btn.btn-red Оформить заказ 
-                </br>
-                a(href="#") перейти в каталог
-        
+        .basket.box-shadow.wow.slideInRight(data-wow-duration="2s")#basket-more
+            .news-sort
+                p Сортировать:
+                .select-block
+                    select.news-sort_select
+                        option Цена по убыванию
+                        option Цена по возрастанию
+                        option Тест
+            ul.basket-list.katalog-list
+                li
+                    .katalog-list_img.product-cat_img
+                        img(src="img/cat-img.png")
+                        button.close_btn.delete-basket_product
+                    .product-count.product-cat_count
+                        .product-count_item
+                            .switch-count.product-cat_counter
+                                span.switch-button -
+                                input(type="text" value="1" disabled="disabled").count-field.quantity  
+                                span.switch-button +
+                            
+                        .product-count_item
+                            p.product-cat_name Название товара
+                            p.product-cat_date 20.06.19 17:27
+                            .product-cat_price.product-cat_price__action 
+                                .product-cat_price_main
+                                    input(type="hidden" value="3439").current-price
+                                    span.basket-price 3439
+                                    |р
+                                .product-cat_price_old 
+                                    strike 4000 р
+                li
+                    .katalog-list_img.product-cat_img
+                        img(src="img/cat-img.png")
+                        button.close_btn.delete-basket_product
+                    .product-count.product-cat_count
+                        .product-count_item
+                            .switch-count.product-cat_counter
+                                span.switch-button -
+                                input(type="text" value="1" disabled="disabled").count-field.quantity  
+                                span.switch-button +
+                            
+                        .product-count_item
+                            p.product-cat_name Название товара
+                            p.product-cat_date 20.06.19 17:27
+                            .product-cat_price.product-cat_price__action 
+                                .product-cat_price_main
+                                    input(type="hidden" value="3439").current-price
+                                    span.basket-price 3439
+                                    |р
+                                .product-cat_price_old 
+                                    strike 4000 р 
+                                            
+                li
+                    .katalog-list_img.product-cat_img
+                        img(src="img/cat-img.png")
+                        button.close_btn.delete-basket_product
+                    .product-count.product-cat_count
+                        .product-count_item
+                            .switch-count.product-cat_counter
+                                span.switch-button -
+                                input(type="text" value="1" disabled="disabled").count-field.quantity  
+                                span.switch-button +
+                            
+                        .product-count_item
+                            p.product-cat_name Название товара
+                            p.product-cat_date 20.06.19 17:27
+                            .product-cat_price.product-cat_price__action 
+                                .product-cat_price_main
+                                    input(type="hidden" value="3439").current-price
+                                    span.basket-price 3439
+                                    |р
+                                .product-cat_price_old 
+                                    strike 4000 р
+                li
+                    .katalog-list_img.product-cat_img
+                        img(src="img/cat-img.png")
+                        button.close_btn.delete-basket_product
+                    .product-count.product-cat_count
+                        .product-count_item
+                            .switch-count.product-cat_counter
+                                span.switch-button -
+                                input(type="text" value="1" disabled="disabled").count-field.quantity  
+                                span.switch-button +
+                            
+                        .product-count_item
+                            p.product-cat_name Название товара
+                            p.product-cat_date 20.06.19 17:27
+                            .product-cat_price.product-cat_price__action 
+                                .product-cat_price_main
+                                    input(type="hidden" value="3439").current-price
+                                    span.basket-price 3439
+                                    |р
+                                .product-cat_price_old 
+                                    strike 4000 р 
+                                    
+                li
+                    .katalog-list_img.product-cat_img
+                        img(src="img/cat-img.png")
+                        button.close_btn.delete-basket_product
+                    .product-count.product-cat_count
+                        .product-count_item
+                            .switch-count.product-cat_counter
+                                span.switch-button -
+                                input(type="text" value="1" disabled="disabled").count-field.quantity  
+                                span.switch-button +
+                            
+                        .product-count_item
+                            p.product-cat_name Название товара
+                            p.product-cat_date 20.06.19 17:27
+                            .product-cat_price.product-cat_price__action 
+                                .product-cat_price_main
+                                    input(type="hidden" value="3439").current-price
+                                    span.basket-price 3439
+                                    |р
+                                .product-cat_price_old 
+                                    strike 4000 р
+                li
+                    .katalog-list_img.product-cat_img
+                        img(src="img/cat-img.png")
+                        button.close_btn.delete-basket_product
+                    .product-count.product-cat_count
+                        .product-count_item
+                            .switch-count.product-cat_counter
+                                span.switch-button -
+                                input(type="text" value="1" disabled="disabled").count-field.quantity  
+                                span.switch-button +
+                            
+                        .product-count_item
+                            p.product-cat_name Название товара
+                            p.product-cat_date 20.06.19 17:27
+                            .product-cat_price.product-cat_price__action 
+                                .product-cat_price_main
+                                    input(type="hidden" value="3439").current-price
+                                    span.basket-price 3439
+                                    |р
+                                .product-cat_price_old 
+                                    strike 4000 р 
+                                            
+                li
+                    .katalog-list_img.product-cat_img
+                        img(src="img/cat-img.png")
+                        button.close_btn.delete-basket_product
+                    .product-count.product-cat_count
+                        .product-count_item
+                            .switch-count.product-cat_counter
+                                span.switch-button -
+                                input(type="text" value="1" disabled="disabled").count-field.quantity  
+                                span.switch-button +
+                            
+                        .product-count_item
+                            p.product-cat_name Название товара
+                            p.product-cat_date 20.06.19 17:27
+                            .product-cat_price.product-cat_price__action 
+                                .product-cat_price_main
+                                    input(type="hidden" value="3439").current-price
+                                    span.basket-price 3439
+                                    |р
+                                .product-cat_price_old 
+                                    strike 4000 р
+                li
+                    .katalog-list_img.product-cat_img
+                        img(src="img/cat-img.png")
+                        button.close_btn.delete-basket_product
+                    .product-count.product-cat_count
+                        .product-count_item
+                            .switch-count.product-cat_counter
+                                span.switch-button -
+                                input(type="text" value="1" disabled="disabled").count-field.quantity  
+                                span.switch-button +
+                            
+                        .product-count_item
+                            p.product-cat_name Название товара
+                            p.product-cat_date 20.06.19 17:27
+                            .product-cat_price.product-cat_price__action 
+                                .product-cat_price_main
+                                    input(type="hidden" value="3439").current-price
+                                    span.basket-price 3439
+                                    |р
+                                .product-cat_price_old 
+                                    strike 4000 р                       
+            .pagination.pagination-main
+                a(href="#").pagination-left 
+                a(href="#").curent 1
+                a(href="#") 2
+                a(href="#") 3
+                a(href="#") 4
+                a(href="#") 5
+                a(href="#") 6 
+                a(href="#") 7
+                a(href="#").pagination-right
+                a(href="#").pagination-next
+                    |Вперед 
+            .basket-total_box
+                .basket-total_box__item
+                    p.basket-total Итого: 
+                        span.basket-total_inner 37094 
+                        b р
+                .basket-total_box__item
+                    button.btn.btn-red Оформить заказ 
+                    </br>
+                    a(href="#") перейти в каталог
+            

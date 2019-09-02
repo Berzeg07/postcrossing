@@ -1,5 +1,8 @@
 
 .border-wrap
+    .cloud-wrap
+        .cloud-animate
+            img(src="img/cont-cloud.png")
     .container
         .cabinet-top.box-shadow.wow.slideInRight(data-wow-duration="1s")
             .cabinet-top_item
@@ -40,7 +43,7 @@
                             label(for="datebirth")
                             input(type="text" placeholder="XX.XX.XXXX").inp#datebirth
                         li
-                            a(href="#").delete-account Удалить аккаунт        
+                            button.delete-account.md-trigger(data-modal="modal-deleteAcc") Удалить аккаунт        
                     ul.cabinet-top_person_right
                         li
                             textarea.cabinet-top_textarea(placeholder="О себе")
@@ -59,7 +62,7 @@
                                     input(type="file").min-photo_add#min-photo_add
                                     label(for="min-photo_add") Прикрепить фото
                         li
-                            button.btn.btn-red.save-selfinfo(type="submit") Сохранить                    
+                            button.btn.btn-red.save-selfinfo Сохранить                    
 .container
     .cabinet-middle.box-shadow.wow.slideInRight(data-wow-duration="2s")
         .cabinet-middle_inner
@@ -95,7 +98,7 @@
                         label(for="index-inp") Индекс
                         .adress-box_inp
                             input(type="text" placeholder="XXX XXX").inp#index-inp
-                            button(type="submit").btn.purple-btn.adress-box_btn.btn-opacity Сохранить
+                            button(type="submit").btn.btn-red.adress-box_btn Сохранить
             .cabinet-middle_inner__item
                 p.cabinet-middle_title.main-title Смена пароля/e-mail
                 ul.cabinet-middle_changepass

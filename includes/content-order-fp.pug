@@ -1,0 +1,113 @@
+.cloud-wrap
+    .cloud-animate
+        img(src="img/cont-cloud.png") 
+                            
+    .container
+        .order.order-personal.box-shadow.wow.slideInRight(data-wow-duration="1s")
+            .order-item
+                button.close_btn
+                .order-top
+                    p.order-title Оформление заказа
+                    p.order-article Ввод персональных данных
+                .order-inner
+                    .order-inner_item
+                        ul.order-radio.order-personal_radio
+                            li
+                                input(type="radio" name="choose-action").order-radio_inp#choose-action_left
+                                label(for="choose-action_left").order-radio_label Ввести данные <br>из личного кабинета
+                            li
+                                input(type="radio" name="choose-action" checked).order-radio_inp#choose-action_right
+                                label(for="choose-action_right").order-radio_label Заполнить данные
+                                      
+                        ul.adress-box.sendpostcard-form_list
+                            li
+                    
+                                .adress-box_inp.adress-box_arrow
+                                    input(type="text" placeholder="Улица").inp
+                            li
+                                
+                                .adress-box_inp.adress-box_inner
+                                    .adress-box_inp
+                                        input(type="text" placeholder="Дом").inp
+                                    .adress-box_inp
+                                        input(type="text" placeholder="Корпус").inp
+                                    .adress-box_inp
+                                        input(type="text" placeholder="Квартира").inp
+                            li
+                                .adress-box_room
+                                    .adress-box_room__item
+                                        input(type="text" placeholder="Комната").inp
+                                    .adress-box_room__item
+                                        input(type="text" placeholder="Населеный пункт").inp                  
+                            li
+                        
+                                .adress-box_inp
+                                    input(type="text" placeholder="Район/Область").inp
+                            li
+                    
+                                .adress-box_inp
+                                    input(type="text" placeholder="Регион").inp
+                            li
+                                .adress-box_inp.adress-box_arrow
+                                    input(type="text" placeholder="Страна").inp
+                            
+                    .order-inner_item
+                        .order-table_wrap
+                            table.order-table
+                                tr.order-table_title
+                                    th
+                                        |Наименование
+                                    th
+                                        |Количество
+                                    th
+                                        |Цена
+                                tr
+                                    th
+                                        .order-table_item
+                                            .order-table_img.box-shadow
+                                                img(src="img/cat-img.png" linkpostcard="product.html" alt="product.html").minimized
+                                            .order-table_nameproduct Название товара        
+                                    th
+                                        span.order-table_count 4
+                                    th
+                                        .order-table_price 3 374 р
+                                            .order-table_delete
+                                            
+                                        
+                                tr
+                                    th
+                                        .order-table_item
+                                            .order-table_img.box-shadow
+                                                img(src="img/cat-img.png" linkpostcard="product.html" alt="product.html").minimized
+                                            .order-table_nameproduct Название товара        
+                                    th
+                                        span.order-table_count 4
+                                    th
+                                        .order-table_price 3 374 р
+                                            .order-table_delete
+                                            
+                                        
+                                tr
+                                    th
+                                        .order-table_item
+                                            .order-table_img.box-shadow
+                                                img(src="img/cat-img.png" linkpostcard="product.html" alt="product.html").minimized
+                                            .order-table_nameproduct Название товара        
+                                    th
+                                        span.order-table_count 4
+                                    th
+                                        .order-table_price 3 374р
+                                            .order-table_delete
+                                            
+                                                                                    
+                            .order-table_bottom
+                                button.order-table_btn Показать все
+                            .order-total
+                                p 3 товара на сумму
+                                p.order-total_price 3 859 р
+                                
+                                            
+                .order-btn_wrap
+                    p Перейти к выбору способа оплаты и доставки        
+                    button.btn.btn-blue.order-btn Продолжить
+            

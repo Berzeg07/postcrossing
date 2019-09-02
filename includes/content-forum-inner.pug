@@ -6,6 +6,9 @@
             .foruminner-head_item
                 a(href="#").foruminner-head_link Вернуться на страницу форума
 .border-wrap
+    .cloud-wrap
+        .cloud-animate
+            img(src="img/cont-cloud.png")
     .container
         .foruminner.box-shadow.wow.slideInRight(data-wow-duration="2s")
             .foruminner-top
@@ -28,11 +31,16 @@
                                 .forum-article_likecount
                                     span 79       
                                 .forum-article_likeicon.like-icon_blue
+                                .tooltip-box.tooltip-forum.tooltip-forum_inner
+                                    .tooltip-article
+                                        .tooltip-article_inner
+                                            |Для того что бы оставить комментарий или поставить отметку необходимо 
+                                            span зарегистрироваться   
 
                 .foruminner-top_comment
                     .foruminner-top_comment__item
                         label
-                            input(type="text" placeholder="Комментировать")
+                            textarea(placeholder="Комментировать")
                         button.btn-blue.comment-btn Комментировать
 
 
@@ -60,9 +68,14 @@
                                         .forum-article_likecount
                                             span 79       
                                         .forum-article_likeicon.like-icon_blue
+                                        .tooltip-box.tooltip-forum.tooltip-forum_inner
+                                            .tooltip-article
+                                                .tooltip-article_inner
+                                                    |Для того что бы оставить комментарий или поставить отметку необходимо 
+                                                    span зарегистрироваться   
                                     .foruminner-commentcount 10 Комментариев
                                     .foruminner-bottom_btn
-                                        button.quote-btn.add-comment Цитировать
+                                        button.quote-btn Цитировать
                                         button.btn-blue.comment-btn.add-comment Комментировать
 
                     .foruminner-bottom_comments
@@ -93,6 +106,11 @@
                                                 .forum-article_likecount
                                                     span 79       
                                                 .forum-article_likeicon.like-icon_blue
+                                                .tooltip-box.tooltip-forum.tooltip-forum_inner
+                                                    .tooltip-article
+                                                        .tooltip-article_inner
+                                                            |Для того что бы оставить комментарий или поставить отметку необходимо 
+                                                            span зарегистрироваться      
                                             .foruminner-bottom_btn
                                                 button.quote-btn.add-answear Цитировать
                                                 button.btn-blue.comment-btn.add-answear Комментировать
@@ -100,6 +118,7 @@
                                 .foruminner-formcomment_title
                                     p Ответ 
                                         a(href="#") Kari70
+                                    .quote-box
                                 .foruminner-formcomment_inner     
                                     textarea(placeholder="Ваш комментарий").foruminner-formcomment_textarea
                                     .foruminner-formcomment_btnbox
@@ -132,6 +151,11 @@
                                                 .forum-article_likecount
                                                     span 79       
                                                 .forum-article_likeicon.like-icon_blue
+                                                .tooltip-box.tooltip-forum.tooltip-forum_inner
+                                                    .tooltip-article
+                                                        .tooltip-article_inner
+                                                            |Для того что бы оставить комментарий или поставить отметку необходимо 
+                                                            span зарегистрироваться      
                                             .foruminner-bottom_btn
                                                 button.quote-btn.add-answear Цитировать
                                                 button.btn-blue.comment-btn.add-answear Комментировать
@@ -139,20 +163,22 @@
                                 .foruminner-formcomment_title
                                     p Ответ 
                                         a(href="#") Kari70
+                                    .quote-box    
                                 .foruminner-formcomment_inner     
                                     textarea(placeholder="Ваш комментарий").foruminner-formcomment_textarea
                                     .foruminner-formcomment_btnbox
                                         button.btn-blue.comment-btn Комментировать
 
 
-                        .foruminner-formcomment.formcomment-main
-                            .foruminner-formcomment_title
-                                p Ответ 
-                                    a(href="#") Kari70
-                            .foruminner-formcomment_inner     
-                                textarea(placeholder="Ваш комментарий").foruminner-formcomment_textarea
-                                .foruminner-formcomment_btnbox
-                                    button.btn-blue.comment-btn Комментировать
+                    .foruminner-formcomment.formcomment-main
+                        .foruminner-formcomment_title
+                            p Ответ 
+                                a(href="#") Kari70
+                            .quote-box    
+                        .foruminner-formcomment_inner     
+                            textarea(placeholder="Ваш комментарий").foruminner-formcomment_textarea
+                            .foruminner-formcomment_btnbox
+                                button.btn-blue.comment-btn Комментировать
                 .foruminner-bottom_item
                     .foruminner-bottom_inner
                         .foruminner-bottom_imgbox
@@ -176,9 +202,14 @@
                                         .forum-article_likecount
                                             span 79       
                                         .forum-article_likeicon.like-icon_blue
+                                        .tooltip-box.tooltip-forum.tooltip-forum_inner
+                                            .tooltip-article
+                                                .tooltip-article_inner
+                                                    |Для того что бы оставить комментарий или поставить отметку необходимо 
+                                                    span зарегистрироваться      
                                     .foruminner-commentcount 10 Комментариев
                                     .foruminner-bottom_btn
-                                        button.quote-btn.add-comment Цитировать
+                                        button.quote-btn Цитировать
                                         button.btn-blue.comment-btn.add-comment Комментировать
 
                     .foruminner-bottom_comments
@@ -209,6 +240,11 @@
                                                 .forum-article_likecount
                                                     span 79       
                                                 .forum-article_likeicon.like-icon_blue
+                                                .tooltip-box.tooltip-forum.tooltip-forum_inner
+                                                    .tooltip-article
+                                                        .tooltip-article_inner
+                                                            |Для того что бы оставить комментарий или поставить отметку необходимо 
+                                                            span зарегистрироваться      
                                             .foruminner-bottom_btn
                                                 button.quote-btn.add-answear Цитировать
                                                 button.btn-blue.comment-btn.add-answear Комментировать
@@ -216,6 +252,7 @@
                                 .foruminner-formcomment_title
                                     p Ответ 
                                         a(href="#") Kari70
+                                    .quote-box
                                 .foruminner-formcomment_inner     
                                     textarea(placeholder="Ваш комментарий").foruminner-formcomment_textarea
                                     .foruminner-formcomment_btnbox
@@ -248,6 +285,11 @@
                                                 .forum-article_likecount
                                                     span 79       
                                                 .forum-article_likeicon.like-icon_blue
+                                                .tooltip-box.tooltip-forum.tooltip-forum_inner
+                                                    .tooltip-article
+                                                        .tooltip-article_inner
+                                                            |Для того что бы оставить комментарий или поставить отметку необходимо 
+                                                            span зарегистрироваться      
                                             .foruminner-bottom_btn
                                                 button.quote-btn.add-answear Цитировать
                                                 button.btn-blue.comment-btn.add-answear Комментировать
@@ -255,21 +297,27 @@
                                 .foruminner-formcomment_title
                                     p Ответ 
                                         a(href="#") Kari70
+                                    .quote-box    
                                 .foruminner-formcomment_inner     
                                     textarea(placeholder="Ваш комментарий").foruminner-formcomment_textarea
                                     .foruminner-formcomment_btnbox
                                         button.btn-blue.comment-btn Комментировать
 
 
-                        .foruminner-formcomment.formcomment-main
-                            .foruminner-formcomment_title
-                                p Ответ 
-                                    a(href="#") Kari70
-                            .foruminner-formcomment_inner     
-                                textarea(placeholder="Ваш комментарий").foruminner-formcomment_textarea
-                                .foruminner-formcomment_btnbox
-                                    button.btn-blue.comment-btn Комментировать
-
+                    .foruminner-formcomment.formcomment-main
+                        .foruminner-formcomment_title
+                            p Ответ 
+                                a(href="#") Kari70
+                            .quote-box    
+                        .foruminner-formcomment_inner     
+                            textarea(placeholder="Ваш комментарий").foruminner-formcomment_textarea
+                            .foruminner-formcomment_btnbox
+                                button.btn-blue.comment-btn Комментировать
+            
+            
+            
+            
+                
                 .pagination.pagination-forum
                     a(href="#").pagination-left 
                     a(href="#").curent 1

@@ -13,15 +13,22 @@
                     li
                         a(href="#postcard-onway") Открытки в пути
 
-            ul.postcard-info_sort
-                li
-                    p Сортировать 
-                li
-                    a(href="#") все
-                li
-                    a(href="#") сначала новые
-                li
-                    a(href="#") сначала старые    
+            .news-sort.postcard-info_sort
+                p Сортировать:
+                .select-block
+                    select.news-sort_select
+                        option Новые Новые Новые Новые
+                        option Старые
+                        option Новые
+            //- ul.postcard-info_sort
+            //-     li
+            //-         p Сортировать 
+            //-     li
+            //-         a(href="#") все
+            //-     li
+            //-         a(href="#") сначала новые
+            //-     li
+            //-         a(href="#") сначала старые    
             
             .postcard-table.tab-table#postcard-onway          
                 table
