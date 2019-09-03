@@ -14,10 +14,23 @@
                     span т
                     span и
             
-            
-
     .main-slider_item
-        img(src="img/sl2.jpg")
+        img(src="img/sl3.jpg")
+        .main-slider_hover
+            .main-slider_inner
+                p Блины и открытки
+                b большая февральская рассылка </br>
+                a(href="#" data-text='Подробнее').btn.h-button.btn-red
+                    span П
+                    span е
+                    span р
+                    span е
+                    span й
+                    span т
+                    span и
+            
+    .main-slider_item
+        img(src="img/sl4.png")
         .main-slider_hover
             .main-slider_inner
                 p Блины и открытки
@@ -34,24 +47,7 @@
             
 
     .main-slider_item
-        img(src="img/sl2.jpg")
-        .main-slider_hover
-            .main-slider_inner
-                p Блины и открытки
-                b большая февральская рассылка </br>
-                a(href="#" data-text='Подробнее').btn.h-button.btn-red
-                    span П
-                    span е
-                    span р
-                    span е
-                    span й
-                    span т
-                    span и
-            
-            
-
-    .main-slider_item
-        img(src="img/sl2.jpg")
+        img(src="img/sl1.png")
         .main-slider_hover
             .main-slider_inner
                 p Блины и открытки
@@ -240,10 +236,34 @@
                 p На апрель 2017 года в проекте было зарегистрировано более 676 000 человек из 208 стран[3], 2 июня 2015 года была получена 30-миллионная открытка[4], а 13 февраля 2017 года — 40-миллионная[5] 
 
 
-    .container
-        .advantage-img.wow.slideInRight(data-wow-duration="2s" data-wow-offset="15").position-r
-            .advantage-img_inner
-                img(src="img/advantage.png")
+    .container.wow.slideInRight(data-wow-duration="2s" data-wow-offset="15").position-r
+        .advantage
+            .advantage-line
+                img(src="img/line-main.png")
+            .advantage-inner
+                .advantage-item.advantage-first
+                    .advantage-img
+                        img(src="img/adv1.png")
+                    .advantage-counter
+                        .advantage-counter_num 351 498
+                        .advantage-article Открыток
+                                
+                .advantage-item.advantage-next
+                    .advantage-img
+                        img(src="img/adv2.png")
+                    .advantage-counter
+                        .advantage-article Пройдено
+                        .advantage-counter_num 265 287 538 
+                            span км
+                            
+                .advantage-item.advantage-last
+                    .advantage-img
+                        img(src="img/adv3.png")
+                    .advantage-counter
+                        .advantage-counter_num 766 511
+                        .advantage-article Членов 
+                
+                
 
 
 include ./postcrossing.pug              
