@@ -799,7 +799,7 @@ a:hover {
 .burger {
   position: absolute;
   right: 10px;
-  top: 10px;
+  top: 22px;
   width: 34px;
   height: 34px;
   cursor: pointer;
@@ -816,7 +816,8 @@ a:hover {
   display: block;
   width: 100%;
   background: white;
-  height: 3px;
+  height: 5px;
+  border-radius: 5px;
   margin-bottom: 5px;
 }
 
@@ -998,6 +999,7 @@ a:hover {
 }
 
 .tooltip-header .tooltip-article_inner:after {
+  opacity: 0.5;
   top: -23px;
   right: -11px;
 }
@@ -1030,6 +1032,7 @@ a:hover {
 }
 
 .tooltip-forum .tooltip-article_inner:after {
+  opacity: 0.5;
   top: -23px;
   right: 65px;
 }
@@ -1144,6 +1147,15 @@ body {
   padding: 0 10px;
 }
 
+@media (min-width: 768px) {
+  .container-nav {
+    max-width: 1434px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 10px;
+  }
+}
+
 .cloud-wrap {
   position: relative;
 }
@@ -1206,6 +1218,12 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 10px 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .header-top {
+    display: none;
   }
 }
 
@@ -1514,11 +1532,101 @@ body {
   }
 }
 
+.login-mob {
+  position: absolute;
+  right: 56px;
+  top: 17px;
+  width: 30px;
+  height: 34px;
+  background: url("../img/login-mob.png") no-repeat center;
+  background-size: contain;
+  border: none;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .login-mob {
+    display: none;
+  }
+}
+
+.container-nav {
+  height: 137px;
+}
+
+@media (min-width: 768px) {
+  .container-nav {
+    height: unset;
+  }
+}
+
+.stickytop {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+}
+
+.header-top_mob {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 27px 10px 4px;
+  background: white;
+}
+
+@media (min-width: 500px) {
+  .header-top_mob {
+    justify-content: center;
+  }
+}
+
+@media (min-width: 768px) {
+  .header-top_mob {
+    display: none;
+  }
+}
+
+.header-top_mob .header-login {
+  margin-top: 0;
+}
+
+@media (min-width: 500px) {
+  .header-top_mob .header-login {
+    margin-right: 50px;
+  }
+}
+
 .main-nav {
   background: #089CB1;
   position: relative;
-  height: 40px;
+  height: 68px;
   z-index: 10;
+}
+
+.main-nav_logo {
+  position: absolute;
+  top: 3px;
+  left: -10px;
+}
+
+@media (min-width: 768px) {
+  .main-nav_logo {
+    display: none;
+  }
+}
+
+.main-nav_logo .header-logo_img {
+  width: 60px;
+}
+
+.main-nav_logo p,
+.main-nav_logo span {
+  color: white;
 }
 
 @media (min-width: 768px) {
@@ -1530,7 +1638,7 @@ body {
 
 .main-nav ul {
   background: #089CB1;
-  padding-top: 33px;
+  padding-top: 74px;
   padding-bottom: 22px;
   text-align: center;
   display: none;
@@ -1590,6 +1698,10 @@ body {
   padding-bottom: 15px;
   border-bottom: 3px dashed #EEF0F4;
   margin-top: 13px;
+}
+
+.main-slider .owl-dots {
+  display: none;
 }
 
 .main-slider_hover {
@@ -1807,8 +1919,14 @@ body {
   margin-right: 7px;
 }
 
-.icon-slider {
-  margin-top: 40px;
+.icon-slider .owl-dots {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .icon-slider {
+    margin-top: 40px;
+  }
 }
 
 .icon-slider .owl-stage-outer {

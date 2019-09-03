@@ -4,55 +4,84 @@
 header.header
     .header-cloud.cloud-animate
         img(src="img/header-cloud.png")
-    .container.position-r
-        .header-top
-            .header-logo
-                .header-logo_item
-                    a(href="#").header-logo_img
-                        img(src="img/logo.png")            
-                .header-logo_item
-                    .header-logo_article
-                        .tooltip-box.tooltip-header
-                            .tooltip-btn i
-                            .tooltip-article
-                                .tooltip-article_inner
-                                    |Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.
-                        p Федеральная
-                    span Лига посткроссеров
-            .header-info
-                .header-cont
-                    .header-cont_item
-                        a(href="tel:89222222222") 89222222222
-                        a(href="mailto:pochta@pochta.ru") pochta@pochta.ru
-                    .header-cont_item
-                        a(href="#").header-basket
-                            span.header-basket_count 16
+
+    .container-nav.position-r
+        .container-nav_sticky
+            .header-top
+                .header-logo
+                    .header-logo_item
+                        a(href="#").header-logo_img
+                            img(src="img/logo.png")            
+                    .header-logo_item
+                        .header-logo_article
+                            .tooltip-box.tooltip-header
+                                .tooltip-btn i
+                                .tooltip-article
+                                    .tooltip-article_inner
+                                        |Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.
+                            p Федеральная
+                        span Лига посткроссеров
+                .header-info
+                    .header-cont
+                        .header-cont_item
+                            a(href="tel:89222222222") 89222222222
+                            a(href="mailto:pochta@pochta.ru") pochta@pochta.ru
+                        .header-cont_item
+                            a(href="#").header-basket
+                                span.header-basket_count 16
+                    .header-login                    
+                        a(href="#").header-login_img
+                            img(src="img/avatar.png")      
+                        .header-login_nickname
+                            a(href="#") Kari174887765...
+                            a(href="#") Выйти
+                        button.header-inter.md-trigger(data-modal="modal-login") 
+                            span Личный кабинет                
+
+    
+            .header-top_mob
                 .header-login                    
                     a(href="#").header-login_img
                         img(src="img/avatar.png")      
                     .header-login_nickname
                         a(href="#") Kari174887765...
                         a(href="#") Выйти
-                    button.header-inter.md-trigger(data-modal="modal-login") 
-                        span Личный кабинет                
-
-        nav.main-nav
-            .burger
-                span
-                span
-                span        
-            ul
-                li
-                    a(href="#") Главная
-                li
-                    a(href="#") Каталог
-                li
-                    a(href="#") Услуги
-                li
-                    a(href="#") Форум
-                li
-                    a(href="#") Почтовые новости
-                li
-                    a(href="#") Рейтинг
-                li
-                    a(href="#") Контакты
+                a(href="#").header-basket
+                    span.header-basket_count 16
+                                
+            
+            nav.main-nav
+                .header-logo.main-nav_logo
+                    .header-logo_item
+                        a(href="#").header-logo_img
+                            img(src="img/logo.png")            
+                    .header-logo_item
+                        .header-logo_article
+                            .tooltip-box.tooltip-header
+                                .tooltip-btn i
+                                .tooltip-article
+                                    .tooltip-article_inner
+                                        |Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.
+                            p Федеральная
+                        span Лига посткроссеров
+                button.login-mob.md-trigger(data-modal="modal-login")
+                    
+                .burger
+                    span
+                    span
+                    span        
+                ul
+                    li
+                        a(href="#") Главная
+                    li
+                        a(href="#") Каталог
+                    li
+                        a(href="#") Услуги
+                    li
+                        a(href="#") Форум
+                    li
+                        a(href="#") Почтовые новости
+                    li
+                        a(href="#") Рейтинг
+                    li
+                        a(href="#") Контакты

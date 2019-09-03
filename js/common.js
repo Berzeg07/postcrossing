@@ -380,7 +380,16 @@ $(document).ready(function() {
 
 
 
-
+    $(function(){
+         $(window).scroll(function() {
+             if($(this).scrollTop() >= 1) {
+                 $('.container-nav_sticky').addClass('stickytop');
+             }
+             else{
+                 $('.container-nav_sticky').removeClass('stickytop');
+             }
+         });
+     });
 
 
 

@@ -766,7 +766,7 @@ a {
 .burger {
     position: absolute;
     right: 10px;
-    top: 10px;
+    top: 22px;
     width: 34px;
     height: 34px;
     cursor: pointer;
@@ -779,7 +779,8 @@ a {
         display: block;
         width: 100%;
         background: white;
-        height: 3px;
+        height: 5px;
+        border-radius: 5px;
         margin-bottom: 5px;
     }
 }
@@ -952,6 +953,7 @@ a {
             position: relative;
 
             &:after {
+                opacity: 0.5;
                 top: -23px;
                 right: -11px;
                 @media(min-width: 992px) {
@@ -981,6 +983,7 @@ a {
         }
 
         &:after {
+            opacity: 0.5;
             top: -23px;
             right: 65px;
             @media(min-width: 768px) {
@@ -1084,6 +1087,15 @@ body {
     padding: 0 10px;
 }
 
+.container-nav {
+    @media(min-width: 768px){
+        max-width: 1434px;
+        margin: 0 auto;
+        width: 100%;
+        padding: 0 10px;
+    }
+}
+
 .cloud-wrap {
     position: relative;
 }
@@ -1141,6 +1153,12 @@ body {
             justify-content: space-between;
             align-items: center;
             padding: 10px 0;
+        }
+    }
+
+    &-top {
+        @media(max-width: 767px) {
+            display: none;
         }
     }
 
@@ -1411,11 +1429,83 @@ body {
     }
 }
 
+.login-mob {
+    position: absolute;
+    right: 56px;
+    top: 17px;
+    width: 30px;
+    height: 34px;
+    background: url("../img/login-mob.png") no-repeat center;
+    background-size: contain;
+    border: none;
+    cursor: pointer;
+    @media(min-width: 768px) {
+        display: none;
+    }
+}
+
+.container-nav{
+    height: 137px;
+    @media(min-width: 768px){
+        height: unset;
+    }
+}
+
+.stickytop {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 20;
+}
+
+.header-top_mob {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 27px 10px 4px;
+    background: white;
+    @media(min-width: 500px) {
+        justify-content: center;
+    }
+    @media(min-width: 768px) {
+        display: none;
+    }
+
+    .header-login {
+        margin-top: 0;
+        @media(min-width: 500px) {
+            margin-right: 50px;
+        }
+    }
+}
+
 .main-nav {
     background: #089CB1;
     position: relative;
-    height: 40px;
+    height: 68px;
     z-index: 10;
+
+    &_logo {
+        position: absolute;
+        top: 3px;
+        left: -10px;
+        @media(min-width: 768px) {
+            display: none;
+        }
+
+        .header-logo_img {
+            width: 60px;
+        }
+
+        p,
+        span {
+            color: white;
+        }
+    }
     @media(min-width: 768px) {
         height: unset;
         z-index: unset;
@@ -1423,7 +1513,7 @@ body {
 
     ul {
         background: #089CB1;
-        padding-top: 33px;
+        padding-top: 74px;
         padding-bottom: 22px;
         text-align: center;
         display: none;
@@ -1470,6 +1560,10 @@ body {
     padding-bottom: 15px;
     border-bottom: 3px dashed #EEF0F4;
     margin-top: 13px;
+
+    .owl-dots {
+        display: none;
+    }
 
     &_hover {
         position: absolute;
@@ -1673,7 +1767,12 @@ body {
 }
 
 .icon-slider {
-    margin-top: 40px;
+    .owl-dots {
+        display: none;
+    }
+    @media(min-width: 768px) {
+        margin-top: 40px;
+    }
 
     .owl-stage-outer {
         padding: 20px 0;
@@ -5485,11 +5584,11 @@ body {
     font-size: 16px;
 }
 
-.my-answear_color{
+.my-answear_color {
     color: #FD6B7E;
 }
 
-.auth-user_img{
+.auth-user_img {
     border: 2px solid #FD6B7E;
 }
 
