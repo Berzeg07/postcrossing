@@ -1330,7 +1330,7 @@ body {
 
 @media (min-width: 768px) {
   .header-cont a:first-child {
-    font-size: 21px;
+    font-size: 18px;
   }
 }
 
@@ -1341,7 +1341,13 @@ body {
 }
 
 .header-cont a:last-child {
-  font-size: 16px;
+  font-size: 13px;
+}
+
+@media (min-width: 1270px) {
+  .header-cont a:last-child {
+    font-size: 16px;
+  }
 }
 
 .header-cont_item:first-child {
@@ -1567,17 +1573,35 @@ body {
 
 @media (min-width: 768px) {
   .container-nav {
-    height: unset;
+    height: 230px;
   }
+}
+
+@media (min-width: 992px) {
+  .container-nav {
+    height: 250px;
+  }
+}
+
+.container-nav_sticky {
+  position: relative;
+  z-index: 10;
 }
 
 .stickytop {
   position: fixed;
-  width: 100%;
+  max-width: 1434px;
+  margin: 0 auto;
   top: 0;
   left: 0;
   right: 0;
   z-index: 9999;
+}
+
+@media (min-width: 768px) {
+  .stickytop {
+    padding: 0 10px;
+  }
 }
 
 .header-top_mob {
@@ -2033,9 +2057,31 @@ body {
   z-index: 20;
 }
 
+@media (min-width: 768px) {
+  .basket-top_item {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 50px;
+  }
+}
+
+@media (min-width: 768px) {
+  .basket-top .news-top_inner .news-top_item:first-child {
+    width: 10%;
+  }
+  .basket-top .news-top_inner .news-top_item:last-child {
+    width: 90%;
+  }
+}
+
 .ether {
   margin-top: 25px;
   padding-top: 20px;
+  position: relative;
+  z-index: 20;
 }
 
 @media (min-width: 992px) {
@@ -6464,6 +6510,10 @@ body {
 
 .pagination-forum {
   margin-top: 45px;
+}
+
+.tooltip-wrap {
+  position: relative;
 }
 
 .advantage {

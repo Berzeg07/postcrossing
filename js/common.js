@@ -135,12 +135,6 @@ $(document).ready(function() {
         $(this).parents('.postcard-table_main').remove();
     });
 
-    $('.sortthemes_btn').click(function() {
-        var text = $(this).text();
-        $('.sortthemes_btn').removeClass('active');
-        $(this).addClass('active');
-    });
-
     var itemprice = $('.product-main_price span').text(),
         priceInner = $('.product-main_price span');
 
@@ -352,47 +346,6 @@ $(document).ready(function() {
         $(this).parents('.foruminner-formcomment').removeClass('active');
     });
 
-
-
-    $('.quote-btn').click(function() {
-        var $this = $(this)
-        $('.quote-box').html('');
-        $('.nick-author').html('');
-        var quoteText = $(this).parents('.foruminner-bottom_comment').find('.foruminner-bottom_text__inner').html();
-        $('.quote-box').html(quoteText);
-        var currentBlockoffset = $('#form-comment').offset().top;
-    	$("html, body").animate({
-    		scrollTop: currentBlockoffset
-    	}, 500);
-    });
-
-    $('.add-comment').click(function() {
-        var $this = $(this)
-        $('.quote-box').html('');
-        $('.nick-author').html('');
-        var quoteText = $(this).parents('.foruminner-bottom_inner').find('.foruminner-nick').html();
-        $('.nick-author').html(quoteText);
-        var currentBlockoffset = $('#form-comment').offset().top;
-        $("html, body").animate({
-            scrollTop: currentBlockoffset
-        }, 500);
-    });
-
-
-
-    // $(function(){
-    //      $(window).scroll(function() {
-    //          if($(this).scrollTop() >= 1) {
-    //              $('.container-nav_sticky').addClass('stickytop');
-    //          }
-    //          else{
-    //              $('.container-nav_sticky').removeClass('stickytop');
-    //          }
-    //      });
-    //  });
-
-
-
     $(function() {
         $('.minimized').click(function(event) {
             var i_path = $(this).attr('src');
@@ -433,26 +386,68 @@ $(document).ready(function() {
         $(this).parents('tr').remove();
     });
 
-    $('.forum-article_likeicon').click(function() {
+    // $('.quote-btn').click(function() {
+    //     var $this = $(this)
+    //     $('.quote-box').html('');
+    //     $('.nick-author').html('');
+    //     var quoteText = $(this).parents('.foruminner-bottom_comment').find('.foruminner-bottom_text__inner').html();
+    //     $('.quote-box').html(quoteText);
+    //     var currentBlockoffset = $('#form-comment').offset().top;
+    //     $("html, body").animate({
+    //         scrollTop: currentBlockoffset
+    //     }, 500);
+    // });
+    //
+    // $('.add-comment').click(function() {
+    //     var $this = $(this)
+    //     $('.quote-box').html('');
+    //     $('.nick-author').html('');
+    //     var quoteText = $(this).parents('.foruminner-bottom_inner').find('.foruminner-nick').html();
+    //     $('.nick-author').html(quoteText);
+    //     var currentBlockoffset = $('#form-comment').offset().top;
+    //     $("html, body").animate({
+    //         scrollTop: currentBlockoffset
+    //     }, 500);
+    // });
+
+    // $('.sortthemes_btn').click(function() {
+    //     var text = $(this).text();
+    //     $('.sortthemes_btn').removeClass('active');
+    //     $(this).addClass('active');
+    // });
+
+    $('.forum-article_likeicon, .comment-btn, .add-comment, .quote-btn, .sortthemes_btn, .sendpostcard-btn, .ether-adress_btn, .basket-btn').click(function(e) {
+        e.preventDefault();
         $(this).parent().find('.tooltip-article').addClass('active');
         $(this).mouseleave(function() {
             $(this).parent().find('.tooltip-article').removeClass('active');
         });
     });
 
-    // $(".dws-progress-bar").circularProgress({
-    //     color: "#CAE2ED",
-    //     line_width: 17,
-    //     height: "350px",
-    //     width: "350px",
-    //     percent: 0,
-    //     // counter_clockwise: true,
-    //     starting_position: 25
-    // }).circularProgress('animate', 100, 2000);
+    $(function(){
+         $(window).scroll(function() {
+             if($(this).scrollTop() >= 1) {
+                 $('.container-nav_sticky').addClass('stickytop');
+             }
+             else{
+                 $('.container-nav_sticky').removeClass('stickytop');
+             }
+         });
+     });
+
+    $(".dws-progress-bar").circularProgress({
+        color: "#CAE2ED",
+        line_width: 17,
+        height: "350px",
+        width: "350px",
+        percent: 0,
+        // counter_clockwise: true,
+        starting_position: 25
+    }).circularProgress('animate', 100, 2000);
 
 });
 
-// $(window).on('load', function() {
-//     var $preloader = $('#preloader');
-//     $preloader.delay(2850).fadeOut('slow');
-// });
+$(window).on('load', function() {
+    var $preloader = $('#preloader');
+    $preloader.delay(2850).fadeOut('slow');
+});

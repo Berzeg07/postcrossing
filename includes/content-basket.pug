@@ -8,7 +8,15 @@
                     .news-top_item
                         img(src="img/cart-inner.png")
                     .news-top_item
-                        p.basket-top_title Корзина
+                        .basket-top_title.basket-top_item 
+                            p Корзина
+                            .tooltip-wrap
+                                a(href="#").cabinet-top_basket.basket-btn Мои покупки
+                                .tooltip-box.tooltip-forum.tooltip-forum_inner
+                                    .tooltip-article
+                                        .tooltip-article_inner
+                                            |Для того что бы просматривать покупки нужно
+                                            span зарегистрироваться
                         ul.basket-info_list
                             li
                                 |У вас 24 товара

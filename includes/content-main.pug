@@ -92,7 +92,7 @@
                     img(src="img/s8.jpg")
         a(href="#").icon-slider_link Перейти в галерею
 
-    .ether.position-r
+    .ether
         .ether-inner.container.wow.slideInRight(data-wow-duration="2s" data-wow-offset="15")
             .ether-adress.ether-inner_item
                 .ether-adress_inner
@@ -107,7 +107,13 @@
                             .index-img
                                 img(src="img/index.png")
                         li
-                            a(href="#").btn.btn-red.ether-adress_btn Получить адрес   
+                            
+                            a(href="#").btn.btn-red.ether-adress_btn.tooltip-wrap Получить адрес
+                                .tooltip-box.tooltip-forum.tooltip-forum_inner
+                                    .tooltip-article
+                                        .tooltip-article_inner
+                                            |Для того что бы оставить комментарий или поставить отметку необходимо 
+                                            span зарегистрироваться   
 
 
             .ether-online.ether-inner_item

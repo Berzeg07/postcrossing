@@ -14,8 +14,20 @@
                         li    
                             input(type="date").inp    
             .forum-top_item
-                a(href="#").notread-themes_btn.sortthemes_btn Показать (177) <br>непрочитанные темы   
-                a(href="#").read-themes_btn.sortthemes_btn Показать (154) <br>прочитанные темы 
+                .tooltip-wrap 
+                    a(href="#").notread-themes_btn.sortthemes_btn Показать (177) <br>непрочитанные темы
+                    .tooltip-box.tooltip-forum.tooltip-forum_inner
+                        .tooltip-article
+                            .tooltip-article_inner
+                                |Для того что бы оставить комментарий или поставить отметку необходимо 
+                                span зарегистрироваться   
+                .tooltip-wrap
+                    a(href="#").read-themes_btn.sortthemes_btn Показать (154) <br>прочитанные темы
+                    .tooltip-box.tooltip-forum.tooltip-forum_inner
+                        .tooltip-article
+                            .tooltip-article_inner
+                                |Для того что бы оставить комментарий или поставить отметку необходимо 
+                                span зарегистрироваться 
 
         .forum-themes.box-shadow.wow.slideInRight(data-wow-duration="2s")
             .forum-themes_top
@@ -23,8 +35,13 @@
                     |Статус                 
                 .forum-themes_top__item
                     |Название заголовка                 
-                .forum-themes_top__item
-                    a(href="#").showalltheme-btn.sortthemes_btn.btn-blue Показать все темы  
+                .forum-themes_top__item.tooltip-wrap
+                    a(href="#").showalltheme-btn.sortthemes_btn.btn-blue Показать все темы
+                    .tooltip-box.tooltip-forum.tooltip-forum_inner
+                        .tooltip-article
+                            .tooltip-article_inner
+                                |Для того что бы оставить комментарий или поставить отметку необходимо 
+                                span зарегистрироваться   
             .forum-themes_inner              
                 .forum-article
                     .forum-article_item.forum-article_left
