@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <title>Форум</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/css/swiper.min.css">
     <link rel="stylesheet" href="libs/simplebox/simplebox.css">
     <link rel="stylesheet" href="libs/wow/animate.css">
@@ -16,8 +17,21 @@
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
+    <div id="preloader">
+      <div class="dws-progress-bar"></div>
+    </div>
     <header class="header">
       <div class="header-cloud cloud-animate"><img src="img/header-cloud.png"></div>
+      <div class="header-sticky_top">
+        <div class="header-sticky_top__cont">
+          <div class="header-sticky_top__inner"><a class="header-basket" href="#"><span class="header-basket_count">16</span></a>
+            <div class="header-login">                   <a class="header-login_img" href="#"><img src="img/avatar.png"></a>
+              <div class="header-login_nickname"><a href="#">Kari174887765...</a><a href="#">Выйти</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="header-sticky_top__bg"></div>
       <div class="container-nav">
         <div class="container-nav_sticky">
           <div class="header-top">
@@ -52,6 +66,16 @@
             </div><a class="header-basket" href="#"><span class="header-basket_count">16</span></a>
           </div>
           <nav class="main-nav">
+            <div class="logo-sticky">
+              <div class="logo-sticky_inner"><a class="logo-sticky_img" href="#"><img src="img/logo-min.png"></a>
+                <div class="tooltip-box tooltip-header">
+                  <div class="tooltip-btn">i</div>
+                  <div class="tooltip-article">
+                    <div class="tooltip-article_inner">Lorem Ipsum является стандартной "рыбой" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div class="header-logo main-nav_logo">
               <div class="header-logo_item"><a class="header-logo_img" href="#"><img src="img/logo.png"></a></div>
               <div class="header-logo_item">
@@ -209,9 +233,10 @@
           </ul>
         </div>
         <div class="footer-bottom">
-          <div class="footer-copyright">ЕКАТЕРИНБУРГ, 2019</div><a class="footer-social" href="#">
-            <div class="footer-social_item">Мы есть </br>вконтакте           </div>
-            <div class="footer-social_item">          <img src="img/vk.png"></div></a>
+          <div class="footer-copyright">ЕКАТЕРИНБУРГ, 2019</div>
+          <div class="footer-bottom_item"><a class="copyright" href="#"> <i>Design by </i><span>Alena </span></a><a class="footer-social" href="#">
+              <div class="footer-social_item">Мы есть </br>вконтакте           </div>
+              <div class="footer-social_item">          <img src="img/vk.png"></div></a></div>
         </div>
       </div>
     </div>
@@ -240,7 +265,7 @@
           <div class="modal-item">
             <p class="modal-title modal-title_blue">Восстановление пароля</p>
             <div class="modal-links">
-              <button class="md-trigger login-button" data-modal="modal-login">Вход /</button><a class="modal-links_icon" href="#">Регистрация</a>
+              <button class="md-trigger login-button hover-color" data-modal="modal-login">Вход /</button><a class="modal-links_icon" href="#">Регистрация</a>
             </div>
             <input class="inp" type="text" placeholder="Введите E-mail">
             <div class="modal-btnbox">
@@ -282,13 +307,14 @@
               <button class="modal-btn btn-blue">Войти в личный кабинет</button>
             </div>
             <div class="modal-wrongpass">
-              <button class="md-trigger restorePass-btn" data-modal="modal-restorePass">Забыли пароль?    </button>
+              <button class="md-trigger restorePass-btn hover-color" data-modal="modal-restorePass">Забыли пароль?    </button>
             </div>
           </div>
         </div>
       </div>
     </div>
     <div class="overlay"></div>
+    <script src="js/polifill.js"></script>
     <script src="libs/jquery/jquery-3.4.1.min.js"></script>
     <script src="libs/parallax/parallax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/js/swiper.min.js"></script>

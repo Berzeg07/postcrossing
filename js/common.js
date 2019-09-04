@@ -218,7 +218,7 @@ $(document).ready(function() {
 
             });
 
-            // myMap.behaviors.disable('scrollZoom');
+            myMap.behaviors.disable('scrollZoom');
 
             var myPlacemark = new ymaps.Placemark(center, {
                 // Свойства.
@@ -321,6 +321,15 @@ $(document).ready(function() {
         }, 500);
     });
 
+    $(".purchaces-link").click(function(e) {
+        e.preventDefault();
+        var currentBlock = $(this).attr("href");
+        currentBlockoffset = $(currentBlock).offset().top;
+        $("html, body").animate({
+            scrollTop: currentBlockoffset
+        }, 500);
+    });
+
     $(".basket-more").click(function(e) {
         e.preventDefault();
         var currentBlock = $(this).attr("href");
@@ -354,22 +363,22 @@ $(document).ready(function() {
 
 
             $('body').append(`
-            <div id="overlay"></div>
-                <div id="magnify">
-                    <div class="magnify-inner">
-                        <img src="${i_path}">
+                <div id="overlay"></div>
+                    <div id="magnify">
+                        <div class="magnify-inner">
+                            <img src="${i_path}">
+                        </div>
+                        <ul class="magnify-article">
+                            <li>
+                                <a href="${i_link}" class="i-link">Ссылка на открытку</a>
+                            </li>
+                            <li>
+                                <p class="i-alt">${i_alt}</p>
+                            </li>
+                        </ul>
+                        <div id="close-popup">
                     </div>
-                    <ul class="magnify-article">
-                        <li>
-                            <a href="${i_link}" class="i-link">Ссылка на открытку</a>
-                        </li>
-                        <li>
-                            <p class="i-alt">${i_alt}</p>
-                        </li>
-                    </ul>
-                    <div id="close-popup">
-                </div>
-            </div>`);
+                </div>`);
             $('.overlay, #magnify').fadeIn('fast');
         });
 
@@ -427,10 +436,21 @@ $(document).ready(function() {
     $(function(){
          $(window).scroll(function() {
              if($(this).scrollTop() >= 1) {
-                 $('.container-nav_sticky').addClass('stickytop');
+                 $('.container-nav_sticky').addClass('stickytop-mobile');
              }
              else{
-                 $('.container-nav_sticky').removeClass('stickytop');
+                 $('.container-nav_sticky').removeClass('stickytop-mobile');
+             }
+
+             if($(this).scrollTop() >= 130) {
+                 $('.header-sticky_top, .header-sticky_top__bg, .logo-sticky').addClass('active');
+                 $('.header-top').addClass('hidden');
+                 $('.main-nav').addClass('fixed');
+             }
+             else{
+                 $('.header-sticky_top, .header-sticky_top__bg, .logo-sticky').removeClass('active');
+                 $('.header-top').removeClass('hidden');
+                 $('.main-nav').removeClass('fixed');
              }
          });
      });

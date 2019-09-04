@@ -20,11 +20,15 @@
                     a(href="#") Контакты
         .footer-bottom
             .footer-copyright ЕКАТЕРИНБУРГ, 2019
-            a(href="#").footer-social
-                .footer-social_item
-                    |Мы есть </br>вконтакте           
-                .footer-social_item           
-                    img(src="img/vk.png")       
+            .footer-bottom_item
+                a(href="#").copyright 
+                    i Design by 
+                    span Alena 
+                a(href="#").footer-social
+                    .footer-social_item
+                        |Мы есть </br>вконтакте           
+                    .footer-social_item           
+                        img(src="img/vk.png")       
                             
                     
                             
@@ -33,6 +37,7 @@
 
 
 include ./footer-modals.pug
+script(src="js/polifill.js")
 script(src="libs/jquery/jquery-3.4.1.min.js")
 
 script(src="libs/parallax/parallax.min.js")
