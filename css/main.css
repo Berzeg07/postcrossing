@@ -1281,7 +1281,7 @@ body {
 
 @media (min-width: 1270px) {
   .header-logo_img {
-    width: unset;
+    width: auto;
   }
 }
 
@@ -1827,8 +1827,8 @@ body {
 
 @media (min-width: 768px) {
   .main-nav {
-    height: unset;
-    z-index: unset;
+    height: auto;
+    z-index: auto;
   }
 }
 
@@ -2119,6 +2119,7 @@ body {
 
 .footer-bottom_item .copyright {
   margin-right: 40px;
+  font-size: 13px;
 }
 
 @media (min-width: 768px) {
@@ -4568,7 +4569,7 @@ input::placeholder {
 }
 
 .profile-article_inner.active {
-  height: unset;
+  height: auto;
 }
 
 .profile-article .profile-article_show {
@@ -5260,7 +5261,7 @@ input::placeholder {
 }
 
 .select-block .ui-button {
-  width: unset !important;
+  width: auto !important;
   background: none;
   margin: 0;
   border: none;
@@ -5477,7 +5478,7 @@ input::placeholder {
 
 @media (min-width: 768px) {
   .news-post_img {
-    margin: unset;
+    margin: 0;
   }
 }
 
@@ -5780,7 +5781,7 @@ input::placeholder {
 
 @media (min-width: 992px) {
   .sendpostcard-form_item:last-child {
-    margin: unset;
+    margin: 0;
   }
 }
 
@@ -6921,8 +6922,8 @@ input::placeholder {
 
 .order-item .close_btn {
   position: absolute;
-  right: 15px;
-  top: -20px;
+  right: 5px;
+  top: -40px;
 }
 
 @media (min-width: 992px) {
@@ -6940,6 +6941,7 @@ input::placeholder {
 .order-top {
   text-align: center;
   margin-bottom: 30px;
+  padding: 0 10px;
 }
 
 @media (min-width: 992px) {

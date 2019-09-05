@@ -1,6 +1,6 @@
-const map = (typeof Map === "function") ? new Map() : (function () {
-	const keys = [];
-	const values = [];
+var map = (typeof Map === "function") ? new Map() : (function () {
+	var keys = [];
+	var values = [];
 
 	return {
 		has(key) {
@@ -16,7 +16,7 @@ const map = (typeof Map === "function") ? new Map() : (function () {
 			}
 		},
 		delete(key) {
-			const index = keys.indexOf(key);
+			var index = keys.indexOf(key);
 			if (index > -1) {
 				keys.splice(index, 1);
 				values.splice(index, 1);
@@ -29,9 +29,8 @@ let createEvent = (name)=> new Event(name, {bubbles: true});
 try {
 	new Event('test');
 } catch(e) {
-	// IE does not support `new Event()`
 	createEvent = (name)=> {
-		const evt = document.createEvent('Event');
+		var evt = document.createEvent('Event');
 		evt.initEvent(name, true, false);
 		return evt;
 	};
@@ -45,7 +44,7 @@ function assign(ta) {
 	let cachedHeight = null;
 
 	function init() {
-		const style = window.getComputedStyle(ta, null);
+		var style = window.getComputedStyle(ta, null);
 
 		if (style.resize === 'vertical') {
 			ta.style.resize = 'none';
@@ -58,7 +57,6 @@ function assign(ta) {
 		} else {
 			heightOffset = parseFloat(style.borderTopWidth)+parseFloat(style.borderBottomWidth);
 		}
-		// Fix when a textarea is not on document body and heightOffset is Not a Number
 		if (isNaN(heightOffset)) {
 			heightOffset = 0;
 		}
@@ -68,15 +66,10 @@ function assign(ta) {
 
 	function changeOverflow(value) {
 		{
-			// Chrome/Safari-specific fix:
-			// When the textarea y-overflow is hidden, Chrome/Safari do not reflow the text to account for the space
-			// made available by removing the scrollbar. The following forces the necessary text reflow.
-			const width = ta.style.width;
+
+			var width = ta.style.width;
 			ta.style.width = '0px';
-			// Force reflow:
-			/* jshint ignore:start */
 			ta.offsetWidth;
-			/* jshint ignore:end */
 			ta.style.width = width;
 		}
 
@@ -84,7 +77,7 @@ function assign(ta) {
 	}
 
 	function getParentOverflows(el) {
-		const arr = [];
+		var arr = [];
 
 		while (el && el.parentNode && el.parentNode instanceof Element) {
 			if (el.parentNode.scrollTop) {
@@ -101,12 +94,11 @@ function assign(ta) {
 
 	function resize() {
 		if (ta.scrollHeight === 0) {
-			// If the scrollHeight is 0, then the element probably has display:none or is detached from the DOM.
 			return;
 		}
 
-		const overflows = getParentOverflows(ta);
-		const docTop = document.documentElement && document.documentElement.scrollTop; // Needed for Mobile IE (ticket #240)
+		var overflows = getParentOverflows(ta);
+		var docTop = document.documentElement && document.documentElement.scrollTop;
 
 		ta.style.height = '';
 		ta.style.height = (ta.scrollHeight+heightOffset)+'px';
@@ -127,8 +119,8 @@ function assign(ta) {
 	function update() {
 		resize();
 
-		const styleHeight = Math.round(parseFloat(ta.style.height));
-		const computed = window.getComputedStyle(ta, null);
+		var styleHeight = Math.round(parseFloat(ta.style.height));
+		var computed = window.getComputedStyle(ta, null);
 
 		// Using offsetHeight as a replacement for computed.height in IE, because IE does not account use of border-box
 		var actualHeight = computed.boxSizing === 'content-box' ? Math.round(parseFloat(computed.height)) : ta.offsetHeight;
@@ -152,7 +144,7 @@ function assign(ta) {
 
 		if (cachedHeight !== actualHeight) {
 			cachedHeight = actualHeight;
-			const evt = createEvent('autosize:resized');
+			var evt = createEvent('autosize:resized');
 			try {
 				ta.dispatchEvent(evt);
 			} catch (err) {
@@ -162,13 +154,13 @@ function assign(ta) {
 		}
 	}
 
-	const pageResize = () => {
+	var pageResize = () => {
 		if (ta.clientWidth !== clientWidth) {
 			update();
 		}
 	};
 
-	const destroy = (style => {
+	var destroy = (style => {
 		window.removeEventListener('resize', pageResize, false);
 		ta.removeEventListener('input', update, false);
 		ta.removeEventListener('keyup', update, false);
@@ -212,14 +204,14 @@ function assign(ta) {
 }
 
 function destroy(ta) {
-	const methods = map.get(ta);
+	var methods = map.get(ta);
 	if (methods) {
 		methods.destroy();
 	}
 }
 
 function update(ta) {
-	const methods = map.get(ta);
+	var methods = map.get(ta);
 	if (methods) {
 		methods.update();
 	}

@@ -360,25 +360,7 @@ $(document).ready(function() {
             var i_path = $(this).attr('src');
             var i_link = $(this).attr('linkpostcard');
             var i_alt = $(this).attr('alt');
-
-
-            $('body').append(`
-                <div id="overlay"></div>
-                    <div id="magnify">
-                        <div class="magnify-inner">
-                            <img src="${i_path}">
-                        </div>
-                        <ul class="magnify-article">
-                            <li>
-                                <a href="${i_link}" class="i-link">Ссылка на открытку</a>
-                            </li>
-                            <li>
-                                <p class="i-alt">${i_alt}</p>
-                            </li>
-                        </ul>
-                        <div id="close-popup">
-                    </div>
-                </div>`);
+            $('body').append('<div id="overlay"></div><div id="magnify"><div class="magnify-inner"><img src="'+i_path+'"></div><ul class="magnify-article"><li><a href="'+i_link+'" class="i-link">ссылка на открытку</a></li><li><p class="i-alt">"'+i_alt+'"</p></li></ul><div id="close-popup"></div>');
             $('.overlay, #magnify').fadeIn('fast');
         });
 
